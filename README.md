@@ -1,5 +1,5 @@
 # Data_structures_and_algorithms
-## Data structures and algorithms (CO2003) - HCMUT - Semester 1 / Academic year 2023->2024 (HK231)
+## Data structures and algorithms (DSA) - CO2003 - HCMUT - Semester 1 / Academic year 2023->2024 (HK231)
 
 ### 1/ What the project does?
 Just doing some exercises in my computer engineering class.
