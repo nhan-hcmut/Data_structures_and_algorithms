@@ -1,0 +1,31 @@
+Algorithm printXRecursively(val n<integer>)
+    Pre: Integer variables order and stop have been declared and initialized.
+    Post: A line of the Cantor set is printed.
+
+    if n=stop then
+        print n characters 'X'
+    else
+        printXRecursively(n/3)
+        print n/3 spaces
+        printXRecursively(n/3)
+    end if
+End printXRecursively
+
+Algorithm printCantorSet
+    Pre: The order of Cantor set is between 1 and 5.
+    Post: The Cantor set is printed by using 'X' characters and spaces.
+
+    stop = 0
+    order = 0
+
+    while order<1 or order>5 do
+        print "Order (from 1 to 5):"
+        read order
+    end while
+
+    for line=0 to order-1 do
+        stop = 3 raised to the power of (order-line-1)
+        printXRecursively(3 raised to power of order-1)
+        print newline character
+    end for
+End printCantorSet
