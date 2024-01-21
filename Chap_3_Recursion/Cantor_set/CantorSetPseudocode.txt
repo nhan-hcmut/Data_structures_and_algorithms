@@ -14,16 +14,16 @@ End printXRecursively
 Algorithm printCantorSet
     Post condition: The Cantor set is printed by using characters 'X' and spaces.
 
-    stop = 0
-    order = 0
+    stop := 0
+    order := 0
 
     while order < 1 do
-        print "Order:"
+        print "Order (must be greater than 0):"
         read order
     end while
 
-    for line=0 to order-1 do
-        stop = 3 raised to the power of (order-line-1)
+    for line:=0 to order-1 do
+        stop := 3 raised to the power of (order-line-1)
         printXRecursively(3 raised to power of order-1)
         print newline character
     end for
