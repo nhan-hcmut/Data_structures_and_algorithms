@@ -15,7 +15,14 @@ void move(int n, string source, string destination, string auxiliary) {
 
 int main() {
 
-    move(3, "left tower", "right tower", "middle tower");
+    int disk = 0;
+
+    while (disk < 1) {
+        cout << "Disk (>=1): ";
+        cin >> disk;
+    }
+
+    move(disk, "left tower", "right tower", "middle tower");
 
     return 0;
 }
