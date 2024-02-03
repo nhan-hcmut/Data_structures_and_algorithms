@@ -1,8 +1,9 @@
 #include<stdio.h>
 
 void move(int n, char* source, char* destination, char* auxiliary) {
+    static int step = 0;
     
-    if (n == 1) printf("Move a disk from %s to %s\n", source, destination);
+    if (n == 1) printf("Step %d: Move a disk from %s to %s.\n", ++step, source, destination);
     
     else {
         move(n-1, source, auxiliary, destination);
