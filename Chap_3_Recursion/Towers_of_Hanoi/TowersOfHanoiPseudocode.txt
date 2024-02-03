@@ -4,8 +4,10 @@ Algorithm move(val disks <integer>, val source <string>, val destination <string
     Pre-condition: disks is the number of disks to be moved.
     Post-condition: print steps to move disks from source to destination.
 
+    static variable named step := 0
+
     if disks = 1 then
-        print "Move a disk from " + source + " to " + destination
+        print "Step " + (++step) + ": Move a disk from " + source + " to " + destination
     else do
         move(disks-1, source, auxiliary, destination)
         move(1, source, destination, auxiliary)
