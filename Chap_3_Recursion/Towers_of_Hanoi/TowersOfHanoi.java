@@ -1,8 +1,10 @@
 import java.util.Scanner;
 
 public class TowersOfHanoi {
+	public static int step = 0;
+	
     public static void move(int n, String source, String destination, String auxiliary) {
-        if (n == 1) System.out.println("Move a disk from " + source + " to " + destination);
+        if (n == 1) System.out.println("Step " + (++step) + ": Move a disk from " + source + " to " + destination);
         else {
             move(n-1, source, auxiliary, destination);
             move(1, source, destination, auxiliary);
