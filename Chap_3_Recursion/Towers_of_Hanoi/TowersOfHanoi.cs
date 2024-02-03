@@ -1,10 +1,11 @@
 using System;
 
 public class TowersOfHanoi {
+    static int step =0 ;
     
     public static void move(int n, string source, string destination, string auxiliary) {
         
-        if (n == 1) Console.WriteLine("Move a disk from {0} to {1}", source, destination);
+        if (n == 1) Console.WriteLine("Step {0}: Move a disk from {1} to {2}", source, destination);
         
         else {
             move(n-1, source, auxiliary, destination);
