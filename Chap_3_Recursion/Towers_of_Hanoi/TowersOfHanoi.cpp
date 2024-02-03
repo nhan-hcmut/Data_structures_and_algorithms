@@ -2,9 +2,10 @@
 using namespace std;
 
 void move(int n, string source, string destination, string auxiliary) {
-
+    static int step = 0;
+    
     if (n == 1) {
-        cout << "Move a disk from " << source << " to " << destination << endl;
+        cout << "Step " << ++step << ": Move a disk from " << source << " to " << destination << endl;
     }
     else {
         move(n-1, source, auxiliary, destination);
