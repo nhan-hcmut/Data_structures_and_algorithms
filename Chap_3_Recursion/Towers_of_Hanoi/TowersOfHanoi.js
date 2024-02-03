@@ -1,17 +1,10 @@
-let instruction = "Move a disk from ";
+let step = 0;
 
 function move(n, source, destination, auxiliary) {
     
-    if (n == 1) {
-        
-        instruction += source;
-        instruction += " to ";
-        instruction += destination;
-        
-        console.log(instruction);
-        
-        instruction = "Move a disk from ";
-    }
+    if (n == 1)
+        console.log("Step " + (++step) + ": Move a disk from " + source + " to " + destination);
+    
     else {
         move(n-1, source, auxiliary, destination);
         move(1, source, destination, auxiliary);
