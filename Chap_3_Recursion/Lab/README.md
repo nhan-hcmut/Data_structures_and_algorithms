@@ -22,3 +22,14 @@ For example:
 <br/><br/>
 + Test 2: printArray(10);
 + Result: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+# Problem 3
+## Implement function: int findMax(int* arr, int length);
+
+Requirements: Find the largest element of the array arr using recursion. "length" is the number of elements.
+
+For example:
++ Test:<br/>
+int arr[] = {10, 5, 7, 9, 15, 6, 11, 8, 12, 2};<br/>
+cout << findMax(arr, 10);
++ Result: 15
