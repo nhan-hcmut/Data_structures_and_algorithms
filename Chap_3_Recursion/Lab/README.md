@@ -33,3 +33,15 @@ For example:
 int arr[] = {10, 5, 7, 9, 15, 6, 11, 8, 12, 2};<br/>
 cout << findMax(arr, 10);
 + Result: 15
+
+# Problem 4
+## Implement function: bool isPalindrome(string str);
+
+Requirements: Check if the given NON EMPTY string is palindrome or not using recursion. The given string can be a word or many words and therefore blank spaces must be ignored.
+
+For example:
++ Test 1: cout << isPalindrome("mom");
++ Result: 1
+<br/><br/>
++ Test 2: cout << isPalindrome("do geese see god");
++ Result: 1
