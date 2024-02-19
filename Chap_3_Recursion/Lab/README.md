@@ -54,3 +54,20 @@ Requirements: Find greatest common divisor of two positive integers a and b usin
 For example:
 + Test: cout << findGCD(124, 32);
 + Result: 4
+
+# Problem 6
+## Implement recursive function: void printHailstone(int number);
+
+Rules of Hailstone sequences:
++ If a number is even, divide it by 2.
++ If a number is odd, multiply it by 3 and add 1.
++ The sequence stops when reaching number 1.
+
+For example:
++ Test 1: printHailstone(6);
++ Result: 6 3 10 5 16 8 4 2 1
+<br/><br/>
++ Test 2: printHailstone(7);
++ Result: 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
+
+Notes: There is NO space at the end. Input is a positive integer.
