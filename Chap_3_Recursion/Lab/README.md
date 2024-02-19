@@ -45,3 +45,12 @@ For example:
 <br/><br/>
 + Test 2: cout << isPalindrome("do geese see god");
 + Result: 1
+
+# Problem 5
+## Implement function: int findGCD(int a, int b);
+
+Requirements: Find greatest common divisor of two positive integers a and b using recursion.
+
+For example:
++ Test: cout << findGCD(124, 32);
++ Result: 4
