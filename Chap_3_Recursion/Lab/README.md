@@ -71,3 +71,14 @@ For example:
 + Result: 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
 
 Notes: There is NO space at the end. Input is a positive integer.
+
+# Problem 7
+## Implement recursive function: int myArrayToInt(char* str, int n);
+
+This function takes a string **str** which represents a positive decimal number, **n** is the number of elements in the string as arguments and returns the value of the decimal number.
+
+For example:
++ Test:<br/>
+char str[] = "2020";<br/>
+cout << myArrayToInt("2020", 4);
++ Result: 2020
