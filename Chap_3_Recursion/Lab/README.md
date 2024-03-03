@@ -82,3 +82,12 @@ For example:
 char str[] = "2020";<br/>
 cout << myArrayToInt("2020", 4);
 + Result: 2020
+
+# Problem 8
+## Implement function: int findLCM(int a, int b);
+
+This function finds lowest common multiple of two positive integers a and b using recursion.
+
+For example:
++ Test: cout << findLCM(10, 102);
++ Result: 510
