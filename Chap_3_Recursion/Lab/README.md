@@ -102,3 +102,17 @@ For example:
 char str[] = "Ho Chi Minh City University of Technology";<br/>
 cout << strLen(str);
 + Result: 41
+
+# Problem 10
+## Implement function: string reverseSentence(string s);
+
+This function returns the reversed sentence of string s using recursion.
+
+**Note:**
++ String s consists only of letters (a-z and A-Z) and spaces.
++ There is only one space between two adjacent words.
++ String s does not begin or end with space.
+
+For example:
++ Test: cout << reverseSentence("data structures and algorithms is challenging");
++ Result: challenging is algorithms and structures data
