@@ -91,3 +91,14 @@ This function finds lowest common multiple of two positive integers a and b usin
 For example:
 + Test: cout << findLCM(10, 102);
 + Result: 510
+
+# Problem 9
+## Implement function: int strLen(char* str);
+
+This function find length of the given string using recursion.
+
+For example:
++ Test:<br/>
+char str[] = "Ho Chi Minh City University of Technology";<br/>
+cout << strLen(str);
++ Result: 41
