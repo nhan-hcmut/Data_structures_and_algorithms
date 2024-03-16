@@ -3,8 +3,8 @@
 using namespace std;
 
 bool isPalindrome(string str) {
-    if (str[0] == ' ') return isPalindrome(str.substr(1, str.length()-1)); // If the first character is blank space, remove the first character.
-    if (str[str.length()-1] == ' ') return isPalindrome(str.substr(0, str.length()-1)); // If the last character is blank space, remove the last character.
+    if (str[0] == ' ') return isPalindrome(str.substr(1, str.length()-1)); // If the first character is a blank space, remove the first character.
+    if (str[str.length()-1] == ' ') return isPalindrome(str.substr(0, str.length()-1)); // If the last character is a blank space, remove the last character.
     
     if (str.length() <= 1) return true;
     if (str[0] != str[str.length()-1]) return false;
