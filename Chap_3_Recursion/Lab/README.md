@@ -2,8 +2,8 @@
 ## Implement function: void printPattern(int n);
 Given a positive number, print following pattern using recursion.
 
-Input: n = 16
-Output: 16 11 6 1 -4 1 6 11 16 (NO space at the end).
+**Input:** n = 16<br/>
+**Output:** 16 11 6 1 -4 1 6 11 16 (NO space at the end).
 
 Pattern rule: First, we reduce 5 one by one until reaching a negative number or 0. Then, we add 5 one by one until reaching n.
 
