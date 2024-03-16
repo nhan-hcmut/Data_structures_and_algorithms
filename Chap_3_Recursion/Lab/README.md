@@ -70,7 +70,7 @@ For example:
 + Test 2: printHailstone(7);
 + Result: 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
 
-Notes: There is NO space at the end. Input is a positive integer.
+**Notes:** There is NO space at the end. Input is a positive integer.
 
 # Problem 7
 ## Implement recursive function: int myArrayToInt(char* str, int n);
