@@ -1,5 +1,5 @@
 # Data_structures_and_algorithms
-Data structures and algorithms (DSA) - CO2003 - HCMUT (Ho Chi Minh City University of Technology) - Semester 1 / Academic year 2023->2024 (HK231)
+Data structures and algorithms (DSA) - CO2003 - HCMUT (Ho Chi Minh City University of Technology)
 
 ### 1/ What does this project do?
 Doing some exercises in my computer engineering class.
