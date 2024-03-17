@@ -8,8 +8,7 @@ int strLen(char* str) {
     return 1 + strLen(str+1);
 }
 
-int main()
-{
+int main() {
     char str[] = "Ho Chi Minh City University of Technology";
     
     cout << strLen(str);
