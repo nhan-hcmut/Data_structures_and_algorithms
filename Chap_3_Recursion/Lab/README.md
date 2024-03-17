@@ -26,13 +26,18 @@ For example:
 # Problem 3
 ## Implement function: int findMax(int* arr, int length);
 
-Requirements: Find the largest element of the array arr using recursion. "length" is the number of elements.
+Requirements: Find the largest element of the array **arr** using recursion. **"length"** is the number of elements.
 
 For example:
-+ Test:<br/>
++ Test 1:<br/>
 int arr[] = {10, 5, 7, 9, 15, 6, 11, 8, 12, 2};<br/>
 cout << findMax(arr, 10);
 + Result: 15
+<br/><br/>
++ Test 2:<br/>
+int arr[] = {291,-444,-456,199,465,31,118,-16,103,-23,199,342,291,374,-206,-383,-15,-286,-216,-287,155,310,-345,-444,-254,-7,304,-99,-143,-456,-349,154,-38,-60,166,-40,256,-107,-31,-454,486,270,-458,-367,258,310,-342,-405,-361};<br/>
+cout << findMax(arr, 49);
++ Result: 486
 
 # Problem 4
 ## Implement function: bool isPalindrome(string str);
