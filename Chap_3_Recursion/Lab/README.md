@@ -111,7 +111,7 @@ This function returns the reversed sentence of string s using recursion.
 **Note:**
 + String s consists only of letters (a-z and A-Z) and spaces.
 + There is only one space between two adjacent words.
-+ String s does not begin or end with space.
++ String s does not begin or end with any spaces.
 
 For example:
 + Test: cout << reverseSentence("data structures and algorithms is challenging");
