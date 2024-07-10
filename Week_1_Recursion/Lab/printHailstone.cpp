@@ -17,5 +17,8 @@ int main() {
     printHailstone(7);
     cout << endl;
 
+    printHailstone(32);
+    cout << endl;
+
     return 0;
 }
