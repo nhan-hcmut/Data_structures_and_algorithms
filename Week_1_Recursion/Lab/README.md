@@ -7,15 +7,19 @@ For example:
 + Test 1: cout << findGCD(124, 32);
 + Result: 4
 <br/>
+
 + Test 2: cout << findGCD(138, 184);
 + Result: 46
 <br/>
+
 + Test 3: cout << findGCD(138, 91);
 + Result: 1
 <br/>
+
 + Test 4: cout << findGCD(138, 6);
 + Result: 6
 <br/>
+
 + Test 5: cout << findGCD(307, 2000);
 + Result: 1
 
