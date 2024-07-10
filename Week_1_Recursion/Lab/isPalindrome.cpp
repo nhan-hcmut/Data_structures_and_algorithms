@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstring>
+#include <string>
 using namespace std;
 
 bool isPalindrome(string str) {
@@ -8,7 +8,7 @@ bool isPalindrome(string str) {
     
     if (str[str.length()-1] == ' ') return isPalindrome(str.substr(0, str.length()-1)); // If the last character is a blank space, remove it
     
-    if (str.length() <= 1) return true;
+    if (str.length() < 2) return true;
     
     if (str[0] != str[str.length()-1]) return false;
     
