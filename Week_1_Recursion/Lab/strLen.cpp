@@ -9,9 +9,11 @@ int strLen(char* str) {
 }
 
 int main() {
-    char str[] = "Ho Chi Minh City University of Technology";
-    
-    cout << strLen(str);
+    char str1[] = "Ho Chi Minh City University of Technology";
+    cout << strLen(str1) << endl;
 
+    char str2[] = "Truong DH Bach Khoa";
+    cout << strLen(str2) << endl;
+    
     return 0;
 }
