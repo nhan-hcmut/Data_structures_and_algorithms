@@ -164,7 +164,13 @@ For example:
 This function find length of the given string using recursion.
 
 For example:
-+ Test:<br/>
++ Test 1:<br/>
 char str[] = "Ho Chi Minh City University of Technology";<br/>
 cout << strLen(str);
 + Result: 41
+<br/>
+
++ Test 2:<br/>
+char str[] = "Truong DH Bach Khoa";<br/>
+cout << strLen(str);
++ Result: 19
