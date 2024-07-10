@@ -29,17 +29,26 @@ int arr[] = {291, -444, -456, 199, 465, 31, 118, -16, 103, -23, 199, 342, 291, 3
 cout << findMax(arr, 49);
 + Result: 486
 
-# Implement function: void printPattern(int n);
-Given a positive number, print following pattern using recursion.
+# Implement function: bool isPalindrome(string str);
 
-**Input:** n = 16<br/>
-**Output:** 16 11 6 1 -4 1 6 11 16 (NO space at the end).
-
-Pattern rule: First, we reduce 5 one by one until reaching a negative number or 0. Then, we add 5 one by one until reaching n.
+Requirements: Check if the given NON EMPTY string is palindrome or not using recursion. The given string can be a word or many words and therefore blank spaces must be ignored.
 
 For example:
-+ Test: printPattern(14);
-+ Result: 14 9 4 -1 4 9 14
++ Test 1: cout << isPalindrome("mom");
++ Result: 1
+<br/><br/>
++ Test 2: cout << isPalindrome("do geese see god");
++ Result: 1
+
+# Implement recursive function: int myArrayToInt(char* str, int n);
+
+This function takes a string **str** which represents a positive decimal number, **n** is the number of elements in the string as arguments and returns the value of the decimal number.
+
+For example:
++ Test:<br/>
+char str[] = "2020";<br/>
+cout << myArrayToInt("2020", 4);
++ Result: 2020
 
 # Implement function: void printArray(int n);
 
@@ -51,17 +60,6 @@ For example:
 <br/><br/>
 + Test 2: printArray(10);
 + Result: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-+ 
-# Implement function: bool isPalindrome(string str);
-
-Requirements: Check if the given NON EMPTY string is palindrome or not using recursion. The given string can be a word or many words and therefore blank spaces must be ignored.
-
-For example:
-+ Test 1: cout << isPalindrome("mom");
-+ Result: 1
-<br/><br/>
-+ Test 2: cout << isPalindrome("do geese see god");
-+ Result: 1
 
 # Implement recursive function: void printHailstone(int number);
 
@@ -79,25 +77,17 @@ For example:
 
 **Notes:** There is NO space at the end. Input is a positive integer.
 
-# Implement recursive function: int myArrayToInt(char* str, int n);
+# Implement function: void printPattern(int n);
+Given a positive number, print following pattern using recursion.
 
-This function takes a string **str** which represents a positive decimal number, **n** is the number of elements in the string as arguments and returns the value of the decimal number.
+**Input:** n = 16<br/>
+**Output:** 16 11 6 1 -4 1 6 11 16 (NO space at the end).
 
-For example:
-+ Test:<br/>
-char str[] = "2020";<br/>
-cout << myArrayToInt("2020", 4);
-+ Result: 2020
-
-# Implement function: int strLen(char* str);
-
-This function find length of the given string using recursion.
+Pattern rule: First, we reduce 5 one by one until reaching a negative number or 0. Then, we add 5 one by one until reaching n.
 
 For example:
-+ Test:<br/>
-char str[] = "Ho Chi Minh City University of Technology";<br/>
-cout << strLen(str);
-+ Result: 41
++ Test: printPattern(14);
++ Result: 14 9 4 -1 4 9 14
 
 # Implement function: string reverseSentence(string s);
 
@@ -111,3 +101,13 @@ This function returns the reversed sentence of string s using recursion.
 For example:
 + Test: cout << reverseSentence("data structures and algorithms is challenging");
 + Result: challenging is algorithms and structures data
+
+# Implement function: int strLen(char* str);
+
+This function find length of the given string using recursion.
+
+For example:
++ Test:<br/>
+char str[] = "Ho Chi Minh City University of Technology";<br/>
+cout << strLen(str);
++ Result: 41
