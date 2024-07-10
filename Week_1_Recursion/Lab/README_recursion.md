@@ -93,7 +93,7 @@ For example:
 
 # Implement function: int myArrayToInt(char* str, int n);
 
-This function takes a string **str** which represents a positive decimal number, **n** is the number of elements in the string as arguments and returns the value of the decimal number.
+**Requirements:** This function takes a string **str** which represents a positive decimal number (base 10 number), **n** is the number of elements in the string as arguments and returns the value of the decimal number. For this exercise, libraries iostream, cstring and using namespace std; are used.
 
 For example:
 + Test:<br/>
