@@ -22,8 +22,9 @@ string reverseSentence(string s) {
 }
 
 int main() {
+    cout << reverseSentence("data structure and algorithm is scary") << endl;
 
-    cout << reverseSentence("data structures and algorithms is challenging");
+    cout << reverseSentence("data structures and algorithms is challenging") << endl;
 
     return 0;
 }
