@@ -1,6 +1,6 @@
 # Implement function: int findGCD(int a, int b);
 
-Requirements: Find greatest common divisor of two positive integers a and b using recursion.
+**Requirements:** Find greatest common divisor of two positive integers a and b using recursion.
 
 For example:
 + Test: cout << findGCD(124, 32);
@@ -16,7 +16,7 @@ For example:
 
 # Implement function: int findMax(int* arr, int length);
 
-Requirements: Find the largest element of the array **arr** using recursion. **"length"** is the number of elements.
+**Requirements:** Find the largest element of the array **arr** using recursion. **"length"** is the number of elements.
 
 For example:
 + Test 1:<br/>
@@ -31,7 +31,7 @@ cout << findMax(arr, 49);
 
 # Implement function: bool isPalindrome(string str);
 
-Requirements: Check if the given NON EMPTY string is palindrome or not using recursion. The given string can be a word or many words and therefore blank spaces must be ignored.
+**Requirements:** Check if the given NON EMPTY string is palindrome or not using recursion. The given string can be a word or many words and therefore blank spaces must be ignored.
 
 For example:
 + Test 1: cout << isPalindrome("mom");
@@ -52,7 +52,7 @@ cout << myArrayToInt("2020", 4);
 
 # Implement function: void printArray(int n);
 
-Requirements: print 0, 1, 2, 3, ..., n (n is a positive integer and there is NO space at the end).<br/>
+**Requirements:** print 0, 1, 2, 3, ..., n (n is a positive integer and there is NO space at the end).<br/>
 For this exercise, you can use "#include <iostream>" and "using namespace std;" in your code.
 
 For example:
