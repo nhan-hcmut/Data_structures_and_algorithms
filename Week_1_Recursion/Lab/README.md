@@ -40,7 +40,7 @@ For example:
 + Test 2: cout << isPalindrome("do geese see god");
 + Result: 1
 
-# Implement recursive function: int myArrayToInt(char* str, int n);
+# Implement function: int myArrayToInt(char* str, int n);
 
 This function takes a string **str** which represents a positive decimal number, **n** is the number of elements in the string as arguments and returns the value of the decimal number.
 
@@ -53,7 +53,7 @@ cout << myArrayToInt("2020", 4);
 # Implement function: void printArray(int n);
 
 **Requirements:** print 0, 1, 2, 3, ..., n (n is a positive integer and there is NO space at the end).<br/>
-For this exercise, you can use "#include <iostream>" and "using namespace std;" in your code.
+For this exercise, you can use **#include <iostream>** and **using namespace std;** in your code.
 
 For example:
 + Test 1: printArray(5);
@@ -62,7 +62,7 @@ For example:
 + Test 2: printArray(10);
 + Result: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 
-# Implement recursive function: void printHailstone(int number);
+# Implement function: void printHailstone(int number);
 
 Rules of Hailstone sequences:
 + If a number is even, divide it by 2.
