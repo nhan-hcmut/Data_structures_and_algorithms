@@ -52,7 +52,8 @@ cout << myArrayToInt("2020", 4);
 
 # Implement function: void printArray(int n);
 
-Output: 0, 1, 2, 3, ..., n (n is a positive integer and there is NO space at the end).
+Requirements: print 0, 1, 2, 3, ..., n (n is a positive integer and there is NO space at the end).<br/>
+For this exercise, you can use "#include <iostream>" and "using namespace std;" in your code.
 
 For example:
 + Test 1: printArray(5);
