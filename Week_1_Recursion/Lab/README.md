@@ -1,3 +1,34 @@
+# Implement function: string expand(string s);
+
+**Notes:** String s contains lowercase letters, digits, "(" and ")", satisfying the following rules:
+
++ Two digits cannot be adjacent.
+
++ Two "(" cannot be adjacent.
+
++ One "(" and one ")" cannot be adjacent.
+
++ After any digit, there must be "(".
+
++ The quantities of "(" and ")" are equal.
+
+**Requirements:** Change string s until new string t created, t contains only lowercase letters. These are changing rules:
+
++ Sub-strings with form "n(p)", can change to "pp...p" (n times p), where n is a digit and p is a string.
+
++ If p still contains "(", ")" or digits, continue to implement the above changing method.
+
++ Libraries iostream, string and using namespace std; have been used. You can add other functions for your answer, but you are not allowed to add other libraries.
+
+For example:
+
++ Test 1: cout << expand("2(ab3(cde)x)") << "\n";
++ Result: abcdecdecdexabcdecdecdex
+<br/>
+
++ Test 2: cout << expand("2(x0(y))3(z)") << "\n";
++ Result: xxzzz
+
 # Implement function: int findGCD(int a, int b);
 
 **Requirements:** Find greatest common divisor of two positive integers a and b using recursion.
@@ -36,11 +67,13 @@ For example:
 **Requirements:** Find the largest element of the array **arr** using recursion. **"length"** is the number of elements.
 
 For example:
+
 + Test 1:<br/>
 int arr[] = {10, 5, 7, 9, 15, 6, 11, 8, 12, 2};<br/>
 cout << findMax(arr, 10);
 + Result: 15
 <br/><br/>
+
 + Test 2:<br/>
 int arr[] = {291, -444, -456, 199, 465, 31, 118, -16, 103, -23, 199, 342, 291, 374, -206, -383, -15, -286, -216, -287, 155, 310, -345, -444, -254, -7, 304, -99, -143, -456, -349, 154, -38, -60, 166, -40, 256, -107, -31, -454, 486, 270, -458, -367, 258, 310, -342, -405, -361};<br/>
 cout << findMax(arr, 49);
@@ -54,6 +87,7 @@ For example:
 + Test 1: cout << isPalindrome("mom");
 + Result: 1
 <br/><br/>
+
 + Test 2: cout << isPalindrome("do geese see god");
 + Result: 1
 
@@ -75,6 +109,7 @@ For example:
 + Test 1: printArray(5);
 + Result: 0, 1, 2, 3, 4, 5
 <br/><br/>
+
 + Test 2: printArray(10);
 + Result: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 
@@ -89,6 +124,7 @@ For example:
 + Test 1: printHailstone(6);
 + Result: 6 3 10 5 16 8 4 2 1
 <br/><br/>
+
 + Test 2: printHailstone(7);
 + Result: 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
 
