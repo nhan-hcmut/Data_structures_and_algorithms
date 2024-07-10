@@ -156,7 +156,11 @@ This function returns the reversed sentence of string s using recursion.
 + String s does not begin or end with any spaces.
 
 For example:
-+ Test: cout << reverseSentence("data structures and algorithms is challenging");
++ Test 1: cout << reverseSentence("data structure and algorithm is scary");
++ Result: scary is algorithm and structure data
+<br/>
+
++ Test 2: cout << reverseSentence("data structures and algorithms is challenging");
 + Result: challenging is algorithms and structures data
 
 # Implement function: int strLen(char* str);
