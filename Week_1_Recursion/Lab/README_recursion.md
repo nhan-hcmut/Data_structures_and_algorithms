@@ -154,6 +154,7 @@ This function returns the reversed sentence of string s using recursion.
 + String s consists only of letters (a-z and A-Z) and spaces.
 + There is only one space between two adjacent words.
 + String s does not begin or end with any spaces.
++ The iostream library and namespace std have been used.
 
 For example:
 + Test 1: cout << reverseSentence("data structure and algorithm is scary");
