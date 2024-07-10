@@ -3,8 +3,26 @@
 **Requirements:** Find greatest common divisor of two positive integers a and b using recursion.
 
 For example:
-+ Test: cout << findGCD(124, 32);
+
++ Test 1: cout << findGCD(124, 32);
 + Result: 4
+<br/><br/>
+
++ Test 2: cout << findGCD(138, 184);
++ Result: 46
+<br/><br/>
+
++ Test 3: cout << findGCD(138, 91);
++ Result: 1
+<br/><br/>
+
++ Test 4: cout << findGCD(138, 6);
++ Result: 6
+<br/><br/>
+
++ Test 5: cout << findGCD(307, 2000);
++ Result: 1
+<br/><br/>
 
 # Implement function: int findLCM(int a, int b);
 
