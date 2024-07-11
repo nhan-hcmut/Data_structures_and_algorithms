@@ -1,3 +1,51 @@
+# Book.cpp
+
+Hoang is a K19 student studying at Bach Khoa University. He plans to write a book management software for the library. In the class design, Hoang has designed the class Book as follows:
+```cpp
+class Book
+{
+private:
+    char* title; 
+    char* authors; 
+    int publishingYear; 
+public: 
+   // some method
+};
+```
+Your task in this exercise is to implement functions marked with /*  * STUDENT ANSWER   */.
+
+**Note:** We have #include \<bits/stdc++.h\> and using namespace std;
+
+For example:
++ Test 1:
+```cpp
+Book book1("Giai tich 1","Nguyen Dinh Huy",2000);
+book1.printBook();
+```
++ Result:
+<br/>
+Giai tich 1
+<br/>
+Nguyen Dinh Huy
+<br/>
+2000
+<br/><br/>
+
++ Test 2:
+```cpp
+Book book1("Giai tich 1","Nguyen Dinh Huy",2000);
+Book book2 = book1;
+book2.printBook();
+```
++ Result:
+<br/>
+Giai tich 1
+<br/>
+Nguyen Dinh Huy
+<br/>
+2000
+
+---
 # Character.cpp
 
 In a game, we have class Character to store characters' data.
