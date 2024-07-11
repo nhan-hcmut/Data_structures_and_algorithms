@@ -180,3 +180,51 @@ Point B(1, 1);
 cout << pow(A.distanceToPoint(B), 2);
 ```
 + Result: 5
+
+---
+# Toy.cpp
+
+1. In the toy store, all toy has a price. Car toy has a price and color, Puzzle toy has a price and size. We have to implement class CarToy and class PuzzleToy which inherit from class Toy.
+2. Class ToyBox has a  pointer array to store a list of toys (up to 5 items including car and puzzle) and number of items in the box.
+
+Your task is to implement two function addItem(…) in class ToyBox. If successfully added, the function returns the current number of toys in the box. If the box is full, return -1.
+
+**For example:**
+
++ Test 1:
+```cpp
+CarToy car(20000,red);
+PuzzleToy puzzle(30000,small);
+car.printType();
+puzzle.printType();
+```
++ Result:
+<br/>
+This is a car toy
+<br/>
+This is a puzzle toy
+<br/><br/>
+
++ Test 2:
+```cpp
+CarToy car(20000,red);
+PuzzleToy puzzle(30000,small);
+
+ToyBox box;
+box.addItem(car);
+box.addItem(puzzle);
+box.printBox();
+```
++ Result:
+<br/>
+This is a car toy
+<br/>
+This is a puzzle toy
+<br/><br/>
+
++ Test 3:
+```cpp
+Toy* toy = new CarToy(30000,red);
+toy->printType();
+```
++ Result: This is a car toy
