@@ -313,3 +313,90 @@ cout << longestSublist(words);
 <br/>
 
 ---
+# removeAt_removeItem_clear
+
+Implement methods removeAt, removeItem and clear in template class ArrayList representing the array list with type T with the initialized frame. The description of each method is given below.
+
+```cpp
+template <class T>
+class ArrayList {
+protected:
+    T* data;        // dynamic array to store the list's items
+    int capacity;   // size of the dynamic array
+    int count;      // number of items stored in the array
+
+public:
+    ArrayList(){capacity = 5; count = 0; data = new T[5];}
+   ~ArrayList(){ delete[] data; }    
+    void    add(T e);
+    void    add(int index, T e);
+    int     size();
+    bool    empty();
+    void    clear();
+    T       get(int index);
+    void    set(int index, T e);
+    int     indexOf(T item);
+    bool    contains(T item);
+    T       removeAt(int index);
+    bool    removeItem(T item);
+    void    ensureCapacity(int index);
+};
+```
+
+**For example:**
+
++ Test 1:
+```cpp
+ArrayList<int> arr;
+
+for (int i = 0; i < 10; ++i) {
+    arr.add(i);
+}
+arr.removeAt(0);
+
+cout << arr.toString() << '\n';
+cout << arr.size();
+```
++ Result 1:
+<br/>
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+<br/>
+9
+<br/><br/>
+
++ Test 2:
+```cpp
+ArrayList<int> arr;
+
+for (int i = 0; i < 10; ++i) {
+    arr.add(i);
+}
+arr.removeAt(9);
+
+cout << arr.toString() << '\n';
+cout << arr.size();
+```
++ Result 2:
+<br/>
+[0, 1, 2, 3, 4, 5, 6, 7, 8]
+<br/>
+9
+<br/><br/>
+
++ Test 3:
+```cpp
+ArrayList<int> arr;
+
+for (int i = 0; i < 10; ++i) {
+    arr.add(i);
+}
+arr.removeAt(5);
+
+cout << arr.toString() << '\n';
+cout << arr.size();
+```
++ Result 3:
+<br/>
+[0, 1, 2, 3, 4, 6, 7, 8, 9]
+<br/>
+9
