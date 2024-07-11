@@ -4,7 +4,7 @@ using namespace std;
 
 int buyCar(int* nums, int length, int k) {
     int sum = 0, count = 0;
-    sort(nums, nums + length);
+    sort(nums, nums + length); // <algorithm> library
     for (short i = 0; i < length; i++) {
         
         if ((sum + nums[i]) > k) return count;
