@@ -111,6 +111,69 @@ cout << consecutiveOnes(nums);
 + Result 9: 0
 
 ---
+# ensureCapacity_add_size
+
+Implement methods ensureCapacity, add, and size in template class ArrayList representing the array list with type T with the initialized frame. The description of each method is given below.
+
+```cpp
+template<class T>
+class ArrayList {
+protected:
+    T* data;        // dynamic array to store the list's items
+    int capacity;   // size of the dynamic array
+    int count;      // number of items stored in the array
+
+public:
+    ArrayList() {capacity = 5; count = 0; data = new T[5];}
+    ~ArrayList() { delete[] data; }
+    void    add(T e);
+    void    add(int index, T e);
+    int     size();
+    void    ensureCapacity(int index);
+};
+```
+
+**For example:**
+
++ Test 1:
+```cpp
+ArrayList<int> arr;
+int size = 10;
+
+for(int index = 0; index < size; index++){
+    arr.add(index);
+}
+
+cout << arr.toString() << '\n';
+cout << arr.size();
+```
++ Result 1:
+<br/>
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+<br/>
+10
+<br/><br/>
+
++ Test 2:
+```cpp
+ArrayList<int> arr;
+int size = 20;
+
+for(int index = 0; index < size; index++){
+    arr.add(0, index);
+}
+
+cout << arr.toString() << '\n';
+cout << arr.size() << '\n';
+arr.ensureCapacity(5);
+```
++ Result 2:
+<br/>
+[19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+<br/>
+20
+
+---
 # equalSumIndex
 
 Given an array of integers.
