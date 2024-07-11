@@ -110,23 +110,31 @@ For example:
 
 For example:
 
-+ Test 1: cout << mininumBracketAdd(")))((");
-+ Result: 5
-<br/><br/>
-
-+ Test 2: cout << mininumBracketAdd("))()))()()");
-+ Result: 4
-<br/><br/>
-
-+ Test 3: cout << mininumBracketAdd("");
++ Test 1: cout << mininumBracketAdd("()(())");
 + Result: 0
 <br/><br/>
 
-+ Test 4: cout << mininumBracketAdd(")()))()))())())))))(");
++ Test 2: cout << mininumBracketAdd("))()");
++ Result: 2
+<br/><br/>
+
++ Test 3: cout << mininumBracketAdd(")))((");
++ Result: 5
+<br/><br/>
+
++ Test 4: cout << mininumBracketAdd("))()))()()");
++ Result: 4
+<br/><br/>
+
++ Test 5: cout << mininumBracketAdd("");
++ Result: 0
+<br/><br/>
+
++ Test 6: cout << mininumBracketAdd(")()))()))())())))))(");
 + Result: 12
 <br/><br/>
 
-+ Test 5: cout << mininumBracketAdd(")())(((())()())()())))()()))(()((((()(()()()))()((())((()))))))()(((()(((())(((()()(())(())))))(()))");
++ Test 7: cout << mininumBracketAdd(")())(((())()())()())))()()))(()((((()(()()()))()((())((()))))))()(((()(((())(((()()(())(())))))(()))");
 + Result: 10
 
 ---
