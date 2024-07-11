@@ -4,8 +4,8 @@ using namespace std;
 
 int equalSumIndex(vector<int>& nums) {
     // STUDENT ANSWER
+    if (nums.empty()) return -1;
     int size = nums.size();
-    if (size == 0) return -1;
     if (size == 1) return 0;
     int sum = 0; // sum of all numbers
     for (int i = 0; i < size; i++) sum += nums.at(i);
