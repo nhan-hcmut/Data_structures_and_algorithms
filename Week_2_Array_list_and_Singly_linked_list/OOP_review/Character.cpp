@@ -33,9 +33,7 @@ class Character {
 
 Character::Character() {
     // STUDENT ANSWER
-    this->x = 0;
-    this->y = 0;
-    this->hp = 0;
+    this->x = this->y = this->hp = 0;
 }
 
 Character::Character(int hp, int x, int y) {
