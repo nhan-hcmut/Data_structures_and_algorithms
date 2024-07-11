@@ -83,9 +83,40 @@ int Character::getManhattanDistTo(Character* other) {
 }
 
 int main() {
-    Character ch1(100, 3, 6);
     
+    // test 1
+    Character ch1(100, 3, 6);
     cout << ch1.getHp() << " " << ch1.getX() << " " << ch1.getY(); // Result: 100 3 6
 
+    /* test 2
+    Character ch2;
+    cout << ch2.getHp() << " " << ch2.getX() << " " << ch2.getY(); // Result: 0 0 0
+    */
+
+    /* test 3
+    Character* ch31 = new Character(100, 1, 2);
+    Character* ch32 = new Character(100, -3, 4);
+    cout << ch31->getManhattanDistTo(ch32);
+    delete ch31;
+    delete ch32; // Result: 6
+    */
+    
+    /* test 4
+    Character ch4;
+    ch4.setX(4);
+    cout << ch4.getX(); // Result: 4
+    */
+
+    /* test 5
+    Character ch5;
+    ch5.setY(5);
+    cout << ch5.getY(); // Result: 5
+    */
+
+    /* test 6
+    Character ch6;
+    ch6.setHp(6);
+    cout << ch6.getHp(); // Result: 6
+    */ 
     return 0;
 }
