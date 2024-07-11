@@ -1,4 +1,4 @@
-# Book.cpp
+# Book
 
 Hoang is a K19 student studying at Bach Khoa University. He plans to write a book management software for the library. In the class design, Hoang has designed the class Book as follows:
 ```cpp
@@ -12,7 +12,7 @@ public:
    // some method
 };
 ```
-Your task in this exercise is to implement functions marked with /*  * STUDENT ANSWER   */.
+Your task in this exercise is to implement functions marked with /* STUDENT ANSWER */.
 
 **Note:** We have #include \<bits/stdc++.h\> and using namespace std;
 
@@ -46,7 +46,7 @@ Nguyen Dinh Huy
 2000
 
 ---
-# Character.cpp
+# Character
 
 In a game, we have class Character to store characters' data.
 The class Character is declared as below:
@@ -138,7 +138,7 @@ cout << ch6.getHp();
 + Result: 6
 
 ---
-# Circle.cpp
+# Circle
 
 In the coordinate plane, a circle is defined by center and radius.
 
@@ -155,7 +155,7 @@ A.printCircle();
 + Result: Center: {0.00, 0.00} and Radius 0.00
 
 ---
-# Point.cpp
+# Point
 
 We have class Point to store a point in the coordinate plane with its x-y coordinate.
 
@@ -182,7 +182,7 @@ cout << pow(A.distanceToPoint(B), 2);
 + Result: 5
 
 ---
-# Toy.cpp
+# Toy
 
 1. In the toy store, all toy has a price. Car toy has a price and color, Puzzle toy has a price and size. We have to implement class CarToy and class PuzzleToy which inherit from class Toy.
 2. Class ToyBox has a  pointer array to store a list of toys (up to 5 items including car and puzzle) and number of items in the box.
