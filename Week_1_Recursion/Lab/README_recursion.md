@@ -100,6 +100,36 @@ For example:
 + Result: 1
 
 ---
+# Implement function: int mininumBracketAdd(string s);
+
+**Requirements:** This function returns the minimum number of brackets to be inserted to s so that the brackets are balanced.
+
+**Note:**
++ The \<iostream\> library and "namespace std" are used. No other libraries are allowed.
++ You can write helper functions.
+
+For example:
+
++ Test 1: cout << mininumBracketAdd(")))((");
++ Result: 5
+<br/><br/>
+
++ Test 2: cout << mininumBracketAdd("))()))()()");
++ Result: 4
+<br/><br/>
+
++ Test 3: cout << mininumBracketAdd("");
++ Result: 0
+<br/><br/>
+
++ Test 4: cout << mininumBracketAdd(")()))()))())())))))(");
++ Result: 12
+<br/><br/>
+
++ Test 5: cout << mininumBracketAdd(")())(((())()())()())))()()))(()((((()(()()()))()((())((()))))))()(((()(((())(((()()(())(())))))(()))");
++ Result: 10
+
+---
 # Implement function: int myArrayToInt(char* str, int n);
 
 **Requirements:** This function takes a string **str** which represents a positive decimal number (base 10 number), **n** is the number of elements in the string as arguments and returns the value of the decimal number. #include \<iostream\>, #include \<cstring\> and "using namespace std;" are used.
