@@ -4,8 +4,8 @@ using namespace std;
 
 bool consecutiveOnes(vector<int>& nums) {
     // STUDENT ANSWER
+    if (nums.empty()) return true;
     int size = nums.size(), first = -1, last = size;
-    if (size == 0) return true;
     if (size == 1) {
         if (nums[0] == 1) return true;
         return false;
