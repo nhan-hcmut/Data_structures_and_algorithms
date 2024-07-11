@@ -36,12 +36,58 @@ Your task is to define constructors and methods of the class.
 **Note:** In this task, \<iostream\> library has been included and namespace std is used. No other libraries are allowed.
 
 **For example:**
-+ Test:
++ Test 1:
 ```cpp
 Character ch1(100, 3, 6);
 cout << ch1.getHp() << " " << ch1.getX() << " " << ch1.getY();
 ```
 + Result: 100 3 6
+<br/>
+
++ Test 2:
+```cpp
+Character ch2;
+cout << ch2.getHp() << " " << ch2.getX() << " " << ch2.getY();
+```
++ Result: 0 0 0
+<br/>
+
++ Test 3:
+```cpp
+Character* ch31 = new Character(100, 1, 2);
+Character* ch32 = new Character(100, -3, 4);
+cout << ch31->getManhattanDistTo(ch32);
+delete ch31;
+delete ch32;
+```
++ Result: 6
+<br/>
+
++ Test 4:
+```cpp
+Character ch4;
+ch4.setX(4);
+cout << ch4.getX();
+```
++ Result: 4
+<br/>
+
++ Test 5:
+```cpp
+Character ch5;
+ch5.setY(5);
+cout << ch5.getY();
+```
++ Result: 5
+<br/>
+
++ Test 6:
+```cpp
+Character ch6;
+ch6.setHp(6);
+cout << ch6.getHp();
+```
++ Result: 6
 
 ---
 # Circle.cpp
