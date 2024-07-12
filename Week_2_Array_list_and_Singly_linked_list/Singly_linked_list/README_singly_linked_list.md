@@ -803,3 +803,98 @@ newhead->clear();
 <br/>
 <br/>
 [174, 51, 151, 158, 197, 27, 132, 185, 194, 112, 174, 29, 130, 185, 97, 164, 183, 92, 86, 194, 121, 191, 36, 12, 80, 71, 147, 192, 162, 185, 138, 69, 56, 103, 42, 123, 191, 69, 131, 45, 156, 61, 38, 62, 88, 39, 172, 122, 13, 108, 93, 127, 160, 148, 180, 11, 81, 71, 66, 150, 0, 97, 17, 44, 105, 194, 51, 68, 25, 124, 51, 156, 82, 173, 83, 16, 37, 143, 157, 8, 158, 38, 55, 18, 45, 139, 177, 152, 179, 46, 90, 67, 114, 56, 171, 15, 40, 154, 50, 104]
+
+---
+# rotateLinkedList
+
+Class LLNode representing a node of singly linked lists is declared as below:
+```cpp
+class LLNode {
+public:
+    int val;
+    LLNode* next;
+    LLNode(); // Constructor: val = 0, next = nullptr
+    LLNode(int val, LLNode* next); // Constructor with customized data
+};
+```
+Given a singly linked list head node and a integer k.
+Your task is to implement a function with following prototype:
+```cpp
+LLNode* rotateLinkedList(LLNode* head, int k);
+```
+The function returns head node of the rotated singly linked list obtained after rotate the linked list to the right by k places.
+
+**Note:**
++ The \<iostream\> library has been used and namespace std is used. No other libraries are allowed.
++ The constructors and methods of class LLNode have been defined fully so you do not need to redefine them.
++ You can write helper functions.
+
+**For example:**
+
++ Test 1:
+```cpp
+int arr[] = {2, 4, 6, 6, 3};
+int k = 3;
+LLNode* head = LLNode::createWithIterators(arr, arr + sizeof(arr) / sizeof(int));
+LLNode::printList(head);
+cout << "\n";
+LLNode* newhead = rotateLinkedList(head, k);
+LLNode::printList(newhead);
+```
++ Result 1:
+
+[2, 4, 6, 6, 3]
+<br/>
+[6, 6, 3, 2, 4]
+<br/>
+
++ Test 2:
+```cpp
+int arr[] = {};
+int k = 2;
+LLNode* head = LLNode::createWithIterators(arr, arr + sizeof(arr) / sizeof(int));
+LLNode::printList(head);
+cout << "\n";
+LLNode* newhead = rotateLinkedList(head, k);
+LLNode::printList(newhead);
+```
++ Result 2:
+
+[]
+<br/>
+[]
+<br/>
+
++ Test 3:
+```cpp
+int arr[] = {0, 4, 2, 5, 1, 0, 6, 4, 8, 6};
+int k = 11;
+LLNode* head = LLNode::createWithIterators(arr, arr + sizeof(arr) / sizeof(int));
+LLNode::printList(head);
+cout << "\n";
+LLNode* newhead = rotateLinkedList(head, k);
+LLNode::printList(newhead);
+```
++ Result 3:
+
+[0, 4, 2, 5, 1, 0, 6, 4, 8, 6]
+<br/>
+[6, 0, 4, 2, 5, 1, 0, 6, 4, 8]
+<br/>
+
++ Test 4:
+```cpp
+int arr[] = {6, 1, 3, 2, 6, 0, 0, 0, 3, 3, 9, 8, 5, 6, 0, 7, 7, 8, 5, 7, 7, 9, 6, 3, 3, 0, 0, 8, 0, 0, 4, 9, 7, 1, 7, 2, 7, 5, 4, 4, 7, 5, 9, 2, 4, 5, 7, 9, 7, 9, 7, 2, 0, 6, 7, 6, 5, 1, 9, 7, 1, 2, 7, 8, 7, 5, 4, 7, 6, 9, 0, 2, 7, 0, 5, 5, 6, 8, 3, 1, 9, 3, 0, 1, 4, 6, 6, 9, 2, 2, 0, 6, 7, 4, 4, 6, 0, 7, 3, 5, 2, 9, 1, 0, 9};
+int k = 35;
+LLNode* head = LLNode::createWithIterators(arr, arr + sizeof(arr) / sizeof(int));
+LLNode::printList(head);
+cout << "\n";
+LLNode* newhead = rotateLinkedList(head, k);
+LLNode::printList(newhead);
+```
++ Result 4:
+
+[6, 1, 3, 2, 6, 0, 0, 0, 3, 3, 9, 8, 5, 6, 0, 7, 7, 8, 5, 7, 7, 9, 6, 3, 3, 0, 0, 8, 0, 0, 4, 9, 7, 1, 7, 2, 7, 5, 4, 4, 7, 5, 9, 2, 4, 5, 7, 9, 7, 9, 7, 2, 0, 6, 7, 6, 5, 1, 9, 7, 1, 2, 7, 8, 7, 5, 4, 7, 6, 9, 0, 2, 7, 0, 5, 5, 6, 8, 3, 1, 9, 3, 0, 1, 4, 6, 6, 9, 2, 2, 0, 6, 7, 4, 4, 6, 0, 7, 3, 5, 2, 9, 1, 0, 9]
+<br/>
+<br/>
+[0, 2, 7, 0, 5, 5, 6, 8, 3, 1, 9, 3, 0, 1, 4, 6, 6, 9, 2, 2, 0, 6, 7, 4, 4, 6, 0, 7, 3, 5, 2, 9, 1, 0, 9, 6, 1, 3, 2, 6, 0, 0, 0, 3, 3, 9, 8, 5, 6, 0, 7, 7, 8, 5, 7, 7, 9, 6, 3, 3, 0, 0, 8, 0, 0, 4, 9, 7, 1, 7, 2, 7, 5, 4, 4, 7, 5, 9, 2, 4, 5, 7, 9, 7, 9, 7, 2, 0, 6, 7, 6, 5, 1, 9, 7, 1, 2, 7, 8, 7, 5, 4, 7, 6, 9]
