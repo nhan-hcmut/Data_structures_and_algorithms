@@ -28,6 +28,7 @@ class LinkedList {
         };
         LinkedList(): head(nullptr), tail(nullptr), size(0) {};
 	void partition(int k);
+
     string toString() const {
         stringstream ss;
         ss << "[";
