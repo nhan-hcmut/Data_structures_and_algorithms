@@ -26,15 +26,11 @@ int main() {
     // test 1
     int arr[] = {13, 88, 60, 7, 192};
     LLNode* head = LLNode::createWithIterators(arr, arr + sizeof(arr) / sizeof(int));
-    LLNode::printList(head);
+    LLNode::printList(head); // result: [13, 88, 60, 7, 192]
     cout << "\n";
     LLNode* newhead = reverseLinkedList(head);
-    LLNode::printList(newhead);
+    LLNode::printList(newhead); // result: [192, 7, 60, 88, 13]
     newhead->clear();
-    /* result
-    [13, 88, 60, 7, 192]
-    [192, 7, 60, 88, 13]
-    */
 
     /* test 2
     int arr[] = {};
