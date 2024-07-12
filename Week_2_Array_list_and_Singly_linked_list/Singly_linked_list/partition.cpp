@@ -28,6 +28,7 @@ class LinkedList {
         };
         LinkedList(): head(nullptr), tail(nullptr), size(0) {};
 	void partition(int k);
+    
     string toString() const {
         stringstream ss;
         ss << "[";
@@ -56,30 +57,21 @@ void LinkedList::partition(int k) {
     Node* current = head;
     while (current) {
         if (current->value < k) {
-            if (!group1_head) {
-                group1_head = current;
-                group1_tail = current;
-            }
+            if (!group1_head) group1_head = group1_tail = current;
             else {
                 group1_tail->next = current;
                 group1_tail = current;
             }
         }
         else if (current->value == k) {
-            if (!group2_head) {
-                group2_head = current;
-                group2_tail = current;
-            }
+            if (!group2_head) group2_head = group2_tail = current;
             else {
                 group2_tail->next = current;
                 group2_tail = current;
             }
         }
         else {
-            if (!group3_head) {
-                group3_head = current;
-                group3_tail = current;
-            }
+            if (!group3_head) group3_head = group3_tail = current;
             else {
                 group3_tail->next = current;
                 group3_tail = current;
