@@ -12,11 +12,21 @@ protected:
     Node* tail;
     int count;
 public:
-    SLinkedList();
-    ~SLinkedList();
+    SLinkedList() : head(head), tail(tail), count(0) {}
+    ~SLinkedList() {
+        Node* temp = nullptr;
+        while(this->head) {
+            temp = this->head;
+            this->head = this->head->next;
+            delete temp;
+            this->count--;
+        }
+        this->tail = nullptr;
+    }
     void    add(const T& e);
     void    add(int index, const T& e);
     int     size();
+    string toString() const;
 public:
     class Node {
     private:
