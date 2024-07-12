@@ -24,9 +24,11 @@ class LLNode {
         this->val = val;
         this->next = next;
     }
+    // some more functions
     static LLNode* createWithIterators(int*, int*);
     static void printList(LLNode*);
     void clear();
+    // End some more functions
 };
 
 LLNode* addLinkedList(LLNode* l0, LLNode* l1) {
@@ -67,12 +69,11 @@ LLNode* addLinkedList(LLNode* l0, LLNode* l1) {
     return sum;
 }
 
-LLNode* LLNode::createWithIterators(int* start, int* end) {
-    LLNode *head = nullptr, *temp = nullptr;
-    return head;
-}
+// some more functions
+LLNode* LLNode::createWithIterators(int* start, int* end) {}
 void LLNode::printList(LLNode* head) {}
 void LLNode::clear() {}
+// End some more functions
 
 int main() {
     int arr1[] = {2, 9};
