@@ -92,18 +92,21 @@ int SLinkedList<T>::size() {
 template<class T>
 string SLinkedList<T>::toString() const {
     stringstream ss;
-    ss << "[";
-    ss << this->head->data;
-    Node* temp = this->head->next;
-    while (temp) {
-        ss << ",";
-        ss << temp->data;
-        temp = temp->next;
-    }
-    ss << "]\n";
-    string str;
-    ss >> str;
-    return str;
+        ss << "[";
+        Node* temp = nullptr;
+        if (this->head) {
+            ss << this->head->data;
+            temp = this->head->next;
+        }
+        while (temp) {
+            ss << ",";
+            ss << temp->data;
+            temp = temp->next;
+        }
+        ss << "]\n";
+        string str;
+        ss >> str;
+        return str;
 }
 
 int main() {
