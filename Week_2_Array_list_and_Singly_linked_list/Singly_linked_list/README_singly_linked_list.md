@@ -14,8 +14,8 @@ protected:
 public:
     SLinkedList();
     ~SLinkedList();
-    void    add(T e);
-    void    add(int index, T e);
+    void    add(const T& e);
+    void    add(int index, const T& e);
     int     size();
 public:
     class Node {
