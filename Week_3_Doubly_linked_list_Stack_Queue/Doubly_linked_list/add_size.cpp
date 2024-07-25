@@ -62,6 +62,7 @@ template<class T>
 void DLinkedList<T>::add(int index, const T& e) {
     /* Insert an element into the list at given index. */
     if (index < 0 || this->count < index) throw std::out_of_range("Index is out of range!\n");
+    
     Node* pNew = new Node(e);
     if (this->count == 0) {
         this->head = this->tail = pNew;
@@ -76,7 +77,7 @@ void DLinkedList<T>::add(int index, const T& e) {
         this->tail->next = pNew;
         this->tail = pNew;
     }
-    else if (index <= (this->count - 1) / 2) {
+    else if (index < this->count / 2) {
         Node* cur = this->head;
         for (int i = 0; i < index; i++) cur = cur->next;
         Node* pre = cur->previous;
