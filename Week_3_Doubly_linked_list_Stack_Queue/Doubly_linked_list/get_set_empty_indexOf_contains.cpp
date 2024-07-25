@@ -50,8 +50,9 @@ template<class T>
 T DLinkedList<T>::get(int index) {
     /* Give the data of the element at given index in the list. */
     if (index < 0 || this->count <= index) throw std::out_of_range("Index is out of range!\n");
+    
     Node* temp;
-    if (index <= (this->count-1) / 2) {
+    if (index < this->count / 2) {
         temp = this->head;
         for (int i = 0; i < index; i++) temp = temp->next;
     }
@@ -66,8 +67,9 @@ template <class T>
 void DLinkedList<T>::set(int index, const T& e) {
     /* Assign new value for element at given index in the list */
     if (index < 0 || this->count <= index) throw std::out_of_range("Index is out of range!\n");
+    
     Node* temp;
-    if (index <= (this->count-1)/2) {
+    if (index < this->count / 2) {
         temp = this->head;
         for (int i = 0; i < index; i++) temp = temp->next;
     }
