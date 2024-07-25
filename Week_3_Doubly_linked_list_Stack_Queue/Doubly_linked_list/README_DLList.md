@@ -456,3 +456,111 @@ cout << list.toString();
 ```
 + Result: [5,6,3,67,332,43,1,0,9]
 ---
+# reverse
+
+Given the head of a doubly linked list, two positive integer a and b where a <= b. Reverse the nodes of the list from position a to position b and return the reversed list
+
+**Note:** the position of the first node is 1. It is guaranteed that a and b are valid positions. You **MUST NOT** change the val attribute in each node.
+```cpp
+struct ListNode {
+    int val;
+    ListNode *left;
+    ListNode *right;
+    ListNode(int x = 0, ListNode *l = nullptr, ListNode* r = nullptr) : val(x), left(l), right(r) {}
+};
+```
+**Constraint:**
+<br/>
+1 <= list.length <= 10^5
+<br/>
+0 <= node.val <= 5000
+<br/>
+1 <= left <= right <= list.length
+
+**Example 1:**
+<br/>
+Input: list = {3, 4, 5, 6, 7} , a = 2, b = 4
+<br/>
+Output: 3 6 5 4 7
+
+**Example 2:**
+<br/>
+Input: list = {8, 9, 10}, a = 1, b = 3
+<br/>
+Output: 10 9 8
+
+**For example:**
+
++ Test 1:
+```cpp
+int size;
+cin >> size; // Input: 5
+int* list = new int[size];
+for(int i = 0; i < size; i++) {
+    cin >> list[i]; // Input: 3 4 5 6 7
+}
+int a, b;
+cin >> a >> b; // Input: 2 4
+unordered_map<ListNode*, int> nodeValue;
+ListNode* head = init(list, size, nodeValue);
+ListNode* reversed = reverse(head, a, b);
+try {
+    printList(reversed, nodeValue);
+}
+catch(char const* err) {
+    cout << err << '\n';
+}
+freeMem(head);
+delete[] list;
+```
++ Result 2: 3 6 5 4 7
+<br/><br/>
+
++ Test 2:
+```cpp
+int size;
+cin >> size; // input: 3
+int* list = new int[size];
+for(int i = 0; i < size; i++) {
+    cin >> list[i]; // input: 8 9 10
+}
+int a, b;
+cin >> a >> b; // input: 1 3
+unordered_map<ListNode*, int> nodeValue;
+ListNode* head = init(list, size, nodeValue);
+ListNode* reversed = reverse(head, a, b);
+try {
+    printList(reversed, nodeValue);
+}
+catch(char const* err) {
+    cout << err << '\n';
+}
+freeMem(head);
+delete[] list;
+```
++ Result 2: 10 9 8
+<br/><br/>
+
++ Test 3:
+```cpp
+int size;
+cin >> size; // input: 20
+int* list = new int[size];
+for(int i = 0; i < size; i++) {
+    cin >> list[i]; // input: 2158 2398 300 2268 3655 765 3792 4038 1761 4762 1292 3200 3882 962 488 1938 3757 3122 302 640
+}
+int a, b;
+cin >> a >> b; // input: 9 12
+unordered_map<ListNode*, int> nodeValue;
+ListNode* head = init(list, size, nodeValue);
+ListNode* reversed = reverse(head, a, b);
+try {
+    printList(reversed, nodeValue);
+}
+catch(char const* err) {
+    cout << err << '\n';
+}
+freeMem(head);
+delete[] list;
+```
++ Result 3: 2158 2398 300 2268 3655 765 3792 4038 3200 1292 4762 1761 3882 962 488 1938 3757 3122 302 640
