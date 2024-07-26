@@ -20,11 +20,15 @@ vector<int> stock_span(const vector<int>& ns) {
 
 int main() {
 
-    // Input 1: 100 80 60 70 60 75 85
-    // Result 1: 1 1 1 2 1 4 6
+    // test 1
+    vector<int> ns = {100, 80, 60, 70, 60, 75, 85};
+    vector<int> span = stock_span(ns);
+    for (int i = 0; i < span.size(); i++) cout << span[i] << ' '; // Result: 1 1 1 2 1 4 6
 
-    // Input 2: 10 4 5 90 120 80
-    // Result 2: 1 1 2 4 5 1
-
+    /* test 2
+    vector<int> ns = {10, 4, 5, 90, 120, 80};
+    vector<int> span = stock_span(ns);
+    for (int i = 0; i < span.size(); i++) cout << span[i] << ' '; // Result: 1 1 2 4 5 1
+    */
     return 0;
 }
