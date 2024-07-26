@@ -35,3 +35,81 @@ Return the sum: 5+10+15 = 30
 + Test 3: cout << baseballScore("5C4C2C11+D3");
 + Result 3: 11
 ---
+# class_Stack
+
+Implement all methods in class Stack with template type T. The description of each method is written as comment in frame code.
+```cpp
+#ifndef STACK_H
+#define STACK_H
+#include "DLinkedList.h"
+template<class T>
+class Stack {
+    protected:
+    DLinkedList<T> list;
+
+    public:
+    Stack() {}
+    void push(T item) ;
+    T pop() ;
+    T top() ;
+    bool empty() ;
+    int size() ;
+    void clear() ;
+};
+
+#endif
+```
+You can use all methods in class DLinkedList without implementing them again. The description of class DLinkedList is written as comment in frame code.
+```cpp
+template <class T>
+class DLinkedList {
+    public:
+    class Node;     //forward declaration
+
+    protected:
+    Node* head;
+    Node* tail;
+    int count;
+
+    public:
+    DLinkedList() ;
+    ~DLinkedList();
+    void add(const T& e);
+    void add(int index, const T& e);
+    T removeAt(int index);
+    bool removeItem(const T& removeItem);
+    bool empty();
+    int size();
+    void clear();
+    T get(int index);
+    void set(int index, const T& e);
+    int indexOf(const T& item);
+    bool contains(const T& item);
+};
+```
+**For example:**
+
++ Test 1:
+```cpp
+Stack<int> stack;
+cout << stack.empty() << " " << stack.size();
+```
++ Result 1: 1 0
+<br/>
+
++ Test 2:
+```cpp
+Stack<int> stack;
+
+int item[] = { 3, 1, 4, 5, 2, 8, 10, 12 };
+for (int idx = 0; idx < 8; idx++) stack.push(item[idx]);
+    
+assert(stack.top() == 12);
+    
+stack.pop();
+stack.pop();
+    
+cout << stack.top();
+```
++ Result 2: 8
+---
