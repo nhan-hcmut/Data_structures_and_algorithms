@@ -113,3 +113,57 @@ cout << stack.top();
 ```
 + Result 2: 8
 ---
+# nextGreater
+
+Given an array nums[] of size N having distinct elements, the task is to find the next greater element for each element of the array
+Next greater element of an element in the array is the nearest element on the right which is greater than the current element.
+If there does not exist a next greater of a element, the next greater element for it is -1
+
+**Note:** \<iostream\>, \<stack\> and \<vector\> are already included
+
+Constraints:
+<br/>
+1 <= nums.length <= 10^5
+<br/>
+0 <= nums[i] <= 10^9
+
+**Example 1:**
+<br/>
+Input: nums = {15, 2, 4, 10}
+<br/>
+Output: {-1, 4, 10, -1}
+
+**Example 2:**
+<br/>
+Input: nums = {1, 4, 6, 9, 6}
+<br/>
+Output: {4, 6, 9, -1, -1}
+
+**For example:**
+
++ Test 1:
+```cpp
+int N;
+cin >> N; // input: 4
+vector<int> nums(N);
+for(int i = 0; i < N; i++) cin >> nums[i]; // input: 15 2 4 10
+vector<int> greaterNums = nextGreater(nums);
+for(int i : greaterNums)
+    cout << i << ' ';
+cout << '\n';
+```
++ Result 1: -1 4 10 -1
+<br/>
+
++ Test 2:
+```cpp
+int N;
+cin >> N; // input: 5
+vector<int> nums(N);
+for(int i = 0; i < N; i++) cin >> nums[i]; // input: 1 4 6 9 6
+vector<int> greaterNums = nextGreater(nums);
+for(int i : greaterNums) cout << i << ' ';
+cout << '\n';
+```
++ Result 2: 4 6 9 -1 -1
+---
