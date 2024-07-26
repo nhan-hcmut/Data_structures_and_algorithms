@@ -40,15 +40,14 @@ int main() {
         cout << i << ' '; // Result: -1 4 10 -1
     cout << '\n';
     
-    /*
-    //Test 2
+    /* Test 2
     int N;
-    cin >> N;//5
+    cin >> N; // input: 5
     vector<int> nums(N);
-    for(int i = 0; i < N; i++) cin >> nums[i];//1 4 6 9 6
+    for(int i = 0; i < N; i++) cin >> nums[i]; // input: 1 4 6 9 6
     vector<int> greaterNums = nextGreater(nums);
     for(int i : greaterNums) 
-        cout << i << ' ';//4 6 9 -1 -1
+        cout << i << ' '; // result: 4 6 9 -1 -1
     cout << '\n';
     */
     return 0;
