@@ -1,7 +1,8 @@
-#ifndef STACK_H
-#define STACK_H
-#include "DLinkedList.h"
-
+#include<iostream>
+using namespace std;
+/*
+You can use all methods in class DLinkedList without implementing them again. The description of class DLinkedList is written as comment in frame code.
+*/
 template <class T> class DLinkedList {
     public:
     class Node;     //forward declaration
@@ -26,8 +27,14 @@ template <class T> class DLinkedList {
     int indexOf(const T& item);
     bool contains(const T& item);
 };
+/*
+Implement all methods in class Stack with template type T. The description of each method is written as comment in frame code.
+*/
+#ifndef STACK_H
+#define STACK_H
+#include "DLinkedList.h"
 
-template<class T>class Stack {
+template <class T> class Stack {
     protected:
     DLinkedList<T> list;
     
@@ -42,32 +49,32 @@ template<class T>class Stack {
 };
 #endif
 
-template <T> void Stack::push(T item) {
+template <class T> void Stack<T>::push(T item) {
     // TODO: Push new element into the top of the stack
     this->list.add(item);
 }
 
-template <T> T Stack::pop() {
+template <class T> T Stack<T>::pop() {
     // TODO: Remove an element on top of the stack
     return this->list.removeAt(this->list.size()-1);
 }
 
-template <T> T Stack::top() {
+template <class T> T Stack<T>::top() {
     // TODO: Get value of the element on top of the stack
     return this->list.get(this->list.size()-1);
 }
 
-template <T> bool Stack::empty() {
+template <class T> bool Stack<T>::empty() {
     // TODO: Determine if the stack is empty
     return this->list.empty();
 }
 
-int size() {
+template <class T> int Stack<T>::size() {
     // TODO: Get the size of the stack
     return this->list.size();
 }
 
-void clear() {
+template <class T> void Stack<T>::clear() {
     // TODO: Clear all elements of the stack
     this->list.clear();
 }
