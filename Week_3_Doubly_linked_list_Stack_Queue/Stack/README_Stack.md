@@ -316,6 +316,7 @@ Hence the output will be [1, 1, 1, 2, 1, 4, 6].
 **Requirement:** Write a program to calculate the spans from the stock's prices.
 
 (Source: Geeks For Geeks)
+<br/>
 **For example:**
 
 + Test 1:
