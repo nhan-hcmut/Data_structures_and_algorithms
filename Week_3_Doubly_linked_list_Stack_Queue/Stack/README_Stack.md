@@ -222,6 +222,47 @@ cout << evaluatePostfix("100 200 + 2 / 5 * 7 +");
 ```
 + Result 2: 757
 ---
+# isValidParentheses
+
+Given a string s containing just the characters '(', ')', '[', ']', '{', and '}'. Check if the input string is valid based on following rules:
++ Open brackets must be closed by the same type of brackets.
++ Open brackets must be closed in the correct order.
+
+**For example:**
+
+String "[]()" is a valid string, also "[()]".
+String "[])" is not a valid string.
+
+Your task is to implement the function
+```cpp
+bool isValidParentheses (string s){
+    /*TODO*/
+}
+```
+**Note:** The library \<stack\> of C++ is included.
+
+**For example:**
+
++ Test 1:
+```cpp
+cout << isValidParentheses("[]");
+```
++ Result 1: 1
+<br/>
+
++ Test 2:
+```cpp
+cout << isValidParentheses("[]()");
+```
++ Result 2: 1
+<br/>
+
++ Test 3:
+```cpp
+cout << isValidParentheses("[)");
+```
++ Result 3: 0
+---
 # nextGreater
 
 Given an array nums[] of size N having distinct elements, the task is to find the next greater element for each element of the array
