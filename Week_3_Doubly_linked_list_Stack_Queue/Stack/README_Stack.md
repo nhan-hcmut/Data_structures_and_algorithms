@@ -276,3 +276,28 @@ cout << '\n';
 ```
 + Result 2: 4 6 9 -1 -1
 ---
+# removeDuplicates
+
+Given a string S of characters, a duplicate removal consists of choosing two adjacent and equal letters, and removing them.
+
+We repeatedly make duplicate removals on S until we no longer can.
+
+Return the final string after all such duplicate removals have been made.
+
+Included **libraries:** \<vector\>, \<list\>, \<stack\>
+
+**For example:**
+
++ Test 1:
+```cpp
+cout << removeDuplicates("abbaca");
+```
++ Result 1: ca
+<br/>
+
++ Test 2:
+```cpp
+cout << removeDuplicates("aab");
+```
++ Result 2: b
+---
