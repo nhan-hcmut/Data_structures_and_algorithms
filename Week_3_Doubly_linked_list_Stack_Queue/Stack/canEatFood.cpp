@@ -32,6 +32,7 @@ bool canEatFood(int maze[5][5], int fx, int fy) {
         record.pop();
         record.push(current);
         if (i == fx && j == fy) return true;
+        
         if (curDir == 0) {
             if (i > 0 && maze[i-1][j] && !visited[i-1][j]) {
                 node next(i-1, j);
