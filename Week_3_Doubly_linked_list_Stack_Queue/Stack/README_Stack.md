@@ -301,3 +301,29 @@ cout << removeDuplicates("aab");
 ```
 + Result 2: b
 ---
+# stock_span
+
+The stock span problem is a financial problem where we have a series of daily price quotes for a stock and we need to calculate the span of the stock’s price for each day.
+
+The span Si of the stock’s price on a given day i is defined as the maximum number of consecutive days just before the given day, for which the price of the stock on the current day is less than its price on the given day, plus 1 (for itself).
+
+**For example:** take the stock's price sequence [100, 80, 60, 70, 60, 75, 85].
+
+The given input span for 100 will be 1, 80 is smaller than 100 so the span is 1, 60 is smaller than 80 so the span is 1, 70 is greater than 60 so the span is 2 and so on.
+
+Hence the output will be [1, 1, 1, 2, 1, 4, 6].
+
+**Requirement:** Write a program to calculate the spans from the stock's prices.
+
+(Source: Geeks For Geeks)
+**For example:**
+
+Input	Result
+
+100 80 60 70 60 75 85
+	1 1 1 2 1 4 6
+
+10 4 5 90 120 80
+	1 1 2 4 5 1
+
+---
