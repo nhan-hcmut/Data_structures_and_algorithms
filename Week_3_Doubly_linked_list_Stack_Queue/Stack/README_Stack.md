@@ -113,6 +113,31 @@ cout << stack.top();
 ```
 + Result 2: 8
 ---
+# evaluatePostfix
+
+Given string S representing a postfix expression, the task is to evaluate the expression and find the final value. Operators will only include the basic arithmetic operators like *, /, + and -.
+
+Postfix expression: The expression of the form “a b operator” (ab+) i.e., when a pair of operands is followed by an operator.
+
+**For example:** Given string S is  "2 3 1 * + 9 -". If the expression is converted into an infix expression, it will be 2 + (3 * 1) – 9 = 5 – 9 = -4.
+
+**Requirement:** Write the function to evaluate the value of postfix expression.
+
+**For example:**
+
++ Test 1:
+```cpp
+cout << evaluatePostfix("2 3 1 * + 9 -");
+```
++ Result 1: -4
+<br/>
+
++ Test 2:
+```cpp
+cout << evaluatePostfix("100 200 + 2 / 5 * 7 +");
+```
++ Result 2: 757
+---
 # nextGreater
 
 Given an array nums[] of size N having distinct elements, the task is to find the next greater element for each element of the array
