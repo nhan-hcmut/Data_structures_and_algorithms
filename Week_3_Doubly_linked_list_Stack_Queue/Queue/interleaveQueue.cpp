@@ -4,32 +4,16 @@
 using namespace std;
 
 void interleaveQueue(queue<int>& q) {
-    stack<int> stk;
+    queue<int> tmpQ;
     int half = q.size() / 2;
  
     for (int i = 0; i < half; i++) {
-        stk.push(q.front());
+        tmpQ.push(q.front());
         q.pop();
-    }
- 
-    while (!stk.empty()) {
-        q.push(stk.top());
-        stk.pop();
-    }
- 
-    for (int i = 0; i < half; i++) {
-        q.push(q.front());
-        q.pop();
-    }
- 
-    for (int i = 0; i < half; i++) {
-        stk.push(q.front());
-        q.pop();
-    }
- 
-    while (!stk.empty()) {
-        q.push(stk.top());
-        stk.pop();
+    } 
+    while (!tmpQ.empty()) {
+        q.push(tmpQ.front());
+        tmpQ.pop();
         q.push(q.front());
         q.pop();
     }
