@@ -12,8 +12,8 @@ void bfs(vector<vector<int>> graph, int start) {
     bool firstMeet = true;
     visited[start] = true;
     q.push(start);
-	
-	int walker;
+    
+    int walker;
     while(!q.empty()) {
         walker = q.front();
 		
