@@ -28,7 +28,7 @@ void bfs(vector<vector<int>> graph, int start) {
         for (int i = 0; i < outDegree; i++) {
             int adjacentVertex = graph[walker][i];
             
-			if (!visited[adjacentVertex]) {
+            if (!visited[adjacentVertex]) {
                 visited[adjacentVertex] = true;
                 q.push(adjacentVertex);
             }
