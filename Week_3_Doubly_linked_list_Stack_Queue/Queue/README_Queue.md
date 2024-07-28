@@ -45,7 +45,7 @@ while (!q.empty()){
 
 Research queue which is implemented in C library at http://www.cplusplus.com/reference/queue/queue/. You can use library queue in c++ for this question.
 
-Using queue, complete function **bool isBipartite(vector\<vector\<int\>\> graph)** to determine if a graph is bipartite or not (the graph can be disconnected). In caat https://en.wikipedia.org/wiki/Bipartite_graph.
+Using queue, complete function **bool isBipartite(vector\<vector\<int\>\> graph)** to determine if a graph is bipartite or not (the graph can be disconnected). You can read more details here: https://en.wikipedia.org/wiki/Bipartite_graph.
 
 You can use below libraries in this question:
 
