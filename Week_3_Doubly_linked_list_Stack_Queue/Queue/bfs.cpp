@@ -4,9 +4,9 @@
 using namespace std;
 
 void bfs(vector<vector<int>> graph, int start) {
-	int numberOfVertices = graph.size();
-	bool* visited = new bool[numberOfVertices];
-	for (int i = 0; i < numberOfVertices; i++) visited[i] = false;
+    int numberOfVertices = graph.size();
+    bool* visited = new bool[numberOfVertices];
+    for (int i = 0; i < numberOfVertices; i++) visited[i] = false;
 
     queue<int> q;
     bool firstMeet = true;
