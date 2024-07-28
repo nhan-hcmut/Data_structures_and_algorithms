@@ -22,10 +22,10 @@ void bfs(vector<vector<int>> graph, int start) {
             firstMeet = false;
         }
         else cout << " " << walker;
-		q.pop();
+        q.pop();
 
         int outDegree = graph[walker].size();
-		for (int i = 0; i < outDegree; i++) {
+        for (int i = 0; i < outDegree; i++) {
             int adjacentVertex = graph[walker][i];
             
 			if (!visited[adjacentVertex]) {
@@ -57,6 +57,6 @@ int main() {
 			if (init_graph[i][j]) graph[i].push_back(j);
 		}
 	}
-	bfs(graph, 0); // result: 0 1 2 4 6 8 3 7 5 9
+    bfs(graph, 0); // result: 0 1 2 4 6 8 3 7 5 9
     return 0;
 }
