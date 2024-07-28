@@ -55,8 +55,8 @@ int main() {
 	for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
             if (init_graph[i][j]) graph[i].push_back(j);
-		}
-	}
+        }
+    }
     bfs(graph, 0); // result: 0 1 2 4 6 8 3 7 5 9
     return 0;
 }
