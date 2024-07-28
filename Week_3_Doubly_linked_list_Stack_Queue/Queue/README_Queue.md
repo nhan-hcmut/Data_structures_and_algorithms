@@ -179,3 +179,57 @@ isBipartite(graph) ? cout << "Yes" : cout << "No";
 ```
 + Result: Yes
 ---
+# nthNiceNumber
+
+A nice number is a positive integer that contains only 2's and 5's.
+Some nice numbers are: 2, 5, 22, 25, 52, 55, ...
+Number 2 is the first nice number.
+
+Given an integer N, return the Nth nice number.
+
+**Note:** \<iostream\>, \<vector\>, \<queue\> are already included.
+
+**Constraint:**
+<br/>
+1 <= n <= 10^6
+
+**Example 1:**
+<br/>
+Input:
+n = 5
+
+Output:
+52
+
+**Explanation:**
+<br/>
+The sequence of nice numbers is 2, 5, 22, 25, 52, 55, ...
+The 5th number in this sequence is 52
+
+**Example 2:**
+<br/>
+Input:
+n = 10000
+
+Output:
+2255522252225
+
+**For example:**
+
++ Test 1:
+```cpp
+int n;
+cin >> n; // Input: 5
+cout << nthNiceNumber(n) << endl;
+```
++ Result 1: 52
+<br/>
+
++ Test 2:
+```cpp
+int n;
+cin >> n; // Input: 10000
+cout << nthNiceNumber(n) << endl;
+```
++ Result 2: 2255522252225
+---
