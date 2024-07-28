@@ -16,8 +16,8 @@ void bfs(vector<vector<int>> graph, int start) {
     int walker;
     while(!q.empty()) {
         walker = q.front();
-		
-		if (firstMeet) {
+        
+        if (firstMeet) {
             cout << walker;
             firstMeet = false;
         }
