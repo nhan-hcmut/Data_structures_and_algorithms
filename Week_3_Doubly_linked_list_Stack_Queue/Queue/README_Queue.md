@@ -37,6 +37,68 @@ bfs(graph, 0);
 ```
 + Result: 0 1 2 4 6 8 3 7 5 9
 ---
+# class_Queue
+
+Implement all methods in class Queue with template type T. The description of each method is written as comment in frame code.
+```cpp
+#ifndef QUEUE_H
+#define QUEUE_H
+#include "DLinkedList.h"
+template<class T>
+class Queue {
+
+    protected:
+    DLinkedList<T> list;
+
+    public:
+    Queue() {}
+    void push(T item) ;
+    T pop() ;
+    T top() ;
+    bool empty() ;
+    int size() ;
+    void clear() ;
+};
+
+#endif /* QUEUE_H */
+```
+You can use all methods in class DLinkedList without implementing them again. The description of class DLinkedList is written as comment in frame code.
+```cpp
+template <class T>
+class DLinkedList {
+    public:
+    class Node;     //forward declaration
+
+    protected:
+    Node* head;
+    Node* tail;
+    int count;
+
+    public:
+    DLinkedList() ;
+    ~DLinkedList();
+    void add(const T& e);
+    void add(int index, const T& e);
+    T removeAt(int index);
+    bool removeItem(const T& removeItem);
+    bool empty();
+    int size();
+    void clear();
+    T get(int index);
+    void set(int index, const T& e);
+    int indexOf(const T& item);
+    bool contains(const T& item);
+};
+```
+**For example:**
+
++ Test:
+```cpp
+Queue<int> queue;
+assert(queue.empty());
+assert(queue.size() == 0);
+```
+---
 # interleaveQueue
 
 Given a queue of integers of even length, rearrange the elements by interleaving the first half of the queue with the second half of the queue.
