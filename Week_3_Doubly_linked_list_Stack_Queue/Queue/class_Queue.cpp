@@ -46,38 +46,38 @@ template <class T> class DLinkedList {
 };
 
 template<class T>
-void Queue::push(T item) {
+void Queue<T>::push(T item) {
     // TODO: Push new element into the end of the queue
     this->list.add(item);
 }
 
 template<class T>
-T Queue::pop() {
+T Queue<T>::pop() {
     // TODO: Remove an element in the head of the queue
     if (this->list->empty()) throw std::out_of_range("Empty queue.\n");
     return this->list.removeAt(0);
 }
 
 template<class T>
-T Queue::top() {
+T Queue<T>::top() {
     // TODO: Get value of the element in the head of the queue
     return this->list.get(0);
 }
 
 template<class T>
-bool Queue::empty() {
+bool Queue<T>::empty() {
     // TODO: Determine if the queue is empty
     return this->list.empty();
 }
 
 template<class T>
-int Queue::size() {
+int Queue<T>::size() {
     // TODO: Get the size of the queue
     return this->list.size();
 }
 
 template<class T>
-void Queue::clear() {
+void Queue<T>::clear() {
     // TODO: Clear all elements of the queue
     this->list.clear();
 }
