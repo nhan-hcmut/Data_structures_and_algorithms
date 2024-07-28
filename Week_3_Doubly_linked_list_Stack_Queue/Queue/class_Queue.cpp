@@ -54,7 +54,7 @@ void Queue<T>::push(T item) {
 template<class T>
 T Queue<T>::pop() {
     // TODO: Remove an element in the head of the queue
-    if (this->list->empty()) throw std::out_of_range("Empty queue.\n");
+    if (this->list.empty()) throw std::out_of_range("Empty queue.\n");
     return this->list.removeAt(0);
 }
 
