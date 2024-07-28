@@ -38,8 +38,7 @@ void bfs(vector<vector<int>> graph, int start) {
 }
 
 int main() {
-
-	int init_graph[10][10] = { {0, 1, 1, 0, 1, 0, 1, 0, 1, 0},
+    int init_graph[10][10] = { {0, 1, 1, 0, 1, 0, 1, 0, 1, 0},
 				    {0, 0, 1, 1, 0, 0, 0, 1, 0, 0},
 				    {0, 1, 0, 0, 0, 1, 1, 0, 1, 1},
 				    {1, 0, 0, 0, 0, 0, 0, 1, 0, 0},
@@ -49,10 +48,10 @@ int main() {
 				    {1, 0, 0, 0, 0, 1, 1, 0, 1, 0},
 				    {0, 0, 0, 0, 0, 1, 0, 1, 0, 1},
 				    {1, 0, 1, 0, 1, 0, 0, 0, 1, 0} };
-	int n = 10;
-	vector<vector<int>> graph(n, vector<int>());
-
-	for (int i = 0; i < n; ++i) {
+    int n = 10;
+    vector<vector<int>> graph(n, vector<int>());
+    
+    for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
             if (init_graph[i][j]) graph[i].push_back(j);
         }
