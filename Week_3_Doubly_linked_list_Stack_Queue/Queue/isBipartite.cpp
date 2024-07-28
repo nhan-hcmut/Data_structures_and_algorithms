@@ -13,10 +13,10 @@ bool isBipartite(vector<vector<int>> graph) {
     q.push(0);
 
     while (!q.empty()) {
-        int walker = q.front(), outDegree = graph[walker].size();
+        int walker = q.front(), degree = graph[walker].size();
         q.pop();
         
-        for (int a = 0; a < outDegree; a++) {
+        for (int a = 0; a < degree; a++) {
             int adjacentVertex = graph[walker][a];
             
             if (colorVtr[adjacentVertex] == RED) {
