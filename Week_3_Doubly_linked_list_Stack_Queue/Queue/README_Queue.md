@@ -298,3 +298,36 @@ cout << secondsToBeRotten(grid);
 ```
 + Result 2: 1
 ---
+# sumOfMaxSubarray
+
+Given an array of integers.
+
+Your task is to implement a function with following prototype:
+```cpp
+int sumOfMaxSubarray(vector<int>& nums, int k);
+```
+The function returns the sum of the maximum value of every consecutive subarray of nums with fixed length k.
+
+**Note:**
++ The \<iostream\>, \<vector\>, \<queue\> and \<deque\> libraries have been included and namespace std is being used. No other libraries are allowed.
++ You can write helper functions and classes.
+
+**For example:**
+
++ Test 1:
+```cpp
+vector<int> nums {1, 2, 4, 3, 6};
+int k = 3;
+cout << sumOfMaxSubarray(nums, k);
+```
++ Result 1: 14
+<br/>
+
++ Test 2:
+```cpp
+vector<int> nums {8016};
+int k = 1;
+cout << sumOfMaxSubarray(nums, k);
+```
++ Result 2: 8016
+---
