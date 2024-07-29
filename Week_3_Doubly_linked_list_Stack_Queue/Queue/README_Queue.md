@@ -233,3 +233,68 @@ cout << nthNiceNumber(n) << endl;
 ```
 + Result 2: 2255522252225
 ---
+# secondsToBeRotten
+
+Given a n*m grid where each cell in the grid can have a value of 0, 1 or 2, which has the following meaning:
+
++ 0: Empty cell
++ 1: This cell contains a fresh apple
++ 2: This cell contains a rotten apple
+
+After 1 second, the cell with rotten apple will rot all fresh apples in all the cells adjacent to it (i.e the cells (x+1, y), (x-1, y), (x, y+1), (x, y-1))
+
+Determine the minimum time (in seconds) required to rot all apples. If this cannot be done, return -1.
+
+**Note:** \<iostream\>, \<vector\>, and \<queue\> are already included.
+
+Constraint: 1 <= n, m <= 500
+
+Hint: Have you ever heard about breadth-first-search?
+
+**Example 1:**
+
+Input: grid = {{2,2,0,1}}
+<br/>
+Output: -1
+
+**Explanation:**
+The grid is { {2, 2, 0, 1} }. The apple at (0, 3) cannot be rotten
+<br/>
+
+**Example 2:**
+
+Input: grid = {{0,1,2},{0,1,2},{2,1,1}}
+<br/>
+Output: 1
+
+**Explanation:** The grid is { {0, 1, 2}, {0, 1, 2}, {2, 1, 1} }
+<br/>
+Apples at positions (0,2), (1,2), (2,0) will rot apples at (0,1), (1,1), (2,2) and (2,1) after 1 second.
+
+**For example:**
+
++ Test 1:
+```cpp
+int rows, cols;
+cin >> rows >> cols; // Input: 1 4
+vector<vector<int>> grid(rows, vector<int>(cols));
+for(int i = 0; i < rows; i++) {
+    for(int j = 0; j < cols; j++) cin >> grid[i][j]; // Input: 2 2 0 1
+}
+cout << secondsToBeRotten(grid);
+```
++ Result 1: -1
+<br/>
+
++ Test 2:
+```cpp
+int rows, cols;
+cin >> rows >> cols; // Input: 3 3
+vector<vector<int>> grid(rows, vector<int>(cols));
+for(int i = 0; i < rows; i++) {
+    for(int j = 0; j < cols; j++) cin >> grid[i][j]; // input: {0 1 2} {0 1 2} {2 1 1}
+}
+cout << secondsToBeRotten(grid);
+```
++ Result 2: 1
+---
