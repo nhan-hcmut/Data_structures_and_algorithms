@@ -2,8 +2,8 @@
 #include<vector>
 #include<queue>
 using namespace std;
-// iostream, vector and queue are included
-// Hint: use breadth-first-search
+
+// Hint: use breadth-first search
 
 int secondsToBeRotten(vector<vector<int>>& grid) {
     const int directions[4][2] = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
@@ -34,7 +34,7 @@ int secondsToBeRotten(vector<vector<int>>& grid) {
                 int r = rottenApple.first + directions[dir][0], c = rottenApple.second + directions[dir][1];
                 
                 if (r >= 0 && r < n && c >= 0 && c < m && grid[r][c] == 1) {
-                    grid[r][c] == 2;
+                    grid[r][c] = 2;
                     freshApples--;
                     RottenApples.push({r, c});
                 }
