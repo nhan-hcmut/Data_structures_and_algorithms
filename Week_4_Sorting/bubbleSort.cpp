@@ -72,19 +72,18 @@ void SLinkedList<T>::bubbleSort() {
     
     for (int upperBound = this->count - 1; upperBound > 0; upperBound--) {
         
-        Node *firstNode = this->head, *secondNode = this->head->next;
+        Node* currentNode = this->head;
         bool isSorted = true;
         
         for (int walker = 0; walker < upperBound; walker++) {
             
-            if (firstNode->data > secondNode->data) {
-                T temp = firstNode->data;
-                firstNode->data = secondNode->data;
-                secondNode->data = temp;
+            if (currentNode->data > currentNode->next->data) {
+                T temp = currentNode->data;
+                currentNode->data = currentNode->next->data;
+                currentNode->next->data = temp;
                 isSorted = false;
             }
-            firstNode = secondNode;
-            secondNode = secondNode->next;
+            currentNode = currentNode->next;
         }
         if (!isSorted) this->printList();
     }
