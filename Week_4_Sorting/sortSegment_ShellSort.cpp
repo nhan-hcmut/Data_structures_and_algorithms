@@ -66,7 +66,7 @@ int main() {
     /* test 2
     int num_segment_list[] = {1, 2, 6};
     int num_phases = 3;
-    int array[] = {10, 9, 8 , 7 , 6, 5, 4, 3, 2, 1};
+    int array[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
     Sorting<int>::ShellSort(&array[0], &array[10], &num_segment_list[0], num_phases);
 
@@ -79,7 +79,7 @@ int main() {
     /* test 3
     int num_segment_list[] = {1, 2, 5};
     int num_phases = 3;
-    int array[] = {10, 9, 8 , 7 , 6, 5, 4, 3, 2, 1};
+    int array[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
     Sorting<int>::ShellSort(&array[0], &array[10], &num_segment_list[0], num_phases);
 
@@ -92,7 +92,7 @@ int main() {
     /* test 4
     int num_segment_list[] = {1, 2, 3};
     int num_phases = 3;
-    int array[] = {10, 9, 8 , 7 , 6, 5, 4, 3, 2, 1};
+    int array[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
     Sorting<int>::ShellSort(&array[0], &array[10], &num_segment_list[0], num_phases);
 
@@ -105,7 +105,7 @@ int main() {
     /* test 5
     int num_segment_list[] = {1, 5, 8, 10};
     int num_phases = 4;
-    int array[] = {3, 5, 7, 10 ,12, 14, 15, 13, 1, 2, 9, 6, 4, 8, 11};
+    int array[] = {3, 5, 7, 10, 12, 14, 15, 13, 1, 2, 9, 6, 4, 8, 11};
 
     Sorting<int>::ShellSort(&array[0], &array[15], &num_segment_list[0], num_phases);
 
