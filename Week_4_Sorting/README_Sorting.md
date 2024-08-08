@@ -78,7 +78,7 @@ class SLinkedList {
 ```cpp
 int arr[] = {9, 2, 8, 4, 1};
 SLinkedList<int> list;
-for(int i = 0; i <int(sizeof(arr))/4;i++)
+for (int i = 0; i < int(sizeof(arr)) / 4; i++)
     list.add(arr[i]);
 list.bubbleSort();
 ```
