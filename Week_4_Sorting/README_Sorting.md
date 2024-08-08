@@ -142,3 +142,123 @@ Sorting<int>::selectionSort(&arr[0], &arr[6]);
 -2, 0, 1, 2, 8, 9
 <br/>
 -2, 0, 1, 2, 8, 9
+
+---
+# sortSegment_ShellSort
+
+Implement static methods sortSegment and ShellSort in class Sorting to sort an array in ascending order. 
+
+```cpp
+#ifndef SORTING_H
+#define SORTING_H
+
+#include <sstream>
+#include <iostream>
+#include <type_traits>
+
+using namespace std;
+
+template <class T>
+class Sorting {
+
+    private:
+    static void printArray(T* start, T* end) {
+        int size = end - start;
+        for (int i = 0; i < size; i++)
+            cout << start[i] << " ";
+        cout << endl;
+    }
+
+    public:
+    // TODO: Write your code here
+    static void sortSegment(T* start, T* end, int segment_idx, int cur_segment_total);
+    static void ShellSort(T* start, T* end, int* num_segment_list, int num_phases);
+};
+#endif /* SORTING_H */
+```
+
+**For example:**
+
++ Test 1:
+```cpp
+int num_segment_list[] = {1, 3, 5};
+int num_phases = 3;
+int array[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+
+Sorting<int>::ShellSort(&array[0], &array[10], &num_segment_list[0], num_phases);
+```
++ Result 1:
+
+5 segments: 5 4 3 2 1 10 9 8 7 6
+<br/>
+3 segments: 2 1 3 5 4 7 6 8 10 9
+<br/>
+1 segments: 1 2 3 4 5 6 7 8 9 10
+
++ Test 2:
+```cpp
+int num_segment_list[] = {1, 2, 6};
+int num_phases = 3;
+int array[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+
+Sorting<int>::ShellSort(&array[0], &array[10], &num_segment_list[0], num_phases);
+```
++ Result 2:
+
+6 segments: 4 3 2 1 6 5 10 9 8 7
+<br/>
+2 segments: 2 1 4 3 6 5 8 7 10 9
+<br/>
+1 segments: 1 2 3 4 5 6 7 8 9 10
+
++ Test 3:
+```cpp
+int num_segment_list[] = {1, 2, 5};
+int num_phases = 3;
+int array[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+
+Sorting<int>::ShellSort(&array[0], &array[10], &num_segment_list[0], num_phases);
+```
++ Result 3:
+
+5 segments: 5 4 3 2 1 10 9 8 7 6
+<br/>
+2 segments: 1 2 3 4 5 6 7 8 9 10
+<br/>
+1 segments: 1 2 3 4 5 6 7 8 9 10
+
++ Test 4:
+```cpp
+int num_segment_list[] = {1, 2, 3};
+int num_phases = 3;
+int array[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+
+Sorting<int>::ShellSort(&array[0], &array[10], &num_segment_list[0], num_phases);
+```
++ Result 4:
+
+3 segments: 1 3 2 4 6 5 7 9 8 10
+<br/>
+2 segments: 1 3 2 4 6 5 7 9 8 10
+<br/>
+1 segments: 1 2 3 4 5 6 7 8 9 10
+
++ Test 5:
+```cpp
+int num_segment_list[] = {1, 5, 8, 10};
+int num_phases = 4;
+int array[] = {3, 5, 7, 10, 12, 14, 15, 13, 1, 2, 9, 6, 4, 8, 11};
+
+Sorting<int>::ShellSort(&array[0], &array[15], &num_segment_list[0], num_phases);
+```
++ Result 5:
+
+10 segments: 3 5 4 8 11 14 15 13 1 2 9 6 7 10 12
+<br/>
+8 segments: 1 2 4 6 7 10 12 13 3 5 9 8 11 14 15
+<br/>
+5 segments: 1 2 4 3 5 9 8 11 6 7 10 12 13 14 15
+<br/>
+1 segments: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+
+---
