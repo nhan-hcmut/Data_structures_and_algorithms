@@ -17,40 +17,32 @@ class SLinkedList {
     int count;
 
     public:
-    SLinkedList()
-    {
+    SLinkedList() {
       this->head = nullptr;
       this->tail = nullptr;
       this->count = 0;
     }
     ~SLinkedList(){};
-    void add(T e)
-    {
+    void add(T e) {
         Node *pNew = new Node(e);
 
-        if (this->count == 0)
-        {
+        if (this->count == 0) {
             this->head = this->tail = pNew;
         }
-        else
-        {
+        else {
             this->tail->next = pNew;
             this->tail = pNew;
         }
-
         this->count++;
     }
-    int size()
-    {
+    int size() {
         return this->count;
     }
-    void printList()
-    {
+    void printList() {
         stringstream ss;
         ss << "[";
         Node *ptr = head;
-        while (ptr != tail)
-        {
+        while (ptr != tail) {
             ss << ptr->data << ",";
             ptr = ptr->next;
         }
@@ -112,8 +104,7 @@ template <class T>
 class Sorting {
     public:
     /* Function to print an array */
-    static void printArray(T *start, T *end)
-    {
+    static void printArray(T *start, T *end) {
         int size = end - start;
         for (int i = 0; i < size - 1; i++)
             cout << start[i] << ", ";
