@@ -9,12 +9,12 @@ int longestSublist(vector<string>& words) {
     for (int i = 0; i < size; i++) {
         temp = 0;
         for (int k = i; k < size; k++) {
-			if (words[k][0] == words[i][0]) temp++;
-			else break;
+            if (words[k][0] == words[i][0]) temp++;
+            else break;
 		}
-		max = max > temp ? max : temp;
-	}
-	return max;
+        max = max > temp ? max : temp;
+    }
+    return max;
 }
 
 int main() {
