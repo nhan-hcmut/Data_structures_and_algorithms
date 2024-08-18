@@ -50,7 +50,8 @@ void Sorting<T>::QuickSort(T* start, T* end) {
     // TODO
     // In this question, you must print out the index of pivot in subarray after every time calling method Partition.
     if (start >= end) return;
-    T* pivotPtr = Partition(start, end); cout << (int)(pivotPtr - start) << ' ';
+    T* pivotPtr = Partition(start, end);
+    cout << pivotPtr - start << ' ';
     QuickSort(start, pivotPtr);
     QuickSort(pivotPtr + 1, end);
 }
