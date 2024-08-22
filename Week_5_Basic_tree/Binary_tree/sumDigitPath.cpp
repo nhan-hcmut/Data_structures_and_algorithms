@@ -24,8 +24,25 @@ class BTNode {
         }
 };
 
-int sumDigitPath(BTNode* root) {
+// helping function
+void sumDigitPathRecur(BTNode* temp, int currentSum, int& totalSum) {
+    if (!temp) return;
+    
+    currentSum = (currentSum * 10 + temp->val) % 27022001;
+    
+    if (!temp->left && !temp->right) {
+        totalSum = (totalSum + currentSum) % 27022001;
+        return;
+    }
+    sumDigitPathRecur(temp->left, currentSum, totalSum);
+    sumDigitPathRecur(temp->right, currentSum, totalSum);
+}
+// End helping function
 
+int sumDigitPath(BTNode* root) {
+    int totalSum = 0;
+    sumDigitPathRecur(root, 0, totalSum);
+    return totalSum;
 }
 
 int main() {
