@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-template <class T> class Sorting {
+template<class T>
+class Sorting {
     public:
     /* Function to print an array */
     static void printArray(T *start, T *end) {
@@ -11,11 +12,10 @@ template <class T> class Sorting {
         cout << start[size - 1];
         cout << endl;
     }
-
     static void selectionSort(T *start, T *end);
 };
 
-template <class T>
+template<class T>
 void Sorting<T>::selectionSort(T *start, T *end) {
     int size = end - start;
     
@@ -38,6 +38,7 @@ int main() {
     
     int arr[] = {9, 2, 8, 1, 0, -2};
     Sorting<int>::selectionSort(&arr[0], &arr[6]);
+    
     /*result:
     -2, 2, 8, 1, 0, 9
     -2, 0, 8, 1, 2, 9
