@@ -105,6 +105,7 @@ int main() {
     int array[] = {19, 20, 18, 17, 12, 13, 14, 15, 1, 2, 9, 6, 4, 7, 11, 16, 10, 8, 5, 3};
     int min_size = 4;
     Sorting<int>::TimSort(&array[0], &array[20], min_size);
+    
     /* Result 1
     Insertion Sort: 17 18 19 20 12 13 14 15 1 2 6 9 4 7 11 16 3 5 8 10
     Merge 1: 12 13 14 15 17 18 19 20 1 2 6 9 4 7 11 16 3 5 8 10
@@ -115,11 +116,12 @@ int main() {
     Merge 6: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
     */
 
-    // test 2
+    /* test 2
     int array[] = {3, 20, 18, 17, 12, 13, 14, 15, 1, 2, 9, 6, 4, 7, 11, 16, 10, 8, 5, 19};
     int min_size = 4;
     Sorting<int>::TimSort(&array[0], &array[20], min_size);
-    /* result
+    
+    Result
     Insertion Sort: 3 17 18 20 12 13 14 15 1 2 6 9 4 7 11 16 5 8 10 19
     Merge 1: 3 12 13 14 15 17 18 20 1 2 6 9 4 7 11 16 5 8 10 19
     Merge 2: 3 12 13 14 15 17 18 20 1 2 4 6 7 9 11 16 5 8 10 19
