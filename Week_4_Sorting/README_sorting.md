@@ -147,6 +147,109 @@ list.bubbleSort();
 [1,2,4,8,9]
 
 ---
+# maxNumberOfPeople
+
+A hotel has m rooms left, there are n people who want to stay in this hotel. You have to distribute the rooms so that as many people as possible will get a room to stay.
+
+However, each person has a desired room size, he/she will accept the room if its size is close enough to the desired room size.
+
+More specifically, if the maximum difference is k, and the desired room size is x, then he or she will accept a room if its size is between x - k and x + k
+
+Determine the maximum number of people who will get a room to stay by implementing function:
+```cpp
+int maxNumberOfPeople(vector<int>& rooms, vector<int>& people, int k);
+```
+
+**input:**
+
++ vector<int> rooms: rooms[i] is the size of the ith room
++ vector<int> people: people[i] the desired room size of the ith person
++ int k: maximum allowed difference. If the desired room size is x, he or she will accept a room if its size is between x - k and x + k
+
+**output:**
+
+the maximum number of people who will get a room to stay.
+
+**Note:** The \<iostream\>, \<vector\> and \<algorithm\> library are already included for you.
+
+**Constraints:**
+1 <= rooms.length, people.length <= 2 * 10^5
+0 <= k <= 10^9
+1 <= rooms[i], people[i] <= 10^9
+
+**Example 1:**
+
+Input:
+rooms = {57, 45, 80, 65}
+people = {30, 60, 75}
+k = 5
+Output:
+2
+
+**Explanation:**
+2 is the maximum amount of people that can stay in this hotel.
+There are 3 people and 4 rooms, the first person cannot stay in any room, the second and third person can stay in the first and third room, respectively
+
+**Example 2:**
+
+Input:
+rooms = {59, 5, 65, 15, 42, 81, 58, 96, 50, 1}
+people = {18, 59, 71, 65, 97, 83, 80, 68, 92, 67}
+k = 1000
+Output:
+10
+
+**For example:**
+
++ Test 1:
+```cpp
+int peopleCount, roomCount, k;
+cin >> peopleCount >> roomCount >> k;
+
+vector<int> people(peopleCount);
+vector<int> rooms(roomCount);
+
+for (int i = 0; i < peopleCount; i++)
+    cin >> people[i];
+for (int i = 0; i < roomCount; i++)
+    cin >> rooms[i];
+cout << maxNumberOfPeople(rooms, people, k) << '\n';
+```
++ Input 1:
+<br/>
+3 4 5
+<br/>
+30 60 75
+<br/>
+57 45 80 65
+
++ Result 1: 2
+
++ Test 2:
+```cpp
+int peopleCount, roomCount, k;
+cin >> peopleCount >> roomCount >> k;
+
+vector<int> people(peopleCount);
+vector<int> rooms(roomCount);
+
+for (int i = 0; i < peopleCount; i++)
+    cin >> people[i];
+for (int i = 0; i < roomCount; i++)
+    cin >> rooms[i];
+cout << maxNumberOfPeople(rooms, people, k) << '\n';
+```
++ Input 2:
+<br/>
+10 10 1000
+<br/>
+18 59 71 65 97 83 80 68 92 67
+<br/>
+59 5 65 15 42 81 58 96 50 1
+
++ Result 2: 10
+
+---
 # mergeLists_mergeSortList
 
 The best way to sort a singly linked list given the head pointer is probably using merge sort.
