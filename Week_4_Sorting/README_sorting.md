@@ -227,6 +227,107 @@ delete[] array;
 + Result 2: 1 2 3 4 5 6 7 8 9
 
 ---
+# merge_InsertionSort_TimSort
+
+Implement static methods merge, InsertionSort and TimSort in class Sorting to sort an array in ascending order. 
+
+merge is responsible for merging two sorted subarrays. It takes three pointers: start, middle, and end, representing the left, middle, and right portions of an array. 
+
+InsertionSort is an implementation of the insertion sort algorithm. It takes two pointers, start and end, and sorts the elements in the range between them in ascending order using the insertion sort technique.
+
+TimSort is an implementation of the TimSort algorithm, a hybrid sorting algorithm that combines insertion sort and merge sort. It takes two pointers, start and end, and an integer min_size, which determines the minimum size of subarrays to be sorted using insertion sort. The function first applies insertion sort to small subarrays, prints the intermediate result, and then performs merge operations to combine sorted subarrays until the entire array is sorted.
+
+```cpp
+#ifndef SORTING_H
+#define SORTING_H
+#include <sstream>
+#include <iostream>
+#include <type_traits>
+using namespace std;
+template<class T>
+class Sorting {
+    private:
+    static void printArray(T* start, T* end) {
+        int  size = end - start;
+        for (int i = 0; i < size - 1; i++)
+            cout << start[i] << " ";
+        cout << start[size - 1];
+        cout << endl;
+    }
+
+    static void merge(T* start, T* middle, T* end);
+
+    public:
+    static void InsertionSort(T* start, T* end);
+    static void TimSort(T* start, T* end, int min_size);
+};
+
+template<class T>
+void Sorting<T>::merge(T* start, T* middle, T* end) {
+    // TODO
+}
+
+template<class T>
+void Sorting<T>::InsertionSort(T* start, T* end) {
+    // TODO
+}
+
+template<class T>
+void Sorting<T>::TimSort(T* start, T* end, int min_size) {
+    // TODO
+    // You must print out the array after using insertion sort and every time calling method merge.
+}
+
+#endif /* SORTING_H */
+```
+
+**For example:**
+
++ Test 1:
+```cpp
+int array[] = { 19, 20, 18, 17 ,12, 13, 14, 15, 1, 2, 9, 6, 4, 7, 11, 16, 10, 8, 5, 3 };
+int min_size = 4;
+Sorting<int>::TimSort(&array[0], &array[20], min_size);
+```
++ Result 1:
+<br/>
+Insertion Sort: 17 18 19 20 12 13 14 15 1 2 6 9 4 7 11 16 3 5 8 10
+<br/>
+Merge 1: 12 13 14 15 17 18 19 20 1 2 6 9 4 7 11 16 3 5 8 10
+<br/>
+Merge 2: 12 13 14 15 17 18 19 20 1 2 4 6 7 9 11 16 3 5 8 10
+<br/>
+Merge 3: 12 13 14 15 17 18 19 20 1 2 4 6 7 9 11 16 3 5 8 10
+<br/>
+Merge 4: 1 2 4 6 7 9 11 12 13 14 15 16 17 18 19 20 3 5 8 10
+<br/>
+Merge 5: 1 2 4 6 7 9 11 12 13 14 15 16 17 18 19 20 3 5 8 10
+<br/>
+Merge 6: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+<br/>
+
++ Test 2:
+```cpp
+int array[] = { 3, 20, 18, 17 ,12, 13, 14, 15, 1, 2, 9, 6, 4, 7, 11, 16, 10, 8, 5, 19 };
+int min_size = 4;
+Sorting<int>::TimSort(&array[0], &array[20], min_size);
+Insertion Sort: 3 17 18 20 12 13 14 15 1 2 6 9 4 7 11 16 5 8 10 19
+```
++ Result 2:
+<br/>
+Merge 1: 3 12 13 14 15 17 18 20 1 2 6 9 4 7 11 16 5 8 10 19
+<br/>
+Merge 2: 3 12 13 14 15 17 18 20 1 2 4 6 7 9 11 16 5 8 10 19
+<br/>
+Merge 3: 3 12 13 14 15 17 18 20 1 2 4 6 7 9 11 16 5 8 10 19
+<br/>
+Merge 4: 1 2 3 4 6 7 9 11 12 13 14 15 16 17 18 20 5 8 10 19
+<br/>
+Merge 5: 1 2 3 4 6 7 9 11 12 13 14 15 16 17 18 20 5 8 10 19
+<br/>
+Merge 6: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+---
 # merge_mergeSort
 
 Implement static methods Merge and MergeSort in class Sorting to sort an array in ascending order. The Merge method has already been defined a call to method printArray so you do not have to call this method again to print your array.
