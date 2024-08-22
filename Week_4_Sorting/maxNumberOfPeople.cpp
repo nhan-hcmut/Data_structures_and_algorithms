@@ -34,9 +34,9 @@ int main() {
     vector<int> people(peopleCount);
     vector<int> rooms(roomCount);
 
-    for(int i = 0; i < peopleCount; i++)
+    for (int i = 0; i < peopleCount; i++)
         cin >> people[i];
-    for(int i = 0; i < roomCount; i++)
+    for (int i = 0; i < roomCount; i++)
         cin >> rooms[i];
     cout << maxNumberOfPeople(rooms, people, k) << '\n';
     /* Input
@@ -54,9 +54,9 @@ int main() {
     vector<int> people(peopleCount);
     vector<int> rooms(roomCount);
 
-    for(int i = 0; i < peopleCount; i++)
+    for (int i = 0; i < peopleCount; i++)
         cin >> people[i];
-    for(int i = 0; i < roomCount; i++)
+    for (int i = 0; i < roomCount; i++)
         cin >> rooms[i];
     cout << maxNumberOfPeople(rooms, people, k) << '\n';
     
