@@ -521,6 +521,37 @@ Sorting<int>::mergeSort(&arr[0], &arr[6]);
 -22, -3, 0, 5, 5, 6, 42
 
 ---
+# minDiffPairs
+
+Given a list of distinct unsorted integers nums.
+
+Your task is to implement a function with following prototype:
+```cpp
+string minDiffPair(int* arr, int n);
+```
+This function identify and return all pairs of elements with the smallest absolute difference among them. If there are multiple pairs that meet this criterion, the function should find and return all of them.
+
+**Note:** Following libraries are included: \<iostream\>, \<string\>, \<algorithm\>, \<sstream\>
+
+**For example:**
+
++ Test 1:
+```cpp
+int arr[] = {10, 5, 7, 9, 15, 6, 11, 8, 12, 2};
+cout << minDiffPairs(arr, 10);
+```
++ Result 1: (5, 6), (6, 7), (7, 8), (8, 9), (9, 10), (10, 11), (11, 12)
+
++ Test 2:
+```cpp
+int arr[] = {10};
+cout << minDiffPairs(arr, 1);
+int arr[] = {10, -1, -150, 200};
+cout << minDiffPairs(arr, 4);
+```
++ Result 2: (-1, 10)
+
+---
 # selectionSort
 
 Implement static method selectionSort in class Sorting to sort an array in ascending order.  After each selection, we will print out a list to check (using printArray). 
