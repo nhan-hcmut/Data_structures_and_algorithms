@@ -595,6 +595,7 @@ int BinaryTree<K, V>::sumOfLeafs() {
 }
 ```
 You can write other functions to achieve this task.
+
 **For example:**
 
 + Test 1:
