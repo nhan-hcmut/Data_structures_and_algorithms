@@ -1,4 +1,4 @@
-#getHeight_preOrder_inOrder_postOrder
+# getHeight_preOrder_inOrder_postOrder
 
 Given class BinaryTree, you need to finish methods getHeight(), preOrder(), inOrder(), postOrder().
 ```cpp
