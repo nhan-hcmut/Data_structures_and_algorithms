@@ -281,3 +281,79 @@ cout << longestPathSum(root);
 + Result 2: 61
 
 ---
+# lowestAncestor
+
+Class BTNode is used to store a node in binary tree, described on the following:
+```cpp
+class BTNode {
+    public: 
+        int val; 
+        BTNode *left; 
+        BTNode *right; 
+        BTNode() {
+            this->left = this->right = NULL;
+        } 
+        BTNode(int val) {
+            this->val = val;
+            this->left = this->right = NULL;
+        } 
+        BTNode(int val, BTNode*& left, BTNode*& right) {
+            this->val = val;
+            this->left = left;
+            this->right = right;
+        } 
+};
+```
+Where val is the value of node (non-negative integer), left and right are the pointers to the left node and right node of it, respectively.
+
+**Request:** Implement function:
+```cpp
+int lowestAncestor(BTNode* root, int a, int b);
+```
+Where root is the root node of given binary tree (this tree has between 2 and 100000 elements). This function returns the lowest ancestor node's val of node a and node b in this binary tree (assume a and b always exist in the given binary tree).
+
+**More information:**
+
+- A node is called as the lowest ancestor node of node a and node b if node a and node b are its descendants.
+
+- A node is also the descendant of itself.
+
+- On the given binary tree, each node's val is distinguish from the others' val
+
+**Example:**
+
+Given a binary tree in the image 'LowestAncestor.png':
+
+- The lowest ancestor of node 4 and node 5 is node 2.
+
+**Explanation of function createTree:** The function has three parameters. The first two parameters take in an array containing the parent of each Node of the binary tree, and the third parameter takes in an array representing the respective values of the Nodes. After processing, the function will construct the binary tree and return the address of the root Node. Note that the root Node is designated with a parent value of -1.
+
+**Example:**
+```cpp
+int arr[] = {-1,0,0,2,2};
+int value[] = {3,5,2,1,4};
+BTNode* root = BTNode::createTree(arr, arr + sizeof(arr)/sizeof(int), value);
+```
+arr[0]=-1 means the Node containing the value value[0]=3 will be the root Node. Also, since arr[1]=arr[2]=0, it implies that the Nodes containing the values value[1]=5 and value[2]=2 will have the Node containing the value value[0]=3 as their parent. Lastly, since arr[3]=arr[4]=2, it means the Nodes containing the values value[3]=1 and value[4]=4 will have the Node with the value value[2]=2 as their parent. Final tree of this example are shown in the figure above.
+Note that whichever Node appears first in the arr sequence will be the left Node, and the TestCase always ensures that the resulting tree is a binary tree.
+
+**Note:** In this exercise, the libraries iostream, stack, queue, utility and using namespace std are used. You can write helper functions; however, you are not allowed to use other libraries.
+
+**For example:**
+
++ Test 1:
+``
+int arr[] = {-1,0,0,2,2,3,3};
+BTNode* root = BTNode::createTree(arr, arr + sizeof(arr) / sizeof(int), NULL);
+cout << lowestAncestor(root, 4, 5);
++ Result 1: 2
+
++ Test 2:
+```cpp
+int arr[] = {-1,0,1,1,0,4,4,2,5,6};
+BTNode* root = BTNode::createTree(arr, arr + sizeof(arr) / sizeof(int), NULL);
+cout << lowestAncestor(root, 4, 9);
+```
++ Result 2: 4
+
+---
