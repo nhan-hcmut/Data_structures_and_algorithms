@@ -2,7 +2,8 @@
 #include <sstream>
 using namespace std;
 
-template <class T> class SLinkedList {
+template<class T>
+class SLinkedList {
     public:
     class Node; // Forward declaration
     
@@ -67,8 +68,9 @@ template <class T> class SLinkedList {
     void bubbleSort();
 };
 
-template <class T>
+template<class T>
 void SLinkedList<T>::bubbleSort() {
+    if (this->count < 2) return;
     
     for (int upperBound = this->count - 1; upperBound > 0; upperBound--) {
         
