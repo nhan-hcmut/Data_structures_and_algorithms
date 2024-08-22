@@ -52,10 +52,34 @@ class BinaryTree {
         if (posFromRoot[l - 1] == 'R')
             walker->pRight = new Node(key, value);
     }
-    // STUDENT ANSWER BEGIN 
-        
+    // STUDENT ANSWER BEGIN
+    // You can define other functions here to help you.
+    int getHeight();
+    string preOrder();
+    string inOrder();
+    string postOrder();
     // STUDENT ANSWER END
 };
+
+template<class K, class V>
+int BinaryTree<K, V>::getHeight() {
+    // TODO: return height of the binary tree.
+}
+
+template<class K, class V>
+string BinaryTree<K, V>::preOrder() {
+    // TODO: return the sequence of values of nodes in pre-order.
+}
+
+template<class K, class V>
+string BinaryTree<K, V>::inOrder() {
+    // TODO: return the sequence of values of nodes in in-order.
+}
+
+template<class K, class V>
+string BinaryTree<K, V>::postOrder() {
+    // TODO: return the sequence of values of nodes in post-order.
+}
 ```
 
 **For example:**
