@@ -50,16 +50,16 @@ class BinaryTree {
     }
     // STUDENT ANSWER BEGIN
     // You can define other functions here to help you.
-    int getHeightRecur(Node* temp) const;
+    int getHeightRecur(Node* temp) const; // helping function
     int getHeight();
 
-    string preOrderRecur(Node* temp) const;
+    string preOrderRecur(Node* temp) const; // helping function
     string preOrder();
 
-    string inOrderRecur(Node* temp) const;
+    string inOrderRecur(Node* temp) const; // helping function
     string inOrder();
 
-    string postOrderRecur(Node* temp) const;
+    string postOrderRecur(Node* temp) const; // helping function
     string postOrder();
     // STUDENT ANSWER END
 };
@@ -67,7 +67,7 @@ class BinaryTree {
 // STUDENT ANSWER BEGIN
 // You can define other functions here to help you.
 template<class K, class V>
-int BinaryTree<K, V>::getHeightRecur(Node* temp) const {
+int BinaryTree<K, V>::getHeightRecur(Node* temp) const { // helping function
     if (!temp) return 0;
     if (this->getHeightRecur(temp->pLeft) > this->getHeightRecur(temp->pRight)) return this->getHeightRecur(temp->pLeft) + 1;
     return this->getHeightRecur(temp->pRight) + 1;
@@ -80,7 +80,7 @@ int BinaryTree<K, V>::getHeight() {
 }
 
 template<class K, class V>
-string BinaryTree<K, V>::preOrderRecur(Node* temp) const {
+string BinaryTree<K, V>::preOrderRecur(Node* temp) const { // helping function
     if (!temp) return "";
     stringstream ss;
     ss << temp->value << " ";
@@ -96,7 +96,7 @@ string BinaryTree<K, V>::preOrder() {
 }
 
 template<class K, class V>
-string BinaryTree<K, V>::inOrderRecur(Node* temp) const {
+string BinaryTree<K, V>::inOrderRecur(Node* temp) const { // helping function
     if (!temp) return "";
     stringstream ss;
     ss << this->inOrderRecur(temp->pLeft);
@@ -112,7 +112,7 @@ string BinaryTree<K, V>::inOrder() {
 }
 
 template<class K, class V>
-string BinaryTree<K, V>::postOrderRecur(Node* temp) const {
+string BinaryTree<K, V>::postOrderRecur(Node* temp) const { // helping function
     if (!temp) return "";
     stringstream ss;
     ss << this->postOrderRecur(temp->pLeft);
@@ -126,7 +126,6 @@ string BinaryTree<K, V>::postOrder() {
     // TODO: return the sequence of values of nodes in post-order.
     return this->postOrderRecur(this->root);
 }
-
 // STUDENT ANSWER END
 
 int main() {
