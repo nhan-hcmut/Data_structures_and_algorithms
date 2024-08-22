@@ -342,10 +342,11 @@ Note that whichever Node appears first in the arr sequence will be the left Node
 **For example:**
 
 + Test 1:
-``
+```cpp
 int arr[] = {-1,0,0,2,2,3,3};
 BTNode* root = BTNode::createTree(arr, arr + sizeof(arr) / sizeof(int), NULL);
 cout << lowestAncestor(root, 4, 5);
+```
 + Result 1: 2
 
 + Test 2:
