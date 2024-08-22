@@ -53,6 +53,8 @@ void Sorting<T>::merge(T* start, T* middle, T* end) {
     while (j < sizeRight) {
         start[k++] = rightArr[j++];
     }
+    delete[] leftArr;
+    delete[] rightArr;
 }
 
 template<class T>
@@ -114,7 +116,7 @@ int main() {
     */
 
     // test 2
-    int array[] = { 3, 20, 18, 17 ,12, 13, 14, 15, 1, 2, 9, 6, 4, 7, 11, 16, 10, 8, 5, 19 };
+    int array[] = {3, 20, 18, 17, 12, 13, 14, 15, 1, 2, 9, 6, 4, 7, 11, 16, 10, 8, 5, 19};
     int min_size = 4;
     Sorting<int>::TimSort(&array[0], &array[20], min_size);
     /* result
