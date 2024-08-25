@@ -68,7 +68,7 @@ int main() {
     (3, 3)
     */
 
-    /* Test	2
+    /* Test 2
     Point points[] = {{3, 3}, {5, -1}, {-2, 4}};
     int n = sizeof(points) / sizeof(points[0]);
     int k = 3;
