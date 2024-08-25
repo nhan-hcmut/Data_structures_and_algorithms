@@ -32,7 +32,7 @@ void Sorting<T>::QuickSort(T* start, T* end) {
 }
 #endif /* SORTING_H */
 ```
-You can read the pseudocode of the algorithm used to in method Partition in the "HoarePartition.png" image.
+You can read the pseudocode of the algorithm used in method Partition in the "HoarePartition.png" image.
 
 **For example:**
 
@@ -46,7 +46,7 @@ cout << "Array after sorting: ";
 for (int i : array) cout << i << " ";
 ```
 + Result:
-
+<br/>
 Index of pivots: 2 0 0 6 1 0 2 1 0 0 2 1 0 0 0 0 0 0 1 0
 <br/>
 Array after sorting: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
