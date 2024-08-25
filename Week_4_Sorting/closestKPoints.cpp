@@ -56,7 +56,7 @@ void closestKPoints(Point points[], int n, Point &des_point, int k) {
 
 int main() {
     
-    // Test	1
+    // Test 1
     Point points[] = {{3, 3}, {5, -1}, {-2, 4}};
     int n = sizeof(points) / sizeof(points[0]);
     int k = 2;
