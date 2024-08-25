@@ -147,6 +147,72 @@ list.bubbleSort();
 [1,2,4,8,9]
 
 ---
+# closestKPoints
+
+Given a list of points on 2-D plane (points[] with n elements) and an integer k. Your task in this exercise is to implement the closestKPoints function to find K closest points to the given point (des_point) and print them out.
+
+**Prototype** of closestKPoints:
+```cpp
+void closestKPoints(Point points[], int n, Point &des_point, int k);
+```
+**Note:** The distance between two points on a plane is the Euclidean distance.
+
+**Template:**
+```cpp
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+class Point {
+   public:
+   int x, y;
+   Point(int x = 0, int y = 0) {
+      this->x = x;
+      this->y = y;
+   }
+   void display() {
+      cout << "(" << this->x << ", " << this->y << ")";
+   }
+};
+```
+
+**For example:**
+
++ Test 1:
+```cpp
+Point points[] = {{3, 3}, {5, -1}, {-2, 4}};
+int n = sizeof(points) / sizeof(points[0]);
+int k = 2;
+Point des_point = {0, 2};
+closestKPoints(points, n, des_point, k);
+```
++ Result 1:
+<br/>
+(-2, 4)
+<br/>
+(3, 3)
+
+
++ Test 2:
+```cpp
+Point points[] = {{3, 3}, {5, -1}, {-2, 4}};
+int n = sizeof(points) / sizeof(points[0]);
+int k = 3;
+Point des_point = {0, 2};
+closestKPoints(points, n, des_point, k);
+```
++ Result 2:
+<br/>
+(-2, 4)
+<br/>
+(3, 3)
+<br/>
+(5, -1)
+
+---
 # maxNumberOfPeople
 
 A hotel has m rooms left, there are n people who want to stay in this hotel. You have to distribute the rooms so that as many people as possible will get a room to stay.
