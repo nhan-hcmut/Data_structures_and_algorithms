@@ -149,7 +149,7 @@ list.bubbleSort();
 ---
 # closestKPoints
 
-Given a list of points on 2-D plane (points[] with n elements) and an integer k. Your task in this exercise is to implement the closestKPoints function to find K closest points to the given point (des_point) and print them out.
+Given a list of points on 2-D plane (points[] with n elements) and an integer k. Your task in this exercise is to implement the closestKPoints function to find K closest points to the given point (des_point) and print them by ascending order of distances.
 
 **Prototype** of closestKPoints:
 ```cpp
