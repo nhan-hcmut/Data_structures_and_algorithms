@@ -19,37 +19,29 @@ class Point {
 
 /* Your helping functions go here */
 // Calculate Euclidean distance between two points
-double calculateDistance(const Point &point1, const Point &point2) {
+double calculateDistance(const Point& point1, const Point& point2) {
     return sqrt(pow(point1.x - point2.x, 2) + pow(point1.y - point2.y, 2));
 }
 /* End helping functions */
 
-void closestKPoints(Point points[], int n, Point &des_point, int k) {
+void closestKPoints(Point points[], int n, Point& des_point, int k) {
     //TODO
+    if (!points || k < 1) return;
 
-    // selection sort
-    for (short i = 0; i < n - 1; i++) {
-        double minDistance = calculateDistance(des_point, points[i]);
-        short idxOfMin = i;
-        
-        for (short j = i + 1; j < n; j++) {
-            if (calculateDistance(des_point, points[j]) < minDistance) {
-                minDistance = calculateDistance(des_point, points[j]);
-                idxOfMin = j;
-            }
+    // copy data from array points[] to a vector
+    vector<Point> vtrPt(points, points + n);
+
+    // sort vector of points by ascending distance from des_point
+    sort(
+        vtrPt.begin(),
+        vtrPt.end(),
+        [des_point](const Point& point1, const Point& point2) { /* lambda expression */
+            return calculateDistance(des_point, point1) < calculateDistance(des_point, point2);
         }
-        int tempX = points[i].x, tempY = points[i].y;
-        
-        points[i].x = points[idxOfMin].x;
-        points[i].y = points[idxOfMin].y;
-        
-        points[idxOfMin].x = tempX;
-        points[idxOfMin].y = tempY;
-    }
-    // End selection sort
+    );
     
     for (short i = 0; i < k && i < n; i++) {
-        points[i].display();
+        vtrPt.at(i).display();
         cout << endl;
     }
 }
