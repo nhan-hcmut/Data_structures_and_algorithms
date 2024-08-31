@@ -660,6 +660,22 @@ Sorting<int>::selectionSort(&arr[0], &arr[6]);
 -2, 0, 1, 2, 8, 9
 
 ---
+# sortByFrequency
+
+Print the elements of an array in the decreasing frequency order while preserving the relative order.
+
+Students are **NOT** allowed to use map / unordered map.
+
+\<iostream\>, \<algorithm\> libraries are included.
+
+**For example:**
+
+| No. | Test | Result |
+| --- | --- | --- |
+| 1 | int arr[] = {-4, 1, 2, 2, -4, 9, 1, -1};<br/>int n = sizeof(arr) / sizeof(arr[0]);<br/>sortByFrequency(arr, n);<br/>for (int i = 0; i < n; i++) {cout << arr[i] << " ";} | -4 -4 1 1 2 2 9 -1 |
+| 2 | int arr[] = {-5, 3, 8, 1, -9, -9};<br/>int n = sizeof(arr) / sizeof(arr[0]);<br/>sortByFrequency(arr, n);<br/>for (int i = 0; i < n; i++) {cout << arr[i] << " ";} | -9 -9 -5 3 8 1 |
+
+---
 # sortSegment_ShellSort
 
 Implement static methods sortSegment and ShellSort in class Sorting to sort an array in ascending order. 
