@@ -32,7 +32,7 @@ void closestKPoints(Point points[], int n, Point& des_point, int k) {
     vector<Point> vtrPt(points, points + n);
 
     // sort vector of points by ascending distance from des_point
-    sort(
+    sort( /* in <algorithm> library */
         vtrPt.begin(),
         vtrPt.end(),
         [des_point](const Point& point1, const Point& point2) { /* lambda expression */
