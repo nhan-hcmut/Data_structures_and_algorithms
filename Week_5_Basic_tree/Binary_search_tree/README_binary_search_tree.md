@@ -1,4 +1,4 @@
-# add_delete
+# add_deleteNode
 
 In this question, you have to perform add and delete on binary search tree. Note that:
 
@@ -29,7 +29,7 @@ class BinarySearchTree {
         // You have to delete all Nodes in BinaryTree. However in this task, you can ignore it.
     }
 
-    //Helping function
+    //Helping functions
 
     void add(T value);
     void deleteNode(T value);
@@ -65,13 +65,11 @@ class BinarySearchTree {
 template<class T>
 void BinarySearchTree<T>::add(T value) {
     //TODO
-    
 }
 
 template<class T>
 void BinarySearchTree<T>::deleteNode(T value) {
     //TODO
-    
 }
 ```
 **For example:**
