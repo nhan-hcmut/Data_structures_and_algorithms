@@ -113,3 +113,73 @@ void BinarySearchTree<T>::deleteNode(T value) {
 </table>
 
 ---
+# subtreeWithRange
+
+Class BSTNode is used to store a node in binary search tree, described on the following:
+```cpp
+class BSTNode {
+    public: 
+    int val; 
+    BSTNode *left; 
+    BSTNode *right; 
+    BSTNode() {
+        this->left = this->right = nullptr;
+    } 
+    BSTNode(int val) {
+        this->val = val;
+        this->left = this->right = nullptr;
+    } 
+    BSTNode(int val, BSTNode*& left, BSTNode*& right) {
+        this->val = val;
+        this->left = left;
+        this->right = right;
+    } 
+};
+```
+Where val is the value of node, left and right are the pointers to the left node and right node of it, respectively. If a repeated value is inserted to the tree, it will be inserted to the left subtree.
+
+Also, a static method named **createBSTree** is used to create the binary search tree, by iterating the argument array left-to-right and repeatedly calling addNode method on the root node to insert the value into the correct position.
+
+**For example:**
+```cpp
+int arr[] = {0, 10, 20, 30};
+auto root = BSTNode::createBSTree(arr, arr + 4);
+```
+is equivalent to
+```cpp
+auto root = new BSTNode(0);
+root->addNode(10);
+root->addNode(20);
+root->addNode(30);
+```
+**Request:** Implement function
+```cpp
+BSTNode* subtreeWithRange(BSTNode* root, int lo, int hi);
+```
+Where root is the root node of given binary search tree (this tree has between 0 and 100000 elements). This function returns the binary search tree after deleting all nodes whose values are outside the range [lo, hi] (inclusive).
+
+**Example:**
+
+Given a binary search tree in 'subtree.png', with lo = 7 and hi = 10, the result will be in 'subtreeres.png'.
+
+**Note:** In this exercise, the libraries \<iostream\> and using namespace std are used. You can write helper functions; however, you are NOT allowed to use other libraries.
+
+**For example:**
+
+<table>
+    <tr>
+        <td>Test</td>
+        <td>Result</td>
+    </tr>
+    <tr>
+        <td>
+            int arr[] = {0, 3, 5, 1, 2, 4};<br/>
+            int lo = 1, hi = 3;<br/>
+            BSTNode* root = BSTNode::createBSTree(arr, arr + sizeof(arr) / sizeof(int));<br/>
+            root = subtreeWithRange(root, lo, hi);<br/>
+            BSTNode::printPreorder(root);<br/>
+            BSTNode::deleteTree(root);
+        </td>
+        <td>3 1 2</td>
+    </tr>
+</table>
