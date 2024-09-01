@@ -74,33 +74,42 @@ void BinarySearchTree<T>::deleteNode(T value) {
 ```
 **For example:**
 
-+ Test 1:
-```cpp
-BinarySearchTree<int> bst;
-bst.add(9);
-bst.add(2);
-bst.add(10);
-bst.deleteNode(9);
-cout << bst.inOrder();
-```
-+ Result 1: 2 10
-
-+ Test 2:
-```cpp
-BinarySearchTree<int> bst;
-bst.add(9);
-bst.add(2);
-bst.add(10);
-bst.add(8);
-cout << bst.inOrder()<<endl;
-bst.add(11);
-bst.deleteNode(9);
-cout << bst.inOrder();
-```
-+ Result 2:
-<br/>
-2 8 9 10
-<br/>
-2 8 10 11 
+<table>
+    <tr>
+        <td>No.</td>
+        <td>Test</td>
+        <td>Result</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>
+            BinarySearchTree<int> bst;<br/>
+            bst.add(9);<br/>
+            bst.add(2);<br/>
+            bst.add(10);<br/>
+            bst.deleteNode(9);<br/>
+            cout << bst.inOrder();
+        </td>
+        <td>2 10</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>
+            BinarySearchTree<int> bst;<br/>
+            bst.add(9);<br/>
+            bst.add(2);<br/>
+            bst.add(10);<br/>
+            bst.add(8);<br/>
+            cout << bst.inOrder() << endl;<br/>
+            bst.add(11);<br/>
+            bst.deleteNode(9);<br/>
+            cout << bst.inOrder();
+        </td>
+        <td>
+            2 8 9 10<br/>
+            2 8 10 11
+        </td>
+    </tr>
+</table>
 
 ---
