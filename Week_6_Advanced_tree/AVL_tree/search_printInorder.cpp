@@ -12,7 +12,7 @@ class AVLTree {
     class Node;
 
     private:
-    Node *root;
+    Node* root;
 
     public:
     AVLTree() : root(nullptr) {}
