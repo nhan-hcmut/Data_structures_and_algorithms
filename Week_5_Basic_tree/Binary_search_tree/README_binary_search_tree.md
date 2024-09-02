@@ -51,7 +51,7 @@ class BinarySearchTree {
     class Node {
         private:
         T value;
-        Node* pLeft, * pRight;
+        Node *pLeft, *pRight;
         friend class BinarySearchTree<T>;
         
         public:
@@ -139,7 +139,7 @@ class BinarySearchTree {
     class Node {
         private:
         T value;
-        Node* pLeft, * pRight;
+        Node *pLeft, *pRight;
         friend class BinarySearchTree<T>;
 
         public:
@@ -202,7 +202,7 @@ class BinarySearchTree {
     class Node {
         private:
         T value;
-        Node* pLeft, * pRight;
+        Node *pLeft, *pRight;
         friend class BinarySearchTree<T>;
 
         public:
