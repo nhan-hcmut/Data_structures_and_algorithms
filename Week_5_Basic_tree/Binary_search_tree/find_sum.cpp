@@ -29,6 +29,7 @@ class BinarySearchTree {
     };
     Node* addRec(Node* root, T value);
     void add(T value);
+
     // STUDENT ANSWER BEGIN
     // You can define other functions here to help you.
     bool findRecur(Node*, T);
