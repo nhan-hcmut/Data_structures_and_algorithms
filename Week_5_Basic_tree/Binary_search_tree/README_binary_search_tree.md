@@ -113,6 +113,70 @@ void BinarySearchTree<T>::deleteNode(T value) {
 </table>
 
 ---
+# getMin_getMax
+
+Given class BinarySearchTree, you need to finish 2 methods getMin() and getMax().
+```cpp
+#include <iostream>
+#include <string>
+#include <sstream>
+
+using namespace std;
+
+template<class T>
+class BinarySearchTree {
+    public:
+    class Node;
+
+    private:
+    Node* root;
+
+    public:
+    BinarySearchTree() : root(nullptr) {}
+    ~BinarySearchTree() {
+        // You have to delete all Nodes in BinaryTree. However in this task, you can ignore it.
+    }
+
+    class Node {
+        private:
+        T value;
+        Node* pLeft, * pRight;
+        friend class BinarySearchTree<T>;
+
+        public:
+        Node(T value) : value(value), pLeft(NULL), pRight(NULL) {}
+        ~Node() {}
+    };
+    Node* addRec(Node* root, T value);
+    void add(T value);
+    // STUDENT ANSWER BEGIN
+
+    // STUDENT ANSWER END
+};
+```
+
+**For example:**
+
+<table>
+    <tr>
+        <td>Test</td>
+        <td>Result</td>
+    </tr>
+    <tr>
+        <td>
+            BinarySearchTree<int> bst;<br/>
+            for (int i = 0; i < 10; ++i) bst.add(i);<br/>
+            cout << bst.getMin() << endl;<br/>
+            cout << bst.getMax() << endl;
+        </td>
+        <td>
+            0<br/>
+            9
+        </td>
+    </tr>
+</table>
+
+---
 # kthSmallest
 
 Class BSTNode is used to store a node in binary search tree, described on the following:
