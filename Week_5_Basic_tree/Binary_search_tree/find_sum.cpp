@@ -20,7 +20,7 @@ class BinarySearchTree {
     class Node {
         private:
         T value;
-        Node* pLeft, * pRight;
+        Node *pLeft, *pRight;
         friend class BinarySearchTree<T>;
 
         public:
@@ -32,8 +32,8 @@ class BinarySearchTree {
 
     // STUDENT ANSWER BEGIN
     // You can define other functions here to help you.
-    bool findRecur(Node*, T);
-    T sumRecur(Node*, T, T);
+    bool findRecur(Node*, T) const;
+    T sumRecur(Node*, T, T) const;
     // End helping functions
 
     bool find(T);
@@ -44,7 +44,7 @@ class BinarySearchTree {
 // STUDENT ANSWER BEGIN
 // You can define other functions here to help you.
 template<class T>
-bool BinarySearchTree<T>::findRecur(Node* ptr, T i) {
+bool BinarySearchTree<T>::findRecur(Node* ptr, T i) const {
     if (!ptr) return false;
     if (ptr->value == i) return true;
     if (ptr->value > i) return findRecur(ptr->pLeft, i);
@@ -52,7 +52,7 @@ bool BinarySearchTree<T>::findRecur(Node* ptr, T i) {
 }
 
 template<class T>
-T BinarySearchTree<T>::sumRecur(Node* ptr, T l, T r) {
+T BinarySearchTree<T>::sumRecur(Node* ptr, T l, T r) const {
     if (!ptr) return 0;
     if (ptr->value < l) return sumRecur(ptr->pRight, l, r);
     if (ptr->value > r) return sumRecur(ptr->pLeft, l, r);
