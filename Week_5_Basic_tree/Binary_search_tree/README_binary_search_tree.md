@@ -83,7 +83,7 @@ void BinarySearchTree<T>::deleteNode(T value) {
     <tr>
         <td>1</td>
         <td>
-            BinarySearchTree<int> bst;<br/>
+            BinarySearchTree&ltint&gt bst;<br/>
             bst.add(9);<br/>
             bst.add(2);<br/>
             bst.add(10);<br/>
@@ -95,7 +95,7 @@ void BinarySearchTree<T>::deleteNode(T value) {
     <tr>
         <td>2</td>
         <td>
-            BinarySearchTree<int> bst;<br/>
+            BinarySearchTree&ltint&gt bst;<br/>
             bst.add(9);<br/>
             bst.add(2);<br/>
             bst.add(10);<br/>
@@ -162,7 +162,7 @@ class BinarySearchTree {
     </tr>
     <tr>
         <td>
-            BinarySearchTree<int> bst;<br/>
+            BinarySearchTree&ltint&gt bst;<br/>
             for (int i = 0; i < 10; ++i) bst.add(i);<br/>
             cout << bst.find(7) << endl;<br/>
             cout << bst.sum(0, 4) << endl;
@@ -226,7 +226,7 @@ class BinarySearchTree {
     </tr>
     <tr>
         <td>
-            BinarySearchTree<int> bst;<br/>
+            BinarySearchTree&ltint&gt bst;<br/>
             for (int i = 0; i < 10; ++i) bst.add(i);<br/>
             cout << bst.getMin() << endl;<br/>
             cout << bst.getMax() << endl;
@@ -235,6 +235,95 @@ class BinarySearchTree {
             0<br/>
             9
         </td>
+    </tr>
+</table>
+
+---
+# isBST
+
+Given class BinaryTree, you need to finish method isBST() to determine if a binary tree is a binary search tree (BST) or not.
+```cpp
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <sstream>
+using namespace std;
+
+template<class K, class V>
+class BinaryTree {
+    public:
+    class Node;
+    
+    private:
+    Node* root;
+    
+    public:
+    BinaryTree() : root(nullptr) {}
+    ~BinaryTree() {
+        // You have to delete all Nodes in BinaryTree. However in this task, you can ignore it.
+    }
+    class Node {
+        private:
+        K key;
+        V value;
+        Node *pLeft, *pRight;
+        friend class BinaryTree<K, V>;
+        
+        public:
+        Node(K key, V value) : key(key), value(value), pLeft(NULL), pRight(NULL) {}
+        ~Node() {}
+    };
+
+    void addNode(string posFromRoot, K key, V value) {
+        if (posFromRoot == "") {
+            this->root = new Node(key, value);
+            return;
+        }
+        Node* walker = this->root;
+        int l = posFromRoot.length();
+        
+        for (int i = 0; i < l - 1; i++) {
+            if (!walker) return;
+            if (posFromRoot[i] == 'L') walker = walker->pLeft;
+            if (posFromRoot[i] == 'R') walker = walker->pRight;
+        }
+        if (posFromRoot[l - 1] == 'L') walker->pLeft = new Node(key, value);
+        if (posFromRoot[l - 1] == 'R') walker->pRight = new Node(key, value);
+    }
+    // STUDENT ANSWER BEGIN
+    // You can define other functions here to help you.
+
+    bool isBST() const;
+    // STUDENT ANSWER END
+};
+```
+**Example:**
+
+<table>
+    <tr>
+        <td>No.</td>
+        <td>Test</td>
+        <td>Result</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>
+            BinaryTree&ltint, int&gt binaryTree;<br/>
+            binaryTree.addNode("", 2, 4); // Add to root<br/>
+            binaryTree.addNode("L", 3, 2); // Add to root's left node<br/>
+            binaryTree.addNode("R", 5, 9); // Add to root's right node<br/>
+            cout << binaryTree.isBST();
+        </td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>
+            BinaryTree&ltint, int&gt binaryTree;<br/>
+            binaryTree.addNode("", 2, 4);<br/>
+            cout << binaryTree.isBST();
+        </td>
+        <td>1</td>
     </tr>
 </table>
 
