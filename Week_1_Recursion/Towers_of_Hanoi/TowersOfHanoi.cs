@@ -5,7 +5,7 @@ public class TowersOfHanoi {
     
     public static void move(int n, string source, string destination, string auxiliary) {
         
-        if (n == 1) Console.WriteLine("Step {0}: Move a disk from {1} to {2}", source, destination);
+        if (n == 1) Console.WriteLine("Step {0}: Move a disk from {1} to {2}", ++step, source, destination);
         
         else {
             move(n-1, source, auxiliary, destination);
