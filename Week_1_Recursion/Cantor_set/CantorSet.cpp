@@ -47,6 +47,7 @@ int main() {
 
     for (int line = 0; line < order; line++) {
         stop = three_power(order - line - 1);
+        
         print_x(three_power(order - 1));
         cout << endl;
     }
