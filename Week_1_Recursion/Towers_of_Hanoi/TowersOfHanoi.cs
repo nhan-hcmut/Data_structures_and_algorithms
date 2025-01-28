@@ -1,7 +1,7 @@
 using System;
 
 public class TowersOfHanoi {
-    static int step =0 ;
+    static int step = 0;
     
     public static void move(int n, string source, string destination, string auxiliary) {
         
