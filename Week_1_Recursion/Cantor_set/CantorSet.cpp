@@ -13,12 +13,8 @@ using namespace std;
 int stop; // A flag to stop the recursion
 
 int three_power(int n) { // 3 raised to the power of n
-    if (n == 0) {
-        return 1;
-    }
-    else {
-        return 3 * three_power(n - 1);
-    }
+    if (n == 0) return 1;
+    return 3 * three_power(n - 1);
 }
 
 void print_space(int n) { // Print n spaces
