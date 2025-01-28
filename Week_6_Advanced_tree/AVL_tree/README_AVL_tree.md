@@ -1,10 +1,10 @@
 # rotateRight_rotateLeft
 
-In this question, you have to perform rotate nodes on AVL tree. Note that:
+In this question, you have to perform rotate nodes on AVL tree. **Note** that:
 
 - When adding a node which has the same value as parent node, add it in the right sub tree.
 
-Your task is to implement function: rotateRight, rotateLeft. You could define one or more functions to achieve this task.
+Your task is to implement function: **rotateRight**, **rotateLeft**. You could define one or more functions to achieve this task.
 ```cpp
 #include <iostream>
 #include <cmath>
@@ -130,11 +130,11 @@ class AVLTree {
         <td>
             After inserting 0, 1. Tree:<br/>
             0<br/>
-            &nbsp1<br/>
+            &nbsp&nbsp1<br/>
             <br/>
             After inserting 2, perform 'rotateLeft'. Tree:<br/>
-            &nbsp1<br/>
-            0&nbsp2
+            &nbsp&nbsp1<br/>
+            0&nbsp&nbsp&nbsp2
         </td>
     </tr>
     <tr>
@@ -152,12 +152,12 @@ class AVLTree {
         </td>
         <td>
             After inserting 10, 9. Tree:<br/>
-            &nbsp10<br/>
+            &nbsp&nbsp10<br/>
             9<br/>
             <br/>
             After inserting 8, perform 'rotateRight'. Tree:<br/>
-            &nbsp9<br/>
-            8&nbsp10
+            &nbsp&nbsp9<br/>
+            8&nbsp&nbsp&nbsp10
         </td>
     </tr>
 </table>
@@ -165,7 +165,7 @@ class AVLTree {
 ---
 # search_printInorder
 
-In this exercise, you have to search and print inorder on AVL tree. You have to implement 2 methods: search() and printInorder() to complete the task. Note that:
+In this exercise, you have to search and print inorder on AVL tree. You have to implement 2 methods: **search()** and **printInorder()** to complete the task. **Note** that:
 
 - When the tree is null, don't print anything. 
 
