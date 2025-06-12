@@ -1,8 +1,8 @@
 Algorithm move(val disks <integer>, val source <string>, val destination <string>, val auxiliary <string>)
     Move disks from source to destination.
     
-    Pre-condition: disks is the number of disks to be moved.
-    Post-condition: print steps to move disks from source to destination.
+    Precondition: disks is the number of disks to be moved.
+    Postcondition: print steps to move disks from source to destination.
 
     static variable named step := 0
 
