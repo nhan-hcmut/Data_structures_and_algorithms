@@ -1,7 +1,7 @@
 Algorithm printXRecursively(val n <integer>)
 
-    Pre-condition: 2 integer variables order and stop have been declared and initialized.
-    Post-condition: A line of the Cantor set is printed.
+    Precondition: 2 integer variables order and stop have been declared and initialized.
+    Postcondition: A line of the Cantor set is printed.
 
     if n = stop then
         print n characters 'X'
@@ -13,7 +13,7 @@ Algorithm printXRecursively(val n <integer>)
 End printXRecursively
 
 Algorithm printCantorSet
-    Post-condition: The Cantor set is printed by using characters 'X' and spaces.
+    Postcondition: The Cantor set is printed by using characters 'X' and spaces.
 
     stop := 0
     order := 0
