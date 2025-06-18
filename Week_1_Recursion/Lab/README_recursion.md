@@ -256,3 +256,43 @@ char str[] = "Truong DH Bach Khoa";
 cout << strLen(str);
 ```
 + Result: 19
+---
+# Implement function: int superString(string x, string y, int m, int n);
+A string is called a subsequence of the string S if it can be derived from string S by deleting some or no elements without changing the order of the remaining characters.
+
+**Example:**
+
+- "abd" is a subsequence of "abcdef" because it is derived from "abcdef" by deleting characters 'c', 'd', 'f' and does not change the order of remaining characters.
+
+- "adc" is not a subsequence of "abcdef" because the order of remaining characters is changed.
+
+A string is called a superstring of two other strings A and B if both strings A and B are subsequences of it. The superstring of A and B that has the smallest length is called the shortest superstring.
+
+**Request:** Inputs are two strings x, y and their lengths m, n. Implement function `superString(x, y, m, n);` to find then return the length of the shortest superstring of x and y.
+
+**Example:**
+<br/>
+Two strings are "ABCBDAB" and "BDCABA". The length of the shortest superstring ("ABCBDCABA", "ABDCABDAB" or "ABDCBDABA") is 9.
+
+**Note:**
+<br/>
+In this exercise, libraries \<iostream\>, and \<string\> are included and "using namespace std;" has been used. You can add other functions but are not allowed to add other libraries. Because this problem is used for practicing recursion, you are **NOT** allowed to use keyword while, for and do.
+
+**For example:**
+
++ Test 1:<br/>
+```cpp
+string x = "ABCBDAB"; 
+string y = "BDCABA";
+int m = x.length(), n = y.length();
+cout << superString(x, y, m, n) << "\n"; // Result: 9
+```
+
++ Test 2:<br/>
+```cpp
+string x = "abcde"; 
+string y = "efghijkl";
+int m = x.length(), n = y.length();
+cout << superString(x, y, m, n) << "\n"; // Result: 12
+```
+---
