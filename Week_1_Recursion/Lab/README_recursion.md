@@ -257,7 +257,8 @@ cout << strLen(str);
 ```
 + Result: 19
 ---
-# Implement function: int superString(string x, string y, int m, int n);
+# Implement function: `int superString(string x, string y, int m, int n);`
+
 A string is called a subsequence of the string S if it can be derived from string S by deleting some or no elements without changing the order of the remaining characters.
 
 **Example:**
@@ -276,7 +277,7 @@ Two strings are "ABCBDAB" and "BDCABA". The length of the shortest superstring (
 
 **Note:**
 <br/>
-In this exercise, libraries \<iostream\>, and \<string\> are included and "using namespace std;" has been used. You can add other functions but are not allowed to add other libraries. Because this problem is used for practicing recursion, you are **NOT** allowed to use keyword while, for and do.
+In this exercise, libraries `<iostream>`, and `<string>` are included and `using namespace std;` has been used. You can add other functions but are not allowed to add other libraries. Because this problem is used for practicing recursion, you are **NOT** allowed to use keyword while, for and do.
 
 **For example:**
 
