@@ -75,7 +75,7 @@ void BinaryTree<K, V>::BFS() {
 }
 
 int main() {
-    // test 1
+    // test
     BinaryTree<int, int> binaryTree;
     binaryTree.addNode("",2, 4); // Add to root
     binaryTree.addNode("L",3, 6); // Add to root's left node
