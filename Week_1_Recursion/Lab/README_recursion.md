@@ -1,3 +1,18 @@
+# Implement function: bool containsPattern(char* text, char* pattern);
+
+Given a **NON-empty** text and a pattern, implement above recursive function that returns true if pattern is present in text, otherwise false.
+
+**Note:** Please note that you **can't** use keyword **<ins>for, while, goto</ins>** (even in variable names, comment). You can implement other recursive functions if needed.
+
+#include \<iostream\> and "using namespace std;" have been used.
+
+**For example:**
+
+```cpp
+cout << containsPattern((char*)"Dai hoc Bach Khoa", (char*)"Bach Khoa"); // Result: 1
+```
+
+---
 # Implement function: string expand(string s);
 
 String s contains lowercase letters, digits, "(" and ")", satisfying the following rules:
@@ -20,7 +35,7 @@ String s contains lowercase letters, digits, "(" and ")", satisfying the followi
 
 **Notes:** #include \<iostream\>, #include \<string\> and "using namespace std;" have been used. You can add other functions for your answer, but you are not allowed to add other libraries.
 
-For example:
+**For example:**
 
 + Test 1: cout << expand("2(ab3(cde)x)") << "\n";
 + Result: abcdecdecdexabcdecdecdex
@@ -34,7 +49,7 @@ For example:
 
 **Requirements:** Find greatest common divisor of two positive integers a and b using recursion.
 
-For example:
+**For example:**
 
 + Test 1: cout << findGCD(124, 32);
 + Result: 4
@@ -60,7 +75,7 @@ For example:
 
 This function finds lowest common multiple of two positive integers a and b using recursion.
 
-For example:
+**For example:**
 + Test: cout << findLCM(10, 102);
 + Result: 510
 
@@ -69,7 +84,7 @@ For example:
 
 **Requirements:** Find the largest element of the array **arr** using recursion. **"length"** is the number of elements.
 
-For example:
+**For example:**
 
 + Test 1:<br/>
 ```cpp
@@ -91,7 +106,7 @@ cout << findMax(arr, 49);
 
 **Requirements:** Check if the given NON EMPTY string is palindrome or not using recursion. The given string can be a word or a sentence and therefore blank spaces must be ignored. The \<string\> library is included.
 
-For example:
+**For example:**
 + Test 1: cout << isPalindrome("mom");
 + Result: 1
 <br/><br/>
@@ -108,7 +123,7 @@ For example:
 + The \<iostream\> library and "namespace std" are used. No other libraries are allowed.
 + You can write helper functions.
 
-For example:
+**For example:**
 
 + Test 1: cout << mininumBracketAdd("()(())");
 + Result: 0
@@ -146,7 +161,7 @@ For example:
 
 **Requirements:** This function takes a string **str** which represents a positive decimal number (base 10 number), **n** is the number of elements in the string as arguments and returns the value of the decimal number. #include \<iostream\>, #include \<cstring\> and "using namespace std;" are used.
 
-For example:
+**For example:**
 + Test:<br/>
 ```cpp
 char str[] = "2020";
@@ -159,7 +174,7 @@ cout << myArrayToInt("2020", 4);
 
 **Requirements:** print 0, 1, 2, 3, ..., n (n is a positive integer and there is NO space at the end).
 
-For example:
+**For example:**
 + Test 1: printArray(5);
 + Result: 0, 1, 2, 3, 4, 5
 <br/><br/>
@@ -175,7 +190,7 @@ Rules of Hailstone sequences:
 + If a number is odd, multiply it by 3 and add 1.
 + The sequence stops when reaching number 1.
 
-For example:
+**For example:**
 + Test 1: printHailstone(6);
 + Result: 6 3 10 5 16 8 4 2 1
 <br/><br/>
@@ -198,7 +213,7 @@ Given a positive integer, print following pattern using recursion.
 
 **Pattern rule:** First, we reduce 5 one by one until reaching a negative number or 0. Then, we add 5 one by one until reaching n.
 
-For example:
+**For example:**
 + Test: printPattern(14);
 + Result: 14 9 4 -1 4 9 14
 
@@ -213,7 +228,7 @@ This function returns the reversed sentence of string s using recursion.
 + String s does not begin or end with any spaces.
 + #include \<iostream\> and "using namespace std;" have been used.
 
-For example:
+**For example:**
 + Test 1: cout << reverseSentence("data structure and algorithm is scary");
 + Result: scary is algorithm and structure data
 <br/>
@@ -226,7 +241,7 @@ For example:
 
 This function find length of the given string using recursion.
 
-For example:
+**For example:**
 + Test 1:<br/>
 ```cpp
 char str[] = "Ho Chi Minh City University of Technology";
