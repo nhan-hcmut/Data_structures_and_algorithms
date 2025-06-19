@@ -9,3 +9,4 @@ Doing some exercises in my computer engineering class.
 + Read docx, pdf or README files.
 + Do all exercises.
 + Check out my codes and compare mine with yours.
++ <ins>***Please let me know if there are any issues with my code. Thanks!***</ins>
