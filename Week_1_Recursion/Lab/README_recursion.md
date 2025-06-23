@@ -2,7 +2,7 @@
 
 Given a **NON-empty** text and a pattern, implement above recursive function that returns true if pattern is present in text, otherwise false.
 
-**Note:** Please note that you **can't** use keyword **<ins>for, while, goto</ins>** (even in variable names, comment). You can implement other recursive functions if needed.
+**Note:** Please note that you **can't** use keywords **<ins>for, while, goto</ins>** (even in variable names, comment). You can implement other recursive functions if needed.
 
 `#include <iostream>` and `using namespace std;` have been used.
 
@@ -11,7 +11,32 @@ Given a **NON-empty** text and a pattern, implement above recursive function tha
 ```cpp
 cout << containsPattern((char*)"Dai hoc Bach Khoa", (char*)"Bach Khoa"); // Result: 1
 ```
+---
+# Implement function: `int countWaySumOfSquare(int x);`
 
+Given an integer x, find number of ways to express x as sum of squares of unique natural numbers (distinct positive whole numbers).
+
+**For example:** x = 100 -> Output: 3 (**explain:** 100 = 10^2 = 8^2 + 6^2 = 1^2 + 3^2 + 4^2 + 5^2 + 7^2)
+
+**Note:** Please note that you can't use keywords for, while, goto (even in variable names, comment). You can implement other recursive functions if needed.
+
+`<iostream>` and `<cmath>` libraries are included. `using namespace std;` has been used.
+
++ Test: `cout << "\nNumber of ways to express 100 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(100) << endl; // result: 3`
+
++ Test: `cout << "\nNumber of ways to express 0 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(0) << endl; // result: 0`
+
++ Test: `cout << "\nNumber of ways to express 50 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(50) << endl; // result: 3 (50 = 7^2 + 1^2 = 6^2 + 3^2 + 2^2 + 1^2 = 5^2 + 4^2 + 3^2)`
+
++ Test: `cout << "\nNumber of ways to express 25 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(25) << endl; // result: 2 (25 = 5^2 = 4^2 + 3^2)`
+
++ Test: `cout << "\nNumber of ways to express 75 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(75) << endl; // result: 3 (75 = 7^2 + 5^2 + 1^2 = 7^2 + 4^2 + 3^2 + 1^2 = 6^2 + 5^2 + 3^2 + 2^2 + 1^2)`
+
++ Test: `cout << "\nNumber of ways to express 87 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(87) << endl; // result: 2 (87 = 7^2 + 5^2 + 3^2 + 2^2 = 6^2 + 5^2 + 4^2 + 3^2 + 1^2)`
+
++ Test: `cout << "\nNumber of ways to express 12 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(12) << endl; // result: 0`
+
++ Test: `cout << "\nNumber of ways to express 13 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(13) << endl; // result: 1`
 ---
 # Implement function: `string expand(string s);`
 
