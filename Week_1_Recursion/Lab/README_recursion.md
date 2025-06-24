@@ -2,12 +2,12 @@
 
 Given a **NON-empty** text and a pattern, implement above recursive function that returns true if pattern is present in text, otherwise false.
 
-**Note:** Please note that you **can't** use keywords **<ins>for, while, goto</ins>** (even in variable names, comment). You can implement other recursive functions if needed.
+**Note:** Please note that you **<ins>can't</ins>** use keywords **for, while, goto** (even in variable names, comment). You can implement other recursive functions if needed.
 
 `#include <iostream>` and `using namespace std;` have been used.
 
 **For example:**
-
++ Test:
 ```cpp
 cout << containsPattern((char*)"Dai hoc Bach Khoa", (char*)"Bach Khoa"); // Result: 1
 ```
@@ -18,25 +18,37 @@ Given an integer x, find number of ways to express x as sum of squares of unique
 
 **For example:** x = 100 -> Output: 3 (**explain:** 100 = 10^2 = 8^2 + 6^2 = 1^2 + 3^2 + 4^2 + 5^2 + 7^2)
 
-**Note:** Please note that you can't use keywords for, while, goto (even in variable names, comment). You can implement other recursive functions if needed.
+**Note:** Please note that you **<ins>can't</ins>** use keywords **for, while, goto** (even in variable names, comment). You can implement other recursive functions if needed.
 
 `<iostream>` and `<cmath>` libraries are included. `using namespace std;` has been used.
 
-+ Test: `cout << "\nNumber of ways to express 100 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(100) << endl; // result: 3`
++ Test 1: `cout << "\nNumber of ways to express 100 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(100) << endl; // result: 3`
 
-+ Test: `cout << "\nNumber of ways to express 0 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(0) << endl; // result: 0`
++ Test 2: `cout << "\nNumber of ways to express 0 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(0) << endl; // result: 0`
 
-+ Test: `cout << "\nNumber of ways to express 50 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(50) << endl; // result: 3 (50 = 7^2 + 1^2 = 6^2 + 3^2 + 2^2 + 1^2 = 5^2 + 4^2 + 3^2)`
++ Test 3: `cout << "\nNumber of ways to express 50 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(50) << endl; // result: 3 (50 = 7^2 + 1^2 = 6^2 + 3^2 + 2^2 + 1^2 = 5^2 + 4^2 + 3^2)`
 
-+ Test: `cout << "\nNumber of ways to express 25 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(25) << endl; // result: 2 (25 = 5^2 = 4^2 + 3^2)`
++ Test 4: `cout << "\nNumber of ways to express 25 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(25) << endl; // result: 2 (25 = 5^2 = 4^2 + 3^2)`
 
-+ Test: `cout << "\nNumber of ways to express 75 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(75) << endl; // result: 3 (75 = 7^2 + 5^2 + 1^2 = 7^2 + 4^2 + 3^2 + 1^2 = 6^2 + 5^2 + 3^2 + 2^2 + 1^2)`
++ Test 5: `cout << "\nNumber of ways to express 75 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(75) << endl; // result: 3 (75 = 7^2 + 5^2 + 1^2 = 7^2 + 4^2 + 3^2 + 1^2 = 6^2 + 5^2 + 3^2 + 2^2 + 1^2)`
 
-+ Test: `cout << "\nNumber of ways to express 87 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(87) << endl; // result: 2 (87 = 7^2 + 5^2 + 3^2 + 2^2 = 6^2 + 5^2 + 4^2 + 3^2 + 1^2)`
++ Test 6: `cout << "\nNumber of ways to express 87 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(87) << endl; // result: 2 (87 = 7^2 + 5^2 + 3^2 + 2^2 = 6^2 + 5^2 + 4^2 + 3^2 + 1^2)`
 
-+ Test: `cout << "\nNumber of ways to express 12 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(12) << endl; // result: 0`
++ Test 7: `cout << "\nNumber of ways to express 12 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(12) << endl; // result: 0`
 
-+ Test: `cout << "\nNumber of ways to express 13 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(13) << endl; // result: 1`
++ Test 8: `cout << "\nNumber of ways to express 13 as a sum of squares of unique natural numbers: " << countWaySumOfSquare(13) << endl; // result: 1`
+---
+# Implement function: `int decimalToBinary(int decimal_number);`
+
+Given a positive decimal number as input, we need to convert the given positive decimal number into its equivalent binary number.
+
+Please note that you **<ins>can't</ins>** use keywords **for, while, goto** (even in variable names, comment).
+
+For this exercise, we have `#include <iostream>` and `using namespace std;`
+
+**For example:**
+
++ Test: `cout << decimalToBinary(20); // Result: 10100`
 ---
 # Implement function: `string expand(string s);`
 
@@ -58,7 +70,7 @@ String s contains lowercase letters, digits, "(" and ")", satisfying the followi
 
 + If p still contains "(", ")" or digits, continue to implement the above changing method.
 
-**Notes:** `#include <iostream>`, `#include <string>` and `using namespace std;` have been used. You can add other functions for your answer, but you are not allowed to add other libraries.
+**Notes:** `#include <iostream>`, `#include <string>` and `using namespace std;` have been used. You can add other functions for your answer, but you are **<ins>not</ins>** allowed to add other libraries.
 
 **For example:**
 
@@ -198,7 +210,7 @@ cout << myArrayToInt("2020", 4);
 ---
 # Implement function: `void printArray(int n);`
 
-**Requirements:** print 0, 1, 2, 3, ..., n (n is a positive integer and there is NO space at the end).
+**Requirements:** print 0, 1, 2, 3, ..., n (n is a positive integer and there is **NO** space at the end).
 
 **For example:**
 + Test 1: `printArray(5);`
@@ -303,7 +315,7 @@ Two strings are "ABCBDAB" and "BDCABA". The length of the shortest superstring (
 
 **Note:**
 <br/>
-In this exercise, libraries `<iostream>`, and `<string>` are included and `using namespace std;` has been used. You can add other functions but are not allowed to add other libraries. Because this problem is used for practicing recursion, you are **NOT** allowed to use keyword while, for and do.
+In this exercise, libraries `<iostream>`, and `<string>` are included and `using namespace std;` has been used. You can add other functions but are **<ins>not</ins>** allowed to add other libraries. Because this problem is used for practicing recursion, you are **NOT** allowed to use keyword while, for and do.
 
 **For example:**
 
