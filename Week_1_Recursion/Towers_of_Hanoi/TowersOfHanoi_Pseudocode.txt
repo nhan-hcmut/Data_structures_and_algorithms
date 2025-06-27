@@ -9,8 +9,8 @@ Algorithm move(val disks <integer>, val source <string>, val destination <string
     if disks = 1 then
         print "Step " + (++step) + ": Move a disk from " + source + " to " + destination
     else do
-        move(disks-1, source, auxiliary, destination)
+        move(disks - 1, source, auxiliary, destination)
         move(1, source, destination, auxiliary)
-        move(disks-1, auxiliary, destination, source)
+        move(disks - 1, auxiliary, destination, source)
     end if
 End algorithm
