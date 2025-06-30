@@ -2,23 +2,24 @@
 
 Given a **NON-empty** text and a pattern, implement above recursive function that returns true if pattern is present in text, otherwise false.
 
-**Note:** Please note that you **<ins>can't</ins>** use keywords **for, while, goto** (even in variable names, comment). You can implement other recursive functions if needed.
+**<ins>Note</ins>:** Please note that you **<ins>can't</ins>** use keywords **for, while, goto** (even in variable names, comment). You can implement other recursive functions if needed.
 
 `#include <iostream>` and `using namespace std;` have been used.
 
 **For example:**
-+ Test:
-```cpp
-cout << containsPattern((char*)"Dai hoc Bach Khoa", (char*)"Bach Khoa"); // Result: 1
-```
++ Test 1: `cout << containsPattern((char*)"Dai hoc Bach Khoa", (char*)"Bach Khoa"); // Result: 1`
++ Test 2: `cout << containsPattern((char*)"Dai hoc Bach Khoa", (char*)"Bach KHoa") << endl; // result: 0`
++ Test 3: `cout << containsPattern((char*)"Bach Khoa", (char*)"Dai hoc Bach Khoa") << endl; // result: 0`
++ Test 4: `cout << containsPattern((char*)"Dai hoc Bach Khoa", (char*)"h Khoa") << endl; // result: 1`
++ Test 5: `cout << containsPattern((char*)"Bo mon hoa HC, Dai hoc Bach Khoa DHQG TP.HCM", (char*)"Bo mon hoa VC") << endl; // result: 0`
 ---
 # Implement function: `int countWaySumOfSquare(int x);`
 
 Given an integer x, find number of ways to express x as sum of squares of unique natural numbers (distinct positive whole numbers).
 
-**For example:** x = 100 -> Output: 3 (**explain:** 100 = 10^2 = 8^2 + 6^2 = 1^2 + 3^2 + 4^2 + 5^2 + 7^2)
+**<ins>For example</ins>:** x = 100 -> Output: 3 (**<ins>Explain</ins>:** 100 = 10^2 = 8^2 + 6^2 = 1^2 + 3^2 + 4^2 + 5^2 + 7^2)
 
-**Note:** Please note that you **<ins>can't</ins>** use keywords **for, while, goto** (even in variable names, comment). You can implement other recursive functions if needed.
+**<ins>Note</ins>:** Please note that you **<ins>can't</ins>** use keywords **for, while, goto** (even in variable names, comment). You can implement other recursive functions if needed.
 
 `<iostream>` and `<cmath>` libraries are included. `using namespace std;` has been used.
 
@@ -46,9 +47,18 @@ Please note that you **<ins>can't</ins>** use keywords **for, while, goto** (eve
 
 For this exercise, we have `#include <iostream>` and `using namespace std;`
 
-**For example:**
+**<ins>For example</ins>:**
 
-+ Test: `cout << decimalToBinary(20); // Result: 10100`
++ Test 1: `cout << decimalToBinary(20) << endl; // Result: 10100`
++ Test 2: `cout << decimalToBinary(19) << endl; // result: 10011`
++ Test 3: `cout << decimalToBinary(18) << endl; // result: 10010`
++ Test 4: `cout << decimalToBinary(17) << endl; // result: 10001`
++ Test 5: `cout << decimalToBinary(16) << endl; // result: 10000`
++ Test 6: `cout << decimalToBinary(15) << endl; // result: 1111`
++ Test 7: `cout << decimalToBinary(14) << endl; // result: 1110`
++ Test 8: `cout << decimalToBinary(13) << endl; // result: 1101`
++ Test 9: `cout << decimalToBinary(12) << endl; // result: 1100`
++ Test 10: `cout << decimalToBinary(11) << endl; // result: 1011`
 ---
 # Implement function: `string expand(string s);`
 
@@ -64,15 +74,15 @@ String s contains lowercase letters, digits, "(" and ")", satisfying the followi
 
 + The quantities of "(" and ")" are equal.
 
-**Requirements:** Change string s until new string t created, t contains only lowercase letters. These are changing rules:
+**<ins>Requirements</ins>:** Change string s until new string t created, t contains only lowercase letters. These are changing rules:
 
 + Substrings with form "n(p)", can change to "pp...p" (n times p), where n is a digit and p is a string.
 
 + If p still contains "(", ")" or digits, continue to implement the above changing method.
 
-**Notes:** `#include <iostream>`, `#include <string>` and `using namespace std;` have been used. You can add other functions for your answer, but you are **<ins>not</ins>** allowed to add other libraries.
+**<ins>Notes</ins>:** `#include <iostream>`, `#include <string>` and `using namespace std;` have been used. You can add other functions for your answer, but you are **<ins>not</ins>** allowed to add other libraries.
 
-**For example:**
+**<ins>For example</ins>:**
 
 + Test 1: `cout << expand("2(ab3(cde)x)") << "\n";`
 + Result: abcdecdecdexabcdecdecdex
@@ -119,49 +129,41 @@ This function finds lowest common multiple of two positive integers a and b usin
 ---
 # Implement function: `int findMax(int* arr, int length);`
 
-**Requirements:** Find the largest element of the array **arr** using recursion. **"length"** is the number of elements.
+**<ins>Requirements</ins>:** Find the largest element of the array **arr** using recursion. **"length"** is the number of elements.
 
-**For example:**
+**<ins>For example</ins>:**
 
-+ Test 1:<br/>
++ Test 1:
 ```cpp
 int arr[] = {10, 5, 7, 9, 15, 6, 11, 8, 12, 2};
-cout << findMax(arr, 10);
+cout << findMax(arr, 10); // Result: 15
 ```
-+ Result: 15
-<br/><br/>
 
-+ Test 2:<br/>
++ Test 2:
 ```cpp
 int arr[] = {291, -444, -456, 199, 465, 31, 118, -16, 103, -23, 199, 342, 291, 374, -206, -383, -15, -286, -216, -287, 155, 310, -345, -444, -254, -7, 304, -99, -143, -456, -349, 154, -38, -60, 166, -40, 256, -107, -31, -454, 486, 270, -458, -367, 258, 310, -342, -405, -361};
-cout << findMax(arr, 49);
+cout << findMax(arr, 49); // Result: 486
 ```
-+ Result: 486
-
 ---
 # Implement function: `bool isPalindrome(string str);`
 
-**Requirements:** Check if the given **NON EMPTY** string is palindrome or not using recursion. The given string can be a word or a sentence and therefore blank spaces must be ignored. The `<string>` library is included.
+**<ins>Requirements</ins>:** Check if the given **NON EMPTY** string is palindrome or not using recursion. The given string can be a word or a sentence and therefore blank spaces must be ignored. The `<string>` library is included.
 
-**For example:**
-+ Test 1: `cout << isPalindrome("mom");`
-+ Result: 1
-<br/><br/>
+**<ins>For example</ins>:**
++ Test 1: `cout << isPalindrome("mom"); // Result: 1`
 
-+ Test 2: `cout << isPalindrome("do geese see god");`
-+ Result: 1
-
++ Test 2: `cout << isPalindrome("do geese see god"); // Result: 1`
 ---
 # Implement function: `int minimumBracketAdd(string s);`
 
-**Requirements:** Given a string s consisting only of '(' and ')'. This function returns the minimum number of brackets to be inserted to s so that the brackets are balanced.
+**<ins>Requirements</ins>:** Given a string s consisting only of '(' and ')'. This function returns the minimum number of brackets to be inserted to s so that the brackets are balanced.
 
-**Note:**
+**<ins>Note</ins>:**
 + A sequence of brackets is balanced when there are no unmatched brackets. Example: "()(())" is balanced, but "))()" is not.
-+ The `<iostream>` library and `using namespace std;` are used. No other libraries are allowed.
++ The `<iostream>` library and `using namespace std;` are used. **<ins>No</ins>** other libraries are allowed.
 + You can write helper functions.
 
-**For example:**
+**<ins>For example</ins>:**
 
 + Test 1: `cout << minimumBracketAdd("()(())");`
 + Result: 0
@@ -197,22 +199,98 @@ cout << findMax(arr, 49);
 ---
 # Implement function: `int myArrayToInt(char* str, int n);`
 
-**Requirements:** This function takes a string **str** which represents a positive decimal number (base 10 number), **n** is the number of elements in the string as arguments and returns the value of the decimal number. `#include <iostream>`, `#include <cstring>` and `using namespace std;` are used.
+**<ins>Requirements</ins>:** This function takes a string **str** which represents a positive decimal number (base 10 number), **n** is the number of elements in the string as arguments and returns the value of the decimal number. `#include <iostream>`, `#include <cstring>` and `using namespace std;` have been used.
 
-**For example:**
+**<ins>For example</ins>:**
 + Test:<br/>
 ```cpp
 char str[] = "2020";
 cout << myArrayToInt("2020", 4);
 ```
 + Result: 2020
+---
+# Implement function: `int oddSumSublist(vector<int>& nums, int m);`
 
+Given a vector of integers. This recursive function returns the number of **<ins>contiguous</ins>** sublists with odd sum. The number may be too large, so the result should mod m.
+
+**<ins>Note</ins>:**
+- The `<iostream>` and `<vector>` libraries have been included and `namespace std` has beeen used. **<ins>No</ins>** other libraries are allowed.
+- Using loop keywords (for, while, do) are **<ins>not</ins>** allowed, even in comments and variable names.
+- You can write helper functions.
+
+**<ins>For example</ins>:**
++ Test 1:
+```cpp
+vector<int> vec {58, 70, 125, 86};
+int m = 12132;
+cout << oddSumSublist(vec, m); // Result: 6
+```
++ Test 2:
+```cpp
+vec = {6};
+cout << endl << oddSumSublist(vec, m) << endl; // result: 0
+```
++ Test 3:
+```cpp
+vec = {13};
+cout << endl << oddSumSublist(vec, m) << endl; // result: 1
+```
++ Test 4:
+```cpp
+vec = {6, 13};
+cout << endl << oddSumSublist(vec, m) << endl; // result: 2
+```
++ Test 5:
+```cpp
+vec = {3, 14};
+cout << endl << oddSumSublist(vec, m) << endl; // result: 2
+```
++ Test 6:
+```cpp
+vec = {6, 14};
+cout << endl << oddSumSublist(vec, m) << endl; // result: 0
+```
++ Test 7:
+```cpp
+vec = {3, 13};
+cout << endl << oddSumSublist(vec, m) << endl; // result: 2
+```
++ Test 8:
+```cpp
+vec = {5, 4, 4, 5, 1, 3};
+cout << endl << oddSumSublist(vec, m) << endl; // result: 12
+```
++ Test 9:
+```cpp
+vec = {1, 3, 5};
+cout << endl << oddSumSublist(vec, m) << endl; // result: 4
+```
++ Test 10:
+```cpp
+vec = {2, 4, 6};
+cout << endl << oddSumSublist(vec, m) << endl; // result: 0
+```
++ Test 11:
+```cpp
+vec = {1, 2, 3, 4};
+cout << endl << oddSumSublist(vec, m) << endl; // result: 6
+```
++ Test 12:
+```cpp
+vec = {1, 2, 3, 4, 5};
+cout << endl << oddSumSublist(vec, m) << endl; // result: 9
+```
++ Test 13:
+```cpp
+vec = {1, 2, 3, 4, 5, 6, 7};
+cout << endl << oddSumSublist(vec, m) << endl; // result: 16
+```
 ---
 # Implement function: `void printArray(int n);`
 
-**Requirements:** print 0, 1, 2, 3, ..., n (n is a positive integer and there is **NO** space at the end).
+**<ins>Requirements</ins>:** print 0, 1, 2, 3, ..., n (n is a positive integer and there is **<ins>NO</ins>** space at the end).
 
-**For example:**
+**<ins>For example</ins>:**
 + Test 1: `printArray(5);`
 + Result: 0, 1, 2, 3, 4, 5
 <br/><br/>
@@ -228,20 +306,18 @@ Rules of Hailstone sequences:
 + If a number is odd, multiply it by 3 and add 1.
 + The sequence stops when reaching number 1.
 
-**For example:**
-+ Test 1: `printHailstone(6);`
-+ Result: 6 3 10 5 16 8 4 2 1
-<br/><br/>
+**<ins>Notes</ins>:** There is **<ins>NO</ins>** space at the end. Input is a positive integer.
 
-+ Test 2: `printHailstone(7);`
-+ Result: 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
-<br/><br/>
+**<ins>For example</ins>:**
++ Test 1: `printHailstone(5); // Result: 5 16 8 4 2 1`
 
-+ Test 3: `printHailstone(32);`
-+ Result: 32 16 8 4 2 1
++ Test 2: `printHailstone(6); // Result: 6 3 10 5 16 8 4 2 1`
 
-**Notes:** There is **NO** space at the end. Input is a positive integer.
++ Test 3: `printHailstone(7); // Result: 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1`
 
++ Test 4: `printHailstone(11); // Result: 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1`
+
++ Test 5: `printHailstone(32); // Result: 32 16 8 4 2 1`
 ---
 # Implement function: `void printPattern(int n);`
 Given a positive integer, print following pattern using recursion.
@@ -251,7 +327,7 @@ Given a positive integer, print following pattern using recursion.
 
 **Pattern rule:** First, we reduce 5 one by one until reaching a negative number or 0. Then, we add 5 one by one until reaching n.
 
-**For example:**
+**<ins>For example</ins>:**
 + Test: `printPattern(14);`
 + Result: 14 9 4 -1 4 9 14
 
@@ -260,13 +336,13 @@ Given a positive integer, print following pattern using recursion.
 
 This function returns the reversed sentence of string s using recursion.
 
-**Note:**
+**<ins>Note</ins>:**
 + String s consists only of letters (a-z and A-Z) and spaces.
 + There is only one space between two adjacent words.
 + String s does not begin or end with any spaces.
 + `#include <iostream>` and `using namespace std;` have been used.
 
-**For example:**
+**<ins>For example</ins>:**
 + Test 1: `cout << reverseSentence("data structure and algorithm is scary");`
 + Result: scary is algorithm and structure data
 <br/>
@@ -279,7 +355,7 @@ This function returns the reversed sentence of string s using recursion.
 
 This function find length of the given string using recursion.
 
-**For example:**
+**<ins>For example</ins>:**
 + Test 1:<br/>
 ```cpp
 char str[] = "Ho Chi Minh City University of Technology";
@@ -299,7 +375,7 @@ cout << strLen(str);
 
 A string is called a subsequence of the string S if it can be derived from string S by deleting some or no elements without changing the order of the remaining characters.
 
-**Example:**
+**<ins>Example</ins>:**
 
 - "abd" is a subsequence of "abcdef" because it is derived from "abcdef" by deleting characters 'c', 'd', 'f' and does not change the order of remaining characters.
 
@@ -307,17 +383,17 @@ A string is called a subsequence of the string S if it can be derived from strin
 
 A string is called a superstring of two other strings A and B if both strings A and B are subsequences of it. The superstring of A and B that has the smallest length is called the shortest superstring.
 
-**Request:** Inputs are two strings x, y and their lengths m, n. Implement function `superString(x, y, m, n);` to find then return the length of the shortest superstring of x and y.
+**<ins>Request</ins>:** Inputs are two strings x, y and their lengths m, n. Implement function `superString(x, y, m, n);` to find then return the length of the shortest superstring of x and y.
 
-**Example:**
+**<ins>Example</ins>:**
 <br/>
 Two strings are "ABCBDAB" and "BDCABA". The length of the shortest superstring ("ABCBDCABA", "ABDCABDAB" or "ABDCBDABA") is 9.
 
-**Note:**
+**<ins>Note</ins>:**
 <br/>
-In this exercise, libraries `<iostream>`, and `<string>` are included and `using namespace std;` has been used. You can add other functions but are **<ins>not</ins>** allowed to add other libraries. Because this problem is used for practicing recursion, you are **NOT** allowed to use keyword while, for and do.
+In this exercise, libraries `<iostream>`, and `<string>` have been included and `using namespace std;` has been used. You can add other functions but are **<ins>not</ins>** allowed to add other libraries. Because this problem is used for practicing recursion, you are **NOT** allowed to use keywords while, for and do.
 
-**For example:**
+**<ins>For example</ins>:**
 
 + Test 1:<br/>
 ```cpp
