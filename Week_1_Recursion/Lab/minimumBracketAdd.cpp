@@ -18,6 +18,9 @@ int minimumBracketAdd(string s) {
 }
 
 int main() {
+    cout << minimumBracketAdd("()(())") << endl; // result: 0
+    
+    cout << minimumBracketAdd("))()") << endl; // result: 2
     
     cout << minimumBracketAdd(")))((") << endl; // result: 5
 
