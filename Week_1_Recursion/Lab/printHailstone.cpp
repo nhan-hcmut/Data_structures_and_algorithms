@@ -11,13 +11,19 @@ void printHailstone(int number) {
 }
 
 int main() {
-    printHailstone(6);
+    printHailstone(5); // Result: 5 16 8 4 2 1
     cout << endl;
     
-    printHailstone(7);
+    printHailstone(6); // Result: 6 3 10 5 16 8 4 2 1
+    cout << endl;
+    
+    printHailstone(7); // Result: 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
     cout << endl;
 
-    printHailstone(32);
+    printHailstone(11); // Result: 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
+    cout << endl;
+
+    printHailstone(32); // Result: 32 16 8 4 2 1
     cout << endl;
 
     return 0;
