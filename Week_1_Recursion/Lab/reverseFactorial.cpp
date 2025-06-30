@@ -1,6 +1,18 @@
 #include <iostream>
 using namespace std;
 
+/* Method 2
+int reverseFactorialRec(int n, int kFactorial = 1, int k = 1) {
+
+    if (kFactorial > n) return -1;
+    
+    if (kFactorial == n) return k;
+    
+    return reverseFactorialRec(n, kFactorial * (k + 1), k + 1);
+}
+End method 2 */
+
+// Helping functions
 int factorial(int num) {
     
     if (num == 1) return 1;
@@ -8,7 +20,6 @@ int factorial(int num) {
     return num * factorial(num - 1);
 }
 
-// Helping function
 int reverseFactorialRec(int n, int result = 1) { // 'result' is initially set to 1 and is incremented until factorial of result == n or exceeds n
 
     if (factorial(result) > n) return -1; // If factorial of result exceeds n, return -1 (no valid result found)
@@ -17,7 +28,7 @@ int reverseFactorialRec(int n, int result = 1) { // 'result' is initially set to
     
     return reverseFactorialRec(n, result + 1); // If factorial of result is less than n, try the next number (increment result and call recursively)
 }
-// End helping function
+// End helping functions
 
 int reverseFactorial(int n) {
     // STUDENT ANSWER
