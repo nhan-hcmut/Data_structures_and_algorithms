@@ -377,7 +377,35 @@ Given a positive integer, print following pattern using recursion.
 **<ins>For example</ins>:**
 + Test: `printPattern(14);`
 + Result: 14 9 4 -1 4 9 14
+---
+# Implement function: `int reverseFactorial(int n);`
 
+Given an integer n. This function returns an integer k such that k! = n. If there are no such numbers, return -1. If n = 1, the function returns k = 1.
+
+**<ins>Note</ins>:**
+- The `<iostream>` library and `namespace std` have been used. **<ins>No</ins>** other libraries are allowed.
+- Using loop keywords (for, while, do) are **<ins>not</ins>** allowed, even in comments and variable names.
+- You can write helper functions.
+
+**<ins>For example</ins>:**
+
++ Test 1: `cout << endl << reverseFactorial(120) << endl; // result: 5 (because 120 = 5!)`
+
++ Test 2: `cout << endl << reverseFactorial(24) << endl; // result: 4 (because 24 = 4!)`
+
++ Test 3: `cout << endl << reverseFactorial(6) << endl; // result: 3 (because 6 = 3!)`
+
++ Test 4: `cout << endl << reverseFactorial(2) << endl; // result: 2 (because 2 = 2!)`
+
++ Test 5: `cout << endl << reverseFactorial(1) << endl; // result: 1 (because 1 = 1!)`
+
++ Test 6: `cout << endl << reverseFactorial(0) << endl; // result: -1 (because there are no such numbers, return -1)`
+
++ Test 7: `cout << endl << reverseFactorial(3) << endl; // result: -1 (because there are no such numbers, return -1)`
+
++ Test 8: `cout << endl << reverseFactorial(4) << endl; // result: -1 (because there are no such numbers, return -1)`
+
++ Test 9: `cout << endl << reverseFactorial(5) << endl; // result: -1 (because there are no such numbers, return -1)`
 ---
 # Implement function: `string reverseSentence(string s);`
 
@@ -396,7 +424,33 @@ This function returns the reversed sentence of string s using recursion.
 
 + Test 2: `cout << reverseSentence("data structures and algorithms is challenging");`
 + Result: challenging is algorithms and structures data
+---
+# Implement function: `int shortestString(string s);`
 
+Given a string s consisting only of 0 and 1. You can delete any two adjacent letters if they are different. The function returns the length of the smallest string that you can make if you're able to perform the above operation on string s as many times as you want.
+
+**<ins>Note</ins>:**
+- The `<iostream>` library and `namespace std` have been used. **<ins>No</ins>** other libraries are allowed.
+- Using loop keywords (for, while, do) are **<ins>not</ins>** allowed, even in comments and variable names.
+- You can write helper functions.
+
+**<ins>For example</ins>:**
+
++ Test 1: `cout << endl << shortestString("01110") << endl; // result: 1 ("01110" -> "011" after removing "10", then "1" after removing "01", so the result is 1)`
+
++ Test 2: `cout << endl << shortestString("") << endl; // result: 0 (an empty string -> no transformations needed, so the result is 0)`
+
++ Test 3: `cout << endl << shortestString("0") << endl; // result: 1 ("0" -> cannot be transformed, so the result is 1)`
+
++ Test 4: `cout << endl << shortestString("1") << endl; // result: 1 ("1" -> cannot be transformed, so the result is 1)`
+
++ Test 5: `cout << endl << shortestString("00") << endl; // result: 2 ("00" -> cannot be transformed, so the result is 2)`
+
++ Test 6: `cout << endl << shortestString("01") << endl; // result: 0 ("01" -> "01" is found and removed, so the result is 0)`
+
++ Test 7: `cout << endl << shortestString("10") << endl; // result: 0 ("10" -> "10" is found and removed, so the result is 0)`
+
++ Test 8: `cout << endl << shortestString("11") << endl; // result: 2 ("11" -> cannot be transformed, so the result is 2)`
 ---
 # Implement function: `int strLen(char* str);`
 
