@@ -14,7 +14,7 @@ int shortestString(string s) {
 }
 
 int main() {
-    cout << endl << shortestString("01110") << endl; // result: 1 ("01110" -> "011" after removing "10", then "0" after removing "01", so the result is 1)
+    cout << endl << shortestString("01110") << endl; // result: 1 ("01110" -> "011" after removing "10", then "1" after removing "01", so the result is 1)
 
     cout << endl << shortestString("") << endl; // result: 0 (an empty string -> no transformations needed, so the result is 0)
 
