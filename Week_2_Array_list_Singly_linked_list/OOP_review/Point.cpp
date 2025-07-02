@@ -65,12 +65,12 @@ int main() {
 
     // Test 1
     Point A(2, 3);
-    cout << A.getX() << " " << A.getY(); // Result: 2 3
+    cout << A.getX() << " " << A.getY() << endl; // Result: 2 3
     
     // Test 2
-    Point A(2, 3);
-    Point B(1, 1);
-    cout << pow(A.distanceToPoint(B), 2); // Result: 5
+    // Point A(2, 3);
+    // Point B(1, 1);
+    // cout << pow(A.distanceToPoint(B), 2) << endl; // Result: 5
     
     return 0;
 }
