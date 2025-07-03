@@ -144,8 +144,10 @@ int main() {
     ToyBox box;
     box.addItem(car);
     box.addItem(puzzle);
-    box.printBox(); // Result: This is a car toy
-    // Result: This is a puzzle toy
+    box.printBox();
+    // Result:
+    // This is a car toy
+    // This is a puzzle toy
     */
 
     /* Test 3
