@@ -1,22 +1,27 @@
-# Book
+# Recommended order to implement:
 
-Hoang is a K19 student studying at Bach Khoa University. He plans to write a book management software for the library. In the class design, Hoang has designed the class Book as follows:
+class Point -> class Circle -> class Character -> class Book -> class CarToy -> class PuzzleToy -> class ToyBox
+
+---
+# class Book
+
+Hoang is a K19 student studying at Bach Khoa University. He plans to write a book management software for the library. In the class design, Hoang has designed the `class Book` as follows:
 ```cpp
 class Book
 {
 private:
-    char* title; 
-    char* authors; 
-    int publishingYear; 
-public: 
+    char* title;
+    char* authors;
+    int publishingYear;
+public:
    // some method
 };
 ```
-Your task in this exercise is to implement functions marked with /* STUDENT ANSWER */.
+Your task in this exercise is to implement the functions marked with `/* STUDENT ANSWER */`.
 
-**Note:** We have #include \<bits/stdc++.h\> and using namespace std;
+**<ins>Note</ins>:** `<bits/stdc++.h>` header and the `std` namespace are already included.
 
-For example:
+**<ins>For example</ins>:**
 + Test 1:
 ```cpp
 Book book1("Giai tich 1","Nguyen Dinh Huy",2000);
@@ -46,10 +51,9 @@ Nguyen Dinh Huy
 2000
 
 ---
-# Character
+# class Character
 
-In a game, we have class Character to store characters' data.
-The class Character is declared as below:
+In a game, we have `class Character` that stores the data of individual characters. The `class Character` is declared as follows:
 ```cpp
 class Character {
 protected:
@@ -79,74 +83,68 @@ public:
     int getManhattanDistTo(Character* other);
 };
 ```
-Your task is to define constructors and methods of the class.
+Your task is to define the constructors and member methods of the `Character` class.
 
-**Note:** In this task, \<iostream\> library has been included and namespace std is used. No other libraries are allowed.
+**<ins>Note</ins>:** In this task, the `<iostream>` library and the `std` namespace are already included. **<ins>No</ins>** additional libraries are allowed.
 
-**For example:**
+**<ins>For example</ins>:**
 + Test 1:
 ```cpp
 Character ch1(100, 3, 6);
-cout << ch1.getHp() << " " << ch1.getX() << " " << ch1.getY();
+cout << ch1.getHp() << " " << ch1.getX() << " " << ch1.getY() << endl; // Result: 100 3 6
 ```
-+ Result: 100 3 6
 <br/>
 
 + Test 2:
 ```cpp
 Character ch2;
-cout << ch2.getHp() << " " << ch2.getX() << " " << ch2.getY();
+cout << ch2.getHp() << " " << ch2.getX() << " " << ch2.getY() << endl; // Result: 0 0 0
 ```
-+ Result: 0 0 0
 <br/>
 
 + Test 3:
 ```cpp
 Character* ch31 = new Character(100, 1, 2);
 Character* ch32 = new Character(100, -3, 4);
-cout << ch31->getManhattanDistTo(ch32);
+cout << ch31->getManhattanDistTo(ch32) << endl; // Result: 6
 delete ch31;
 delete ch32;
 ```
-+ Result: 6
 <br/>
 
 + Test 4:
 ```cpp
 Character ch4;
 ch4.setX(4);
-cout << ch4.getX();
+cout << ch4.getX() << endl; // Result: 4
 ```
-+ Result: 4
 <br/>
 
 + Test 5:
 ```cpp
 Character ch5;
 ch5.setY(5);
-cout << ch5.getY();
+cout << ch5.getY() << endl; // Result: 5
 ```
-+ Result: 5
 <br/>
 
 + Test 6:
 ```cpp
 Character ch6;
 ch6.setHp(6);
-cout << ch6.getHp();
+cout << ch6.getHp() << endl; // Result: 6
 ```
-+ Result: 6
 
 ---
-# Circle
+# class Circle
 
-In the coordinate plane, a circle is defined by center and radius.
+In the coordinate plane, a circle is defined by its center and radius.
 
-Your task in this exercise is to implement functions marked with /*  * STUDENT ANSWER   */.
+Your task in this exercise is to implement the functions marked with `/*  * STUDENT ANSWER   */`.
 
-**Note:** you can use implemented class Point in previous question
+**<ins>Note</ins>:** you can use the `Point` class implemented in the previous question.
 
-**For example:**
+**<ins>For example</ins>:**
 + Test:
 ```cpp
 Circle A;
@@ -155,41 +153,41 @@ A.printCircle();
 + Result: Center: {0.00, 0.00} and Radius 0.00
 
 ---
-# Point
+# class Point
 
-We have class Point to store a point in the coordinate plane with its x-y coordinate.
+In the coordinate plane, we have `class Point` to store a point with its x-y coordinate.
 
-Your task in this exercise is to implement functions marked with /*  * STUDENT ANSWER   */.
+Your task in this exercise is to implement the functions marked with `/*  * STUDENT ANSWER   */`.
 
-**Note:** We have #include \<bits/stdc++.h\> and using namespace std;
+**<ins>Note</ins>:** The `<bits/stdc++.h>` header and the `std` namespace are already included.
 
-**For example:**
+**<ins>For example</ins>:**
 
 + Test 1:
 ```cpp
 Point A(2, 3);
-cout << A.getX() << " " << A.getY();
+cout << A.getX() << " " << A.getY() << endl; // Result: 2 3
 ```
-+ Result: 2 3
 <br/>
 
 + Test 2:
 ```cpp
 Point A(2, 3);
 Point B(1, 1);
-cout << pow(A.distanceToPoint(B), 2);
+cout << pow(A.distanceToPoint(B), 2) << endl; // Result: 5
 ```
-+ Result: 5
 
 ---
 # Toy
 
-1. In the toy store, all toy has a price. Car toy has a price and color, Puzzle toy has a price and size. We have to implement class CarToy and class PuzzleToy which inherit from class Toy.
-2. Class ToyBox has a  pointer array to store a list of toys (up to 5 items including car and puzzle) and number of items in the box.
+1. In the toy store, all toys have a price. The car toy has a price and a color. The puzzle toy has a price and a size. We have to implement the `CarToy` and `PuzzleToy` classes which inherit from the `Toy` class.
+2. The `ToyBox` class has a pointer array to store a list of toys (up to 5 items, including cars and puzzles) and a variable for the number of items in the box.
 
-Your task is to implement two function addItem(…) in class ToyBox. If successfully added, the function returns the current number of toys in the box. If the box is full, return -1.
+Your task is to implement two addItem(…) functions in the `ToyBox` class. If an item is successfully added, the function returns the current number of toys in the box. If the box is full, it returns -1.
 
-**For example:**
+The `<bits/stdc++.h>` header and the `std` namespace are already included.
+
+**<ins>For example</ins>:**
 
 + Test 1:
 ```cpp
@@ -197,13 +195,10 @@ CarToy car(20000,red);
 PuzzleToy puzzle(30000,small);
 car.printType();
 puzzle.printType();
+// Result:
+// This is a car toy
+// This is a puzzle toy
 ```
-+ Result:
-<br/>
-This is a car toy
-<br/>
-This is a puzzle toy
-<br/><br/>
 
 + Test 2:
 ```cpp
@@ -214,17 +209,13 @@ ToyBox box;
 box.addItem(car);
 box.addItem(puzzle);
 box.printBox();
+// Result:
+// This is a car toy
+// This is a puzzle toy
 ```
-+ Result:
-<br/>
-This is a car toy
-<br/>
-This is a puzzle toy
-<br/><br/>
 
 + Test 3:
 ```cpp
 Toy* toy = new CarToy(30000,red);
-toy->printType();
+toy->printType(); // Result: This is a car toy
 ```
-+ Result: This is a car toy
