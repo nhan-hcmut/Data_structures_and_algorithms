@@ -87,7 +87,7 @@ public:
          * TODO: set zero numberOfItems and nullptr toyBox
         */
         this->numberOfItems = 0;
-        *toyBox = nullptr;
+        for (short i = 0; i < 5; i++) this->toyBox[i] = nullptr;
     }
     
     int addItem(const CarToy& carToy)
