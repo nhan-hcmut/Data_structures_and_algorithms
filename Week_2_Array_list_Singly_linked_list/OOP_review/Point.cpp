@@ -57,7 +57,7 @@ class Point {
          * STUDENT ANSWER
          * TODO: calculate the distance from this point to point A in the coordinate plane
         */
-        return sqrt(pow(this->x - pointA.getX(), 2) + pow(this->y - pointA.getY(), 2));
+        return sqrt(pow(this->x - pointA.x, 2) + pow(this->y - pointA.y, 2));
     }
 };
 
