@@ -77,9 +77,10 @@ class Circle {
          * STUDENT ANSWER
          * TODO: set zero center's x-y and radius
         */
+        this->center.setX(0);
+        this->center.setY(0);
+        
         this->radius = 0;
-        center.setX(0);
-        center.setY(0);
     }
 
     Circle(Point center, double radius)
@@ -87,9 +88,8 @@ class Circle {
         /*
          * STUDENT ANSWER
         */
+        this->center = center;
         this->radius = radius;
-        this->center.setX(center.getX());
-        this->center.setY(center.getY());
     }
 
     Circle(const Circle &circle)
@@ -97,9 +97,8 @@ class Circle {
         /*
          * STUDENT ANSWER
         */
+        this->center = circle.center;
         this->radius = circle.radius;
-        this->center.setX(circle.center.getX());
-        this->center.setY(circle.center.getY());
     }
     
     void setCenter(Point point)
@@ -107,8 +106,7 @@ class Circle {
         /*
          * STUDENT ANSWER
         */
-        this->center.setX(point.getX());
-        this->center.setY(point.getY());
+        this->center = point;
     }
 
     void setRadius(double radius)
@@ -124,11 +122,7 @@ class Circle {
         /*
          * STUDENT ANSWER
         */
-        Point C(0, 0);
-        C.setX(this->center.getX());
-        C.setY(this->center.getY());
-        
-        return C;
+        return this->center;
     }
 
     double getRadius() const
