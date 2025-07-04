@@ -56,7 +56,7 @@ public:
          * STUDENT ANSWER
          * TODO: calculate the distance from this point to point A in the coordinate plane
         */
-        return sqrt(pow(this->x - pointA.getX(), 2) + pow(this->y - pointA.getY(), 2));
+        return sqrt(pow(this->x - pointA.x, 2) + pow(this->y - pointA.y, 2));
     }
 };
 
@@ -72,10 +72,10 @@ public:
         /*
          * STUDENT ANSWER
         */
-        this->radius = 0;
-        
         this->center.setX(0);
         this->center.setY(0);
+        
+        this->radius = 0;
     }
 
     Circle(Point center, double radius)
@@ -83,8 +83,8 @@ public:
         /*
          * STUDENT ANSWER
         */
-        this->radius = radius;
         this->center = center;
+        this->radius = radius;
     }
 
     bool containsPoint(const Point point)
