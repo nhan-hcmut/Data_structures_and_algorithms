@@ -24,10 +24,10 @@ public:
         /*
          * STUDENT ANSWER
         */
-        this->title = new char[sizeof(title)];
+        this->title = new char[strlen(title) + 1];
         strcpy(this->title, title);
 
-        this->authors = new char[sizeof(authors)];
+        this->authors = new char[strlen(authors) + 1];
         strcpy(this->authors, authors);
 
         this->publishingYear = publishingYear;
@@ -39,11 +39,11 @@ public:
          * STUDENT ANSWER
          * TODO: deep copy constructor
         */
-        this->title = new char[sizeof(book.getTitle())];
-        strcpy(this->title, book.getTitle());
+        this->title = new char[strlen(book.title) + 1];
+        strcpy(this->title, book.title);
 
-        this->authors = new char[sizeof(book.getAuthors())];
-        strcpy(this->authors, book.getAuthors());
+        this->authors = new char[strlen(book.authors) + 1];
+        strcpy(this->authors, book.authors);
 
         this->publishingYear = book.getPublishingYear();
     }
@@ -53,7 +53,8 @@ public:
         /*
          * STUDENT ANSWER
         */
-        this->title = new char[sizeof(title)];
+        if (this->title != nullptr) delete[] this->title;
+        this->title = new char[strlen(title) + 1];
         strcpy(this->title, title);
     }
 
@@ -62,7 +63,8 @@ public:
         /*
          * STUDENT ANSWER
         */
-        this->authors = new char[sizeof(authors)];
+        if (this->authors != nullptr) delete[] this->authors;
+        this->authors = new char[strlen(authors) + 1];
         strcpy(this->authors, authors);
     }
 
