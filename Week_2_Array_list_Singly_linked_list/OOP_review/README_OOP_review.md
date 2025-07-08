@@ -384,6 +384,43 @@ cout << pow(A.distanceToPoint(B), 2) << endl; // Result: 5
 ```
 
 ---
+# class Printer
+
+Your task is to implement the function `printBook(...)` in `class Printer` in file "Printer.cpp" to print out information of a Book object.
+
+See 2 examples below for output format (no spaces at the end of each line and no empty lines at the end).
+
+**<ins>Note</ins>:** In the `authors` attribute, it is possible to have more than one author collaborating on a book. Therefore, the `authors` attribute will follow this format: *"author1, author2, ..., authorN"*
+
+**<ins>For example</ins>:**
++ Test 1:
+```cpp
+Book book1("Giai tich 1", "Nguyen Dinh Huy, Nguyen Thi Xuan Anh", 2000);
+Printer::printBook(book1);
+cout << endl <<endl;
+```
++ Result:<br/>
+Giai tich 1<br/>
+Nguyen Dinh Huy<br/>
+Nguyen Thi Xuan Anh<br/>
+2000<br/>
+<br/>
+<br/>
+
++ Test 2:
+```cpp
+Book book2("Introduction to Algorithms", "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein", 1990);
+Printer::printBook(book2);
+```
++ Result:<br/>
+Introduction to Algorithms<br/>
+Thomas H. Cormen<br/>
+Charles E. Leiserson<br/>
+Ronald L. Rivest<br/>
+Clifford Stein<br/>
+1990
+
+---
 # Toy
 
 1. In the toy store, all toys have a price. The car toy has a price and a color. The puzzle toy has a price and a size. We have to implement the `CarToy` and `PuzzleToy` classes which inherit from the `Toy` class.
@@ -424,6 +461,32 @@ box.printBox();
 ```cpp
 Toy* toy = new CarToy(30000,red);
 toy->printType(); // Result: This is a car toy
+```
+
+---
+# `friend bool checkAuthor(...);`
+
+In this exercise, your task is to implement this friend function of the Book class in the file "checkAuthor.cpp":
+
+```cpp
+friend bool checkAuthor(Book book, const char* author) {}
+```
+In the `authors` attribute, it is possible to have more than one author collaborating on a book. Therefore, the `authors` attribute will follow this format: *"author1, author2, ..., authorN"*
+
+The function returns true if the specified author is on the book's list of authors. Otherwise, it returns false.
+
+**<ins>Note</ins>:** The full name must match exactly. If only a partital match is found, the function will still return false.
+
+**<ins>For example</ins>:**
++ Test 1:
+```cpp
+Book book1("Giai tich 1","Nguyen Dinh Huy, Nguyen Thi Xuan Anh", 2000);
+cout << checkAuthor(book1,"Nguyen Dinh Huy") << endl; // Result: 1
+```
++ Test 2:
+```cpp
+Book book1("Giai tich 1","Nguyen Dinh Huy, Nguyen Thi Xuan Anh", 2000);
+cout << checkAuthor(book1,"Nguyen Thi Xuan") << endl; // Result: 0
 ```
 
 ---
