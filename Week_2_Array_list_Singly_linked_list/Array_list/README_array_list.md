@@ -1,17 +1,17 @@
 # buyCar
 The prices of all cars in a car shop have been saved as an array called N. Each element of the array N is the price of each car. A person, with the amount of money k want to buy as much cars as possible.
 
-**Implement function: buyCar(int\* nums, int length, int k);**
+**<ins>Implement function</ins>:** `int buyCar(int\* nums, int length, int k);`
 
 Where **nums** is the array N, **length** is the size of this array and k is the amount of money the person has. Find the maximum cars this person can buy with his money, and return that number.
 
-**Example:**
+**<ins>Example</ins>:**
 
 nums = {90, 30, 20, 40, 50}; k = 90;
 
 The result is 3, he can buy the cars having index 1, 2, 3 (first index is 0).
 
-**Note:** The library \<iostream\>, \<algorithm\> and using namespace std have been used. You can add other functions but you are not allowed to add other libraries.
+**<ins>Note</ins>:** The `<iostream>`, `<algorithm>` libraries and the `std` namespace are already included. You can add other functions but you are **<ins>not</ins>** allowed to add other libraries.
 
 + Test:
 ```cpp
@@ -28,16 +28,17 @@ Given an array of integers.
 
 Your task is to implement a function with the following prototype:
 
-**bool consecutiveOnes(vector\<int\>& nums);**
-
+```cpp
+bool consecutiveOnes(vector<int>& nums);
+```
 This function returns if all the 1s appear consecutively in nums or not. If nums does NOT contain any elements, please return true
 
-**Note:**
-+ The \<iostream\> and \<vector\> libraries have been included and namespace std is used. No other libraries are allowed.
+**<ins>Note</ins>:**
++ The `<iostream>`, `<vector>` libraries and the std namespace are already included. No other libraries are allowed.
 + You can write helper functions.
-+ Do NOT use global variables in your code.
++ Do **<ins>NOT</ins>** use global variables in your code.
 
-**For example:**
+**<ins>For example</ins>:**
 
 + Test 1:
 ```cpp
@@ -133,7 +134,7 @@ public:
 };
 ```
 
-**For example:**
+**<ins>For example</ins>:**
 
 + Test 1:
 ```cpp
@@ -180,17 +181,18 @@ Given an array of integers.
 
 Your task is to implement a function with following prototype:
 
-**int equalSumIndex(vector\<int\>& nums);**
-
+```cpp
+int equalSumIndex(vector<int>& nums);
+```
 This function returns the smallest index i such that the sum of the numbers to the left of i is equal to the sum of the numbers to the right.
 
 If no such index exists, return -1.
 
-**Note:**
-+ The \<iostream\> and \<vector\> libraries have been included and namespace std is used. No other libraries are allowed.
+**<ins>Note</ins>:**
++ The `<iostream>`, `<vector>` libraries and the `std` namespace are already included. **<ins>No</ins>** other libraries are allowed.
 + You can write helper functions.
 
-**For example:**
+**<ins>For example</ins>:**
 
 + Test 1:
 ```cpp
@@ -254,15 +256,16 @@ Given an array of strings.
 
 Your task is to implement a function with following prototype:
 
-**int longestSublist(vector\<string\>& words);**
-
+```cpp
+int longestSublist(vector<string>& words);
+```
 The function returns the length of the longest subarray where all words share the same first letter.
 
-**Note:**
-+ The \<iostream\> and \<vector\> libraries have been included and namespace std is used. No other libraries are allowed.
+**<ins>Note</ins>:**
++ The `<iostream>`, `<vector>` libraries and the `std` namespace are already included. **<ins>No</ins>** other libraries are allowed.
 + You can write helper functions.
 
-**For example:**
+**<ins>For example</ins>:**
 
 + Test 1:
 ```cpp
@@ -343,7 +346,7 @@ public:
 };
 ```
 
-**For example:**
+**<ins>For example</ins>:**
 
 + Test 1:
 ```cpp
@@ -414,8 +417,8 @@ vector<int> updateArrayPerRange(vector<int>& nums, vector<vector<int>>& operatio
 ```
 This function returns the array after applying all operation in **operations**.
 
-**Note:**
-+ The \<iostream\> and \<vector\> libraries have been included and namespace std is used. No other libraries are allowed.
+**<ins>Note</ins>:**
++ The `<iostream>`, `<vector>` libraries and the `std` namespace are already included. **<ins>No</ins>** other libraries are allowed.
 + You can write helper functions.
 
 **For example:**
