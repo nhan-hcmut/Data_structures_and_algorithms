@@ -37,7 +37,7 @@ public:
    // some method
 };
 ```
-Your task in this exercise is to implement the functions marked with `/* STUDENT ANSWER */`.
+Your task in this exercise is to implement the methods marked with `/* STUDENT ANSWER */`.
 
 **<ins>Note</ins>:** `<bits/stdc++.h>` header and the `std` namespace are already included.
 
@@ -240,7 +240,7 @@ cout << endl << ((Character(3, 4, 5) < Character(3, 4, 5)) ? "true\n" : "false\n
 
 In the coordinate plane, a circle is defined by its center and radius.
 
-Your task in this exercise is to implement the functions marked with `/*  * STUDENT ANSWER   */`.
+Your task in this exercise is to implement the methods marked with `/*  * STUDENT ANSWER   */`.
 
 **<ins>Note</ins>:** you can use the `Point` class implemented in the previous question.
 
@@ -255,7 +255,7 @@ A.printCircle();
 ---
 # Overload 3 operators in the Circle class
 
-In this exercise, your task is to overload 3 operators =, == and >> of the Circle class in the file Circle_overload_operators.cpp:
+In this exercise, your task is to overload 3 operators =, == and >> of the `Circle` class, located in the file *Circle_overload_operators.cpp*:
 
 1. Overload operator = (assignment operator): `void operator=(const Circle &circle);`
 
@@ -363,7 +363,7 @@ Player pl;
 
 In the coordinate plane, we have `class Point` to store a point with its x-y coordinate.
 
-Your task in this exercise is to implement the functions marked with `/*  * STUDENT ANSWER   */`.
+Your task in this exercise is to implement the methods marked with `/*  * STUDENT ANSWER   */`.
 
 **<ins>Note</ins>:** The `<bits/stdc++.h>` header and the `std` namespace are already included.
 
@@ -386,7 +386,7 @@ cout << pow(A.distanceToPoint(B), 2) << endl; // Result: 5
 ---
 # class Printer
 
-Your task is to implement the function `printBook(...)` in `class Printer` in file "Printer.cpp" to print out information of a Book object.
+Your task is to implement the `printBook(...)` method in the `Printer` class, located in the file *Printer.cpp*, to print information about a `Book` object.
 
 See 2 examples below for output format (no spaces at the end of each line and no empty lines at the end).
 
@@ -397,7 +397,7 @@ See 2 examples below for output format (no spaces at the end of each line and no
 ```cpp
 Book book1("Giai tich 1", "Nguyen Dinh Huy, Nguyen Thi Xuan Anh", 2000);
 Printer::printBook(book1);
-cout << endl <<endl;
+cout << endl << endl;
 ```
 + Result:<br/>
 Giai tich 1<br/>
@@ -411,6 +411,7 @@ Nguyen Thi Xuan Anh<br/>
 ```cpp
 Book book2("Introduction to Algorithms", "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein", 1990);
 Printer::printBook(book2);
+cout << endl;
 ```
 + Result:<br/>
 Introduction to Algorithms<br/>
@@ -426,7 +427,7 @@ Clifford Stein<br/>
 1. In the toy store, all toys have a price. The car toy has a price and a color. The puzzle toy has a price and a size. We have to implement the `CarToy` and `PuzzleToy` classes which inherit from the `Toy` class.
 2. The `ToyBox` class has a pointer array to store a list of toys (up to 5 items, including cars and puzzles) and a variable for the number of items in the box.
 
-Your task is to implement two addItem(…) functions in the `ToyBox` class. If an item is successfully added, the function returns the current number of toys in the box. If the box is full, it returns -1.
+Your task is to implement two `addItem(…)` methods in the `ToyBox` class. If an item is successfully added, the method returns the current number of toys in the box. If the box is full, it returns -1.
 
 The `<bits/stdc++.h>` header and the `std` namespace are already included.
 
@@ -436,11 +437,8 @@ The `<bits/stdc++.h>` header and the `std` namespace are already included.
 ```cpp
 CarToy car(20000,red);
 PuzzleToy puzzle(30000,small);
-car.printType();
-puzzle.printType();
-// Result:
-// This is a car toy
-// This is a puzzle toy
+car.printType(); // Result: This is a car toy
+puzzle.printType(); // Result: This is a puzzle toy
 ```
 
 + Test 2:
@@ -452,9 +450,10 @@ ToyBox box;
 box.addItem(car);
 box.addItem(puzzle);
 box.printBox();
-// Result:
-// This is a car toy
-// This is a puzzle toy
+/* Result:
+This is a car toy
+This is a puzzle toy
+*/
 ```
 
 + Test 3:
@@ -466,7 +465,7 @@ toy->printType(); // Result: This is a car toy
 ---
 # `friend bool checkAuthor(...);`
 
-In this exercise, your task is to implement this friend function of the Book class in the file "checkAuthor.cpp":
+In this exercise, your task is to implement the friend function of the `Book` class, which is located in the file *checkAuthor.cpp*:
 
 ```cpp
 friend bool checkAuthor(Book book, const char* author) {}
@@ -492,7 +491,7 @@ cout << checkAuthor(book1,"Nguyen Thi Xuan") << endl; // Result: 0
 ---
 # `bool containsPoint(...);` and `bool containsTriangle(...);`
 
-In this exercise, your task is to implement these 2 methods of the Circle class in the file containsPoint_containsTriangle.cpp
+In this exercise, your task is to implement these 2 methods of the `Circle` class located in the file *containsPoint_containsTriangle.cpp*.
 
 1. Implement method `bool containsPoint(const Point point);` to check if a given point is entirely within the circle or not (points on the circle do not count). If it is contained, return true.
 
