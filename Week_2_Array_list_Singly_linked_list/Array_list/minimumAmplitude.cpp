@@ -3,18 +3,30 @@
 #include<climits>
 using namespace std;
 
+/*
+Summary of logic:
++ The function tries every possible subarray of length k to remove.
++ For each removal, it calculates the amplitude (max - min) of the remaining array.
++ It keeps track of the smallest such amplitude found and returns it.
+*/
+
 int minimumAmplitude(vector<int>& nums, int k) {
 
-    int size = nums.size(), result = INT_MAX;
+    int size = nums.size(), result = INT_MAX; // Store the size of the input array to improve performance (do not need to call the size() method anymore) and initialize the result with maximum possible 32-bit signed integer (<climits> library)
 
+    // Loop through all possible starting indices of a subarray of length k to be removed
     for (int i = 0; i < size - k + 1; i++) {
-        int maxEle = INT_MIN, minEle = INT_MAX;
+        int maxEle = INT_MIN, minEle = INT_MAX; // Initialize max and min element for the remaining array (<climits> library)
         
+        // Loop through the array to compute max and min after removing subarray [i, i + k - 1]
         for (int j = 0; j < size; j++) {
-            if (i <= j && j < i + k) continue;
-            if (nums.at(j) > maxEle) maxEle = nums.at(j);
-            if (nums.at(j) < minEle) minEle = nums.at(j);
+            if (i <= j && j < i + k) continue; // Skip the elements in the current subarray of length k
+            
+            // Update max and min for the remaining elements
+            if (nums.at(j) > maxEle) maxEle = nums.at(j); // the at() method in <vector> library
+            if (nums.at(j) < minEle) minEle = nums.at(j); // the at() method in <vector> library
         }
+        // Update the result with the minimum amplitude found so far
         if (maxEle - minEle < result) result = maxEle - minEle;
     }
     return result;
