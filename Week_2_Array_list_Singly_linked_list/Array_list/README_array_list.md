@@ -2,15 +2,17 @@
 
 The prices of all cars in a car shop have been saved as an array called N. Each element of the array N is the price of each car. A person, with the amount of money k want to buy as much cars as possible.
 
-**<ins>Implement function</ins>:** `int buyCar(int* nums, int length, int k);`
-
+**<ins>Implement function</ins>:**
+```cpp
+int buyCar(int* nums, int length, int k);
+```
 Where ***nums*** is the array N, ***length*** is the size of this array and k is the amount of money the person has. Find the maximum cars this person can buy with his money, and return that number.
 
 **<ins>Example</ins>:** nums = {90, 30, 20, 40, 50}; k = 90;
 
 The result is 3. He can buy the cars at indices 1, 2 and 3 (the first index is 0).
 
-**<ins>Note</ins>:** The `<iostream>`, `<algorithm>` libraries and the `std` namespace are already included. You may add other functions but you are **<ins>not</ins>** allowed to add other libraries.
+**<ins>Note</ins>:** The `<iostream>`, `<algorithm>` libraries and the `using namespace std;` directive are already included. You may add other functions but are **<ins>not</ins>** allowed to add other libraries.
 
 + Test:
 ```cpp
@@ -29,10 +31,10 @@ Your task is to implement a function with the following prototype:
 ```cpp
 bool consecutiveOnes(vector<int>& nums);
 ```
-This function checks if all the 1s in nums appear consecutively or not. If nums does NOT contain any elements, please return true.
+This function checks if all the 1s in nums appear consecutively or not. If nums does **NOT** contain any elements, please return true.
 
 **<ins>Note</ins>:**
-+ The `<iostream>`, `<vector>` libraries and the `std` namespace are already included. **<ins>No</ins>** other libraries are allowed.
++ The `<iostream>`, `<vector>` libraries and the `using namespace std;` directive are already included. **<ins>No</ins>** other libraries are allowed.
 + You can write helper functions.
 + Do **<ins>NOT</ins>** use global variables in your code.
 
@@ -150,7 +152,6 @@ arr.ensureCapacity(5);
 Given an array of integers.
 
 Your task is to implement a function with following prototype:
-
 ```cpp
 int equalSumIndex(vector<int>& nums);
 ```
@@ -159,7 +160,7 @@ This function returns the smallest index i such that the sum of the numbers to t
 If no such index exists, return -1.
 
 **<ins>Note</ins>:**
-+ The `<iostream>`, `<vector>` libraries and the `std` namespace are already included. **<ins>No</ins>** other libraries are allowed.
++ The `<iostream>`, `<vector>` libraries and the `using namespace std;` directive are already included. **<ins>No</ins>** other libraries are allowed.
 + You can write helper functions.
 
 **<ins>For example</ins>:**
@@ -212,14 +213,13 @@ cout << equalSumIndex(nums); // Result: -1
 Given an array of strings.
 
 Your task is to implement a function with following prototype:
-
 ```cpp
 int longestSublist(vector<string>& words);
 ```
 The function returns the length of the longest subarray where all words share the same first letter.
 
 **<ins>Note</ins>:**
-+ The `<iostream>`, `<vector>` libraries and the `std` namespace are already included. **<ins>No</ins>** other libraries are allowed.
++ The `<iostream>`, `<vector>` libraries and the `using namespace std;` directive are already included. **<ins>No</ins>** other libraries are allowed.
 + You can write helper functions.
 
 **<ins>For example</ins>:**
@@ -258,6 +258,38 @@ cout << longestSublist(words); // Result: 7
 ```cpp
 vector<string> words {"application", "boats", "fight", "and", "a", "at", "fishing", "and", "as", "both", "application", "and", "application", "and", "attitude", "are", "entertainment", "an", "as", "as", "discover", "canals", "another", "capulet", "an", "currying", "also", "boats", "colorless", "and", "apple", "as", "composed", "both", "concept", "and", "entertainment", "agree", "a", "for", "a", "application", "count", "chorus", "apple", "and", "composed", "and", "after", "capulets", "at", "boating", "feast", "daughter", "cooling", "families", "boats", "and", "a", "by", "begins", "at", "apple", "apple", "boating", "but", "fluids", "another", "boat", "each", "as", "are", "and", "at", "another", "are", "and", "and", "benvolio", "all", "discover", "a", "capulets", "a", "agree", "capulets", "application", "are", "cooking", "and", "and", "beloved", "boys", "an", "excellent", "daughter", "application", "and", "each", "and", "and", "are", "and", "currying", "each", "capulet", "entertainment", "are", "ant", "currying", "for", "but", "ant", "attitude", "and", "and", "boat", "and", "at", "colorless", "but", "ant", "and", "cooking", "also", "at", "at", "discover", "also", "beloved", "chemical", "and", "daughter", "beloved", "banish", "currying", "boating", "colorless", "and", "constituent", "families", "disguise", "concept", "and", "an", "a", "and", "disguise", "and", "currying", "accept", "are", "families", "as", "all", "family", "composed", "an", "and", "an", "day", "and", "and", "and", "and", "and", "after", "a", "daughter", "and", "boating", "are", "feuding", "fluids", "apple", "boys", "agree", "ant", "and", "and", "boating", "begins", "currying", "and", "but", "a", "family", "currying", "entertainment", "for", "and", "an", "and", "discover", "and", "boating", "a", "constituent", "constituent", "as", "application", "and", "families", "feuding", "excellent", "apple", "currying", "and", "beloved", "concept", "boat", "currying", "and", "chorus", "boat", "are", "and", "canals", "application", "are", "an", "are", "beloved", "composed", "application", "begins", "agree", "composed", "and", "after", "at", "and", "and", "boating", "and", "central", "chorus", "and", "an", "are", "begins", "and", "falls", "are", "begins", "and", "and", "fight", "for", "application", "a", "each", "and", "a", "and", "discover", "also", "and", "for", "and", "and", "earth", "falls", "as", "boat", "fluids", "attitude", "boat", "are", "family", "accept", "chemical", "and", "and", "as", "and", "families", "composed", "application", "and", "a", "and", "all", "another", "and", "cousin", "and", "beloved", "for", "are", "entertainment", "and", "families", "discover", "cooling", "currying", "and", "are", "colorless", "boating", "after", "an", "a", "cooling", "and", "both", "composed", "feast", "begins", "both", "currying", "entertainment", "a", "by", "a", "both", "by", "and", "as", "are", "currying", "and", "and", "family", "attitude", "currying", "beloved", "falls", "are", "a", "and", "boating", "are", "discover", "and", "currying", "diving", "and", "fight", "agressive", "family", "canals", "a", "boats", "and", "and", "agressive", "and", "cousin", "also", "benvolio", "feuding", "and", "composed", "all", "and", "cooling", "a", "feast", "are", "are", "and", "are", "an", "and", "as", "and", "begins", "apple", "capulets", "and", "capulets", "families", "boating", "boats", "and", "earth", "and", "are", "amper", "currying", "amper", "begins", "currying", "at", "are", "also", "discover", "daughter", "are", "and", "as", "but", "and", "as", "boat", "cooking", "for", "after", "currying", "and", "beloved", "faction", "application", "also", "day", "diving", "and", "and", "families", "agree", "and", "central", "and", "constituent", "daughter", "are", "chorus", "discover", "and", "and", "cooking", "and", "ant", "family", "also", "fluids", "benvolio", "and", "fluids", "falls", "both", "boating", "a", "a", "each", "and", "and", "and", "as", "discover", "after", "and", "and", "all", "day", "and", "and", "application", "are", "excellent", "and", "and", "as", "faction", "and", "as", "boating", "discover", "also", "are", "chorus", "excellent", "an", "at", "daughter", "are", "and", "and", "currying", "and", "day", "discover", "and", "agree", "and", "apple", "and", "and", "are", "cooling", "and", "boat", "discover", "and", "beloved", "diving", "and", "after", "family", "an", "an", "each", "and", "fight", "families", "and", "by", "and", "and"};
 cout << longestSublist(words); // Result: 8
+```
+
+---
+# maxSum
+
+Given the array ***N*** contains positive integers (including n elements) and positive integer ***k*** (***k*** <= n). Divide array ***N*** into sub-arrays satisfying the following rules:
+
+- Each sub-array contains contiguous elements in array ***N***.
+
+- Each element in array ***N*** belongs to only one sub-array.
+
+- Number of elements in each sub-array is less than or equal ***k***.
+
+Let S-value of each sub-array is the product of the largest element in this sub-array and the size of this sub-array. A way W, following these above rules, divides this array ***N*** into sub-arrays. S(W) is the sum of all S-values from all sub-arrays created by the way W. The way having the largest value S(W) is called Wmax.
+
+**<ins>Request</ins>:** Implement function with following prototype:
+```cpp
+int maxSum(int* nums, int n, int k);
+```
+Where ***nums*** is array ***N***, n is the size of array ***N*** and ***k*** is described above; return the result is the S(W) of the way Wmax.
+
+**<ins>Example</ins>:** `nums[] = {1, 6, 3, 2, 2, 5, 1}; k = 3;`
+
+The result is 35. The way Wmax to divide the array is: {1, 6, 3}, {2}, {2, 5, 1}; the S-values of each sub-arrays is 6 * 3 = 18, 2 * 1 = 2 and 5 * 3 = 15, respectively; therefore, the sum of all S-values is 35.
+
+**<ins>Note</ins>:** In this exercise, the `<iostream>` library and the `using namespace std;` directive have been used. You may add other functions, but **<ins>not</ins>** additional libraries.
+
+**<ins>Test</ins>:**
+```cpp
+int arr[] = {1, 6, 3, 2, 2, 5, 1};
+int length = sizeof(arr) / sizeof(arr[0]);
+cout << maxSum(arr, length, 3) << "\n"; // Result: 35
 ```
 
 ---
