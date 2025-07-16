@@ -304,7 +304,7 @@ int minimumAmplitude(vector<int>& nums, int k);
 The function returns the minimum value of max(nums) - min(nums) after removing a contiguous sublist with length ***k*** from array ***nums***.
 
 **<ins>Note</ins>:**
-- The `<iostream>`, `<vector>` and `<climits>` libraries and the `using namespace std;` directive have been included. **<ins>No</ins> ** other libraries are allowed.
+- The `<iostream>`, `<vector>` and `<climits>` libraries and the `using namespace std;` directive have been included. **<ins>No</ins>** other libraries are allowed.
 - You can write helper functions.
 
 **<ins>For example</ins>:**
@@ -421,6 +421,51 @@ arr.removeAt(5);
 
 cout << arr.toString() << '\n'; // Result: [0, 1, 2, 3, 4, 6, 7, 8, 9]
 cout << arr.size(); // Result: 9
+```
+
+---
+# steadySpeed
+
+You are given a list of integers, called `positions`, containing ***n*** elements (1 ≤ ***n*** ≤ 100,000). Each element represents a person's position at equally spaced time intervals.
+
+**<ins>Request</ins>:** Implement function:
+```cpp
+int steadySpeed(vector<int>& p);
+```
+Where `p` is the list of position of a person. This function returns the length of the longest sublist where the person was traveling at a constant speed. The direction of movement should be **<ins>ignored</ins>**.
+
+**<ins>Example</ins>:**
+The list of position is `{5, 4, 3, 5, 4, 5, 1, 3, 5, 3}`. Therefore, the length of the longest sublist where the person was traveling at a constant speed is 4 (It is `{1, 3, 5, 3}`, with constant speed is 2).
+
+**<ins>Note</ins>:**
++ In this exercise, the libraries `<iostream>`, `<string>`, `<cstring>`, `<climits>`, `<utility>`, `<vector>`, `<list>`, `<stack>`, `<queue>`, `<map>`, `<unordered_map>`, `<set>`, `<unordered_set>`, `<functional>` and `<algorithm>` have been included and the `using namespace std;` directive is used.
++ You may write helper functions and classes.
++ Importing other libraries is allowed but **<ins>not</ins>** encouraged, as it may result in unexpected errors.
+
+**<ins>For example</ins>:**
+
++ Test 1:
+```cpp
+vector<int> positions1 {5, 4, 3, 5, 4, 5, 1, 3, 5, 3};
+cout << steadySpeed(positions1) << endl; // Result: 4
+```
+
++ Test 2:
+```cpp
+vector<int> positions2 {0, 3, 6, 3, 0};
+cout << steadySpeed(positions2) << endl; // Result: 5
+```
+
++ Test 3:
+```cpp
+vector<int> positions3 {0, 1, 2, 4, 8, 16, 32, 64, 128};
+cout << steadySpeed(positions3) << endl; // Result: 3
+```
+
++ Test 4:
+```cpp
+vector<int> positions4 {0, 1, 3, 6, 10, 15, 21, 28, 37};
+cout << steadySpeed(positions4) << endl; // Result: 2
 ```
 
 ---
