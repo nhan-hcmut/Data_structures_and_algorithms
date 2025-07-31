@@ -13,7 +13,7 @@ class SLinkedList {
     int count;
     
     public:
-    SLinkedList() : head(head), tail(tail), count(0) {}
+    SLinkedList() : head(nullptr), tail(nullptr), count(0) {}
     ~SLinkedList() {
         Node* temp = nullptr;
         while(this->head) {
@@ -24,10 +24,12 @@ class SLinkedList {
         }
         this->tail = nullptr;
     }
+    /* TO DO */
     void    add(const T& e);
     void    add(int index, const T& e);
     int     size();
-    string toString() const;
+    /* END TO DO */
+    string toString() const; // helping method
 
     class Node {
         private:
@@ -49,6 +51,7 @@ class SLinkedList {
     };
 };
 
+/* TO DO */
 template <class T>
 void SLinkedList<T>::add(const T& e) {
     /* Insert an element into the end of the list. */
@@ -88,7 +91,9 @@ int SLinkedList<T>::size() {
     /* Return the length (size) of list */
     return this->count;
 }
+/* END TO DO */
 
+// helping method
 template<class T>
 string SLinkedList<T>::toString() const {
     stringstream ss;
@@ -103,11 +108,12 @@ string SLinkedList<T>::toString() const {
             ss << temp->data;
             temp = temp->next;
         }
-        ss << "]\n";
-        string str;
-        ss >> str;
-        return str;
+        ss << "]";
+        string result;
+        ss >> result;
+        return result;
 }
+// End helping method
 
 int main() {
 
@@ -115,21 +121,21 @@ int main() {
     SLinkedList<int> list;
     int size = 10;
 
-    for(int index = 0; index < size; index++){
+    for (int index = 0; index < size; index++) {
         list.add(index);
     }
 
-    cout << list.toString(); // Result: [0,1,2,3,4,5,6,7,8,9]
+    cout << list.toString() << endl; // Result: [0,1,2,3,4,5,6,7,8,9]
     
     /* Test 2
     SLinkedList<int> list;
     int size = 10;
 
-    for(int index = 0; index < size; index++){
+    for (int index = 0; index < size; index++) {
         list.add(0, index);
     }
 
-    cout << list.toString(); // Result: [9,8,7,6,5,4,3,2,1,0]
+    cout << list.toString() << endl; // Result: [9,8,7,6,5,4,3,2,1,0]
     */
     
     return 0;
