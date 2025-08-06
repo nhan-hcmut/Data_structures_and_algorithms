@@ -46,7 +46,7 @@ public:
         this->authors = new char[strlen(book.authors) + 1];
         strcpy(this->authors, book.authors);
 
-        this->publishingYear = book.getPublishingYear();
+        this->publishingYear = book.publishingYear;
     }
     
     void setTitle(const char* title)
@@ -106,8 +106,8 @@ public:
         /*
          * STUDENT ANSWER
         */
-        delete[] this->title;
-        delete[] this->authors;
+        if (this->title != nullptr) delete[] this->title;
+        if (this->authors != nullptr) delete[] this->authors;
 
         this->title = nullptr;
         this->authors = nullptr;
@@ -162,17 +162,17 @@ public:
         */
         cout << book.title << endl;
 
-        char* tempAuthors = new char[strlen(book.authors) + 1];
-        strcpy(tempAuthors, book.authors);
-        char* oneAuthor = strtok(tempAuthors, ",");
+        const char* ptr = book.authors;
 
-        while (oneAuthor != nullptr) {
-            if (oneAuthor[0] == ' ') oneAuthor++;
-            cout << oneAuthor << endl;
-            oneAuthor = strtok(nullptr, ",");
+        while (*ptr != '\0') {
+            if (*ptr != ',') cout << *ptr;
+            else {
+                cout << endl;
+                ptr++;
+            }
+            ptr++;
         }
-        delete[] tempAuthors;
-        cout << book.publishingYear;
+        cout << endl << book.publishingYear;
     }
 };
 
@@ -181,7 +181,8 @@ int main() {
     // Test 1
     Book book1("Giai tich 1", "Nguyen Dinh Huy, Nguyen Thi Xuan Anh", 2000);
     Printer::printBook(book1);
-    cout << endl <<endl;
+    cout << endl << endl;
+    
     /* Result:
     Giai tich 1
     Nguyen Dinh Huy
@@ -192,6 +193,7 @@ int main() {
     // Test 2
     Book book2("Introduction to Algorithms", "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein", 1990);
     Printer::printBook(book2);
+    cout << endl << endl;
     
     /* Result:
     Introduction to Algorithms
@@ -200,6 +202,63 @@ int main() {
     Ronald L. Rivest
     Clifford Stein
     1990
+    */
+
+    // Test 3
+    Book book3("Ky thuat Lap trinh", "Nguyen Trung Truc", 2018);
+    Printer::printBook(book3);
+    cout << endl << endl;
+    
+    /* Result:
+    Ky thuat Lap trinh
+    Nguyen Trung Truc
+    2018
+    */
+
+    // Test 4
+    Book book4("Cau truc Du lieu va Giai thuat", "Nguyen Trung Truc", 2019);
+    Printer::printBook(book4);
+    cout << endl << endl;
+    /* Result:
+    Cau truc Du lieu va Giai thuat
+    Nguyen Trung Truc
+    2019
+    */
+
+    // Test 5
+    Book book5("Phan tich va Thiet ke Giai thuat", "Duong Tuan Anh", 2018);
+    Printer::printBook(book5);
+    cout << endl << endl;
+    
+    /* Result:
+    Phan tich va Thiet ke Giai thuat
+    Duong Tuan Anh
+    2018
+    */
+
+    // Test 6
+    Book book6("Cau truc Du lieu va Giai thuat", "Do Xuan Loi, Ho Dong, Nguyen Trong Hai, Pham Thanh Hung", 2018);
+    Printer::printBook(book6);
+    cout << endl << endl;
+    
+    /* Result:
+    Cau truc Du lieu va Giai thuat
+    Do Xuan Loi
+    Ho Dong
+    Nguyen Trong Hai
+    Pham Thanh Hung
+    2018
+    */
+
+    // Test 7
+    Book book7("He thong May tinh va Ngon ngu C", "Dang Thanh Tin", 2020);
+    Printer::printBook(book7);
+    cout << endl;
+    
+    /* Result:
+    He thong May tinh va Ngon ngu C
+    Dang Thanh Tin
+    2020
     */
     return 0;
 }
