@@ -33,7 +33,7 @@ class Character {
 
 Character::Character() {
     // STUDENT ANSWER
-    this->x = this->y = this->hp = 0;
+    this->hp = this->x = this->y = 0;
 }
 
 Character::Character(int hp, int x, int y) {
@@ -76,8 +76,8 @@ void Character::setY(int y) {
 int Character::getManhattanDistTo(Character* other) {
     // STUDENT ANSWER
     
-    int xDifference = (this->x > other->getX()) ? this->x - other->getX() : other->getX() - this->x;
-    int yDifference = (this->y > other->getY()) ? this->y - other->getY() : other->getY() - this->y;
+    int xDifference = (this->x > other->x) ? (this->x - other->x) : (other->x - this->x);
+    int yDifference = (this->y > other->y) ? (this->y - other->y) : (other->y - this->y);
     
     return xDifference + yDifference;
 }
