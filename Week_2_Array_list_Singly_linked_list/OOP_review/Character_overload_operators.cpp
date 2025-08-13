@@ -141,7 +141,8 @@ int main() {
 
     // Test 5
     Character(3, 4, 5)(); // Result: 3-4-5
-    cout << endl << ((Character(3, 4, 5) < Character(3, 4, 5)) ? "true\n" : "false\n"); // Result: false
+    cout << endl << ((Character(3, 4, 5) < Character(3, 4, 5)) ? "true\n" : "false\n"); // Result: true
     
     return 0;
+
 }
