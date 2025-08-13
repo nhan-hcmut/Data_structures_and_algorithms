@@ -1,26 +1,26 @@
 # Recommended order:
 
-1. `class Point` in Point.cpp
+1. Implement `class Point` in *Point.cpp*
 
-2. `class Circle` in Circle.cpp
+2. Implement `class Circle` in *Circle.cpp*
 
-3. `containsPoint(...)` and `containsTriangle(...)` in containsPoint_containsTriangle.cpp
+3. Implement 2 methods `containsPoint(...)` and `containsTriangle(...)` in *containsPoint_containsTriangle.cpp*
 
-4. Operators `=`, `==` and `>>` in Circle_overload_operators.cpp
+4. Overload 3 operators `=`, `==` and `>>` in *Circle_overload_operators.cpp*
 
-5. `class Character` in Character.cpp
+5. `class Character` in *Character.cpp*
 
-6. Operators `=`, `<` and `()` in Character_overload_operators.cpp
+6. Overload 3 operators `=`, `<` and `()` in *Character_overload_operators.cpp*
 
-7. `class Player` in Player.cpp
+7. Implement `class Player` in *Player.cpp*
 
-8. `class Book` in Book.cpp
+8. Implement `class Book` in *Book.cpp*
 
-9. `friend bool checkAuthor(...)` in checkAuthor.cpp
+9. Implement `friend bool checkAuthor(...)` in *checkAuthor.cpp*
 
-10. `class Printer` in Printer.cpp
+10. Implement `class Printer` in *Printer.cpp*
 
-11. `class CarToy` -> `class PuzzleToy` -> `class ToyBox` in Toy.cpp
+11. Implement `class CarToy` -> `class PuzzleToy` -> `class ToyBox` in *Toy.cpp*
 
 ---
 # class Book
@@ -232,7 +232,7 @@ cout << endl;
 + Test 5:
 ```cpp
 Character(3, 4, 5)(); // Result: 3-4-5
-cout << endl << ((Character(3, 4, 5) < Character(3, 4, 5)) ? "true\n" : "false\n"); // Result: false
+cout << endl << ((Character(3, 4, 5) < Character(3, 4, 5)) ? "true\n" : "false\n"); // Result: true
 ```
 
 ---
