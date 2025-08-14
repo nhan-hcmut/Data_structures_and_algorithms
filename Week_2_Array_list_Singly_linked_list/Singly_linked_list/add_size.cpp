@@ -4,15 +4,15 @@ using namespace std;
 
 template<class T>
 class SLinkedList {
-    public:
+public:
     class Node; // Forward declaration
     
-    protected:
+protected:
     Node* head;
     Node* tail;
     int count;
     
-    public:
+public:
     SLinkedList() : head(nullptr), tail(nullptr), count(0) {}
     ~SLinkedList() {
         Node* temp = nullptr;
@@ -24,20 +24,20 @@ class SLinkedList {
         }
         this->tail = nullptr;
     }
-    /* TO DO */
+    /* TODO */
     void    add(const T& e);
     void    add(int index, const T& e);
     int     size();
-    /* END TO DO */
+    /* END TODO */
     string toString() const; // helping method
 
     class Node {
-        private:
+    private:
         T data;
         Node* next;
         friend class SLinkedList<T>;
         
-        public:
+    public:
         Node() {
             next = 0;
         }
@@ -51,7 +51,7 @@ class SLinkedList {
     };
 };
 
-/* TO DO */
+/* TODO */
 template <class T>
 void SLinkedList<T>::add(const T& e) {
     /* Insert an element into the end of the list. */
@@ -91,27 +91,27 @@ int SLinkedList<T>::size() {
     /* Return the length (size) of list */
     return this->count;
 }
-/* END TO DO */
+/* END TODO */
 
 // helping method
 template<class T>
 string SLinkedList<T>::toString() const {
     stringstream ss;
-        ss << "[";
-        Node* temp = nullptr;
-        if (this->head) {
-            ss << this->head->data;
-            temp = this->head->next;
-        }
-        while (temp) {
-            ss << ",";
-            ss << temp->data;
-            temp = temp->next;
-        }
-        ss << "]";
-        string result;
-        ss >> result;
-        return result;
+    ss << "[";
+    Node* temp = nullptr;
+    if (this->head) {
+        ss << this->head->data;
+        temp = this->head->next;
+    }
+    while (temp) {
+        ss << ",";
+        ss << temp->data;
+        temp = temp->next;
+    }
+    ss << "]";
+    string result;
+    ss >> result;
+    return result;
 }
 // End helping method
 
