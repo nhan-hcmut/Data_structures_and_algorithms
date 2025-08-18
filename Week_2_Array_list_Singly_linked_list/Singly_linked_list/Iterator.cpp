@@ -1,67 +1,94 @@
-#include<iostream>
-#include<cassert>
+#include <iostream>
+#include <cassert>
+
 using namespace std;
 
-template<class T>
+template <class T>
 class SLinkedList {
-    public:
+
+public:
     class Iterator; //forward declaration
     class Node;     //forward declaration
-    
-    protected:
+
+protected:
     Node *head;
     Node *tail;
     int count;
-    
-    public:
-    SLinkedList() : head(NULL), tail(NULL), count(0){};
-    ~SLinkedList();
-    void add(const T &e);
+
+public:
+    SLinkedList() : head(NULL), tail(NULL), count(0) {};
+    ~SLinkedList(); // Helping methods
+
+    void add(const T &e); // Helping methods
     void add(int index, const T &e);
-    T removeAt(int index);
+
+    T removeAt(int index); // Helping methods
     bool removeItem(const T &removeItem);
+
     bool empty();
     int size();
-    void clear();
+    void clear(); // Helping methods
+
     T get(int index);
     void set(int index, const T &e);
+
     int indexOf(const T &item);
     bool contains(const T &item);
     string toString();
-    SLinkedList(const SLinkedList &list) {
+
+    SLinkedList(const SLinkedList &list)
+    {
+        if (this->head != NULL) this->clear();
+
+        this->head = this->tail = NULL;
         this->count = 0;
-        this->head = NULL;
-        this->tail = NULL;
+        
+        for (Node* temp = list.head; temp != NULL; temp = temp->next) this->add(temp->data);
     }
-    Iterator begin() {return Iterator(this, true);}
-    Iterator end() {return Iterator(this, false);}
-    
-    public:
-    class Node {
-        private:
+    Iterator begin()
+    {
+        return Iterator(this, true);
+    }
+    Iterator end()
+    {
+        return Iterator(this, false);
+    }
+public:
+    class Node
+    {
+    private:
         T data;
         Node *next;
         friend class SLinkedList<T>;
-        
-        public:
-        Node() {next = 0;}
-        Node(Node *next) {this->next = next;}
-        Node(T data, Node *next = NULL) {
+    public:
+        Node()
+        {
+            next = 0;
+        }
+        Node(Node *next)
+        {
+            this->next = next;
+        }
+        Node(T data, Node *next = NULL)
+        {
             this->data = data;
             this->next = next;
         }
     };
-    class Iterator {
-        private:
+    class Iterator
+    {
+    private:
         SLinkedList<T> *pList;
         Node *current;
         int index; // corresponding with current node
-        
-        public:
+    public:
+        Iterator() : pList(NULL), current(NULL), index(-1) {}; // Helping methods
         Iterator(SLinkedList<T> *pList, bool begin);
         Iterator &operator=(const Iterator &iterator);
+        
         void remove();
         void set(const T &e);
+        
         T &operator*();
         bool operator!=(const Iterator &iterator);
         
@@ -73,38 +100,113 @@ class SLinkedList {
     };
 };
 
-template<class T>
+// Helping methods
+template <class T>
+void SLinkedList<T>::add(const T &e) {
+    Node* pNew = new Node(e, NULL);
+    
+    if (this->head == NULL) {
+        this->head = pNew;
+        this->tail = pNew;
+    }
+    else {
+        this->tail->next = pNew;
+        this->tail = pNew;
+    }
+    this->count++;
+}
+
+template <class T>
+T SLinkedList<T>::removeAt(int index) {
+    if (index < 0 || this->count <= index) throw std::out_of_range("Index is out of range!");
+    
+    T value;
+    if (this->count == 1) {
+        value = this->head->data;
+
+        delete this->head;
+        this->head = this->tail = NULL;
+    }
+    else if (index == 0) {
+        value = this->head->data;
+
+        Node* temp = this->head;
+        this->head = this->head->next;
+        delete temp;
+    }
+    else if (index == this->count - 1) {
+        value = this->tail->data;
+        
+        Node* pre = this->head;
+        while (pre->next != this->tail) pre = pre->next;
+
+        delete this->tail;
+        this->tail = pre;
+        this->tail->next = NULL;
+    }
+    else {
+        Node* pre = this->head;
+        for (int i = 0; i < index - 1; i++) pre = pre->next;
+
+        Node* cur = pre->next;
+        value = cur->data;
+        
+        pre->next = cur->next;
+        delete cur;
+    }
+    this->count--;
+    return value;
+}
+
+template <class T>
+SLinkedList<T>::~SLinkedList() {this->clear();}
+
+template <class T>
+void SLinkedList<T>::clear() {while (this->head != NULL) this->removeAt(0);}
+// End helping methods
+
+
+/* TODO */
+template <class T>
 SLinkedList<T>::Iterator::Iterator(SLinkedList<T>* pList, bool begin)
 {
     /*
         Constructor of iterator
         * Set pList to pList
-        * begin = true:
+        * if begin = true:
         * * Set current (index = 0) to pList's head if pList is not NULL
         * * Otherwise set to NULL (index = -1)
-        * begin = false:
+        * if begin = false:
         * * Always set current to NULL
         * * Set index to pList's size if pList is not NULL, otherwise 0
     */
     this->pList = pList;
+    
     if (begin) {
-        if (pList && pList->head) {
-            current = pList->head;
-            index = 0;
+        if (pList != NULL) {
+            this->current = pList->head;
+            
+            if (pList->head != NULL) this->index = 0;
+            else this->index = -1;
         }
-        else {
-            current = nullptr;
-            index = -1;
+        else { /* pList == NULL */
+            this->current = NULL;
+            this->index = -1;
         }
     }
-    else {
-        current = nullptr;
-        if (pList) index = pList->size();
-        else index = 0;
+    else { /* begin == false */
+        this->current = NULL;
+        
+        if (pList != NULL) {
+            this->index = pList->count;
+        }
+        else { /* pList == NULL */
+            this->index = 0;
+        }
     }
 }
 
-template<class T>
+template <class T>
 typename SLinkedList<T>::Iterator& SLinkedList<T>::Iterator::operator=(const Iterator& iterator)
 {
     /*
@@ -114,155 +216,156 @@ typename SLinkedList<T>::Iterator& SLinkedList<T>::Iterator::operator=(const Ite
     this->current = iterator.current;
     this->index = iterator.index;
     this->pList = iterator.pList;
+    
     return *this;
 }
 
-template<class T>
+template <class T>
 void SLinkedList<T>::Iterator::remove()
 {
     /*
         Remove a node which is pointed by current
-        * After remove current points to the previous node of this position (or node with index - 1)
-        * If remove at front, current points to previous "node" of head (current = NULL, index = -1)
+        * After removing, current points to the previous node of the current position (the node with index - 1)
+        * If removing at the front, current points to previous "node" of head (current = NULL, index = -1)
         * Exception: throw std::out_of_range("Segmentation fault!") if remove when current is NULL
     */
-    if (!current || !pList || !pList->head) throw std::out_of_range("Segmentation fault!");
+    if (this->current == NULL) throw std::out_of_range("Segmentation fault!");
+    
+    if (this->index == 0) {
+        this->pList->removeAt(0);
+        
+        this->current = NULL;
+        this->index = -1;
+    }
+    else { /* this->index > 0 */
+        Node* pre = this->pList->head;
+        while (pre->next != this->current) pre = pre->next;
 
-    if (current == pList->head) {
-        pList->head = pList->head->next;
-        if (!pList->head) { // list is now empty
-            pList->tail = nullptr;
-        }
-        current = nullptr;
-        index = -1;
+        this->pList->removeAt(this->index);
+        
+        this->index--;
+        this->current = pre;
     }
-    else {
-        Node* temp = pList->head;
-        while (temp && temp->next != current) {
-            temp = temp->next;
-        }
-        if (temp) {
-            temp->next = current->next;
-            if (temp->next == nullptr) { // last element was removed
-                pList->tail = temp;
-            }
-            current = temp;
-            index--;
-        }
-    }
-    pList->count--; // decrease size of list
 }
 
-template<class T>
+template <class T>
 void SLinkedList<T>::Iterator::set(const T& e)
 {
     /*
-        Set the new value for current node
+        Set the new value for the current node
         * Exception: throw std::out_of_range("Segmentation fault!") if current is NULL
     */
-    if (!current) throw std::out_of_range("Segmentation fault!");
-    current->data = e;
+    if (this->current == NULL) throw std::out_of_range("Segmentation fault!");
+    this->current->data = e;
 }
 
-template<class T>
+template <class T>
 T& SLinkedList<T>::Iterator::operator*()
 {
     /*
-        Get data stored in current node
+        Get data stored in the current node
         * Exception: throw std::out_of_range("Segmentation fault!") if current is NULL
     */
-    if (!current) throw std::out_of_range("Segmentation fault!");
-    return current->data;
+    if (this->current == NULL) throw std::out_of_range("Segmentation fault!");
+    return this->current->data;
 }
 
-template<class T>
-bool SLinkedList<T>::Iterator::operator!=(const Iterator& iterator)
-{
+template <class T>
+bool SLinkedList<T>::Iterator::operator!=(const Iterator& iterator) {
     /*
-        Operator not equals
-        * Returns false if two iterators points the same node and index
+        Operator not equal
+        * Returns false if both iterators point to the same node and have the same index
     */
-    return (this->current != iterator.current || this->index != iterator.index);
+    return !(this->current == iterator.current && this->index == iterator.index);
 }
+
 // Prefix ++ overload
-template<class T>
-typename SLinkedList<T>::Iterator& SLinkedList<T>::Iterator::operator++()
-{
+template <class T>
+typename SLinkedList<T>::Iterator& SLinkedList<T>::Iterator::operator++() {
     /*
         Prefix ++ overload
         * Set current to the next node
         * If iterator corresponds to the previous "node" of head, set it to head
         * Exception: throw std::out_of_range("Segmentation fault!") if iterator corresponds to the end
     */
-    if (!current && index == -1) throw std::out_of_range("Segmentation fault!");
-
-    if (current) {
-        current = current->next;
-        index++;
+    if (this->index == this->pList->count) throw std::out_of_range("Segmentation fault!");
+    
+    if (this->index == -1) {
+        if (this->pList != NULL) this->current = this->pList->head;
+        else this->current = NULL;
+        
+        this->index = 0;
     }
-    else if (index == -1) {
-        current = pList->head;
-        index = 0;
+    else { /* this->index > -1 */
+        this->current = this->current->next;
+        this->index++;
     }
     return *this;
 }
+
 // Postfix ++ overload
-template<class T>
-typename SLinkedList<T>::Iterator SLinkedList<T>::Iterator::operator++(int)
-{
+template <class T>
+typename SLinkedList<T>::Iterator SLinkedList<T>::Iterator::operator++(int) {
     /*
         Postfix ++ overload
         * Set current to the next node
         * If iterator corresponds to the previous "node" of head, set it to head
         * Exception: throw std::out_of_range("Segmentation fault!") if iterator corresponds to the end
     */
-    if (!current && index == -1) throw std::out_of_range("Segmentation fault!");
+    if (this->index == this->pList->count) throw std::out_of_range("Segmentation fault!");
 
-    Iterator previous = *this;
+    Iterator curIt = *this;
+    
+    if (this->index == -1) {
+        if (this->pList != NULL) this->current = this->pList->head;
+        else this->current = NULL;
 
-    if (current) {
-        current = current->next;
-        index++;
+        this->index = 0;
     }
-    else if (index == -1) {
-        current = pList->head;
-        index = 0;
+    else { /* this->index > -1 */
+        this->current = this->current->next;
+        this->index++;
     }
-    return previous;
+    return curIt;
 }
+/* END TODO */
 
 int main() {
-
-    // test 1
+    // Test 1
     SLinkedList<int> list;
     
     int size = 10;
-    for(int idx=0; idx < size; idx++){
+    
+    for (int idx = 0; idx < size; idx++) {
         list.add(idx);
     }
-            
+    
     SLinkedList<int>::Iterator it;
     int expvalue = 0;
-    for(it = list.begin(); it != list.end(); it++){
+    
+    for (it = list.begin(); it != list.end(); it++) {
         assert(*it == expvalue);
         expvalue += 1;
     }
-
-    /* test 2
+    
+    /* Test 2
     SLinkedList<int> list;
         
     int size = 10;
-    for(int idx=0; idx < size; idx++){
+    
+    for (int idx = 0; idx < size; idx++) {
         list.add(idx);
     }
             
     SLinkedList<int>::Iterator it;
+    
     int expvalue = 0;
-    for(it = list.begin(); it != list.end(); ++it){
+    
+    for (it = list.begin(); it != list.end(); ++it) {
         assert(*it == expvalue);
         expvalue += 1;
     }
     */
-
+    
     return 0;
 }
