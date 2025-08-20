@@ -185,9 +185,7 @@ SLinkedList<T>::Iterator::Iterator(SLinkedList<T>* pList, bool begin)
     if (begin) {
         if (pList != NULL) {
             this->current = pList->head;
-            
-            if (pList->head != NULL) this->index = 0;
-            else this->index = -1;
+            this->index = 0;
         }
         else { /* pList == NULL */
             this->current = NULL;
