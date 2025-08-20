@@ -1,25 +1,80 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class LLNode {
-    public:
+public:
     int val;
     LLNode* next;
+
+    // Helping methods
     LLNode(); // Constructor: val = 0, next = nullptr
     LLNode(int val, LLNode* next); // Constructor with customized data
+
+    static LLNode* createWithIterators(int*, int*);
+    static void printList(LLNode*);
+    void clear();
 };
 
-LLNode* reverseLinkedList(LLNode* head) {
-    // STUDENT ANSWER
-    if (!head) return nullptr;
-    LLNode *temp = head->next, *newHead = new LLNode(head->val, nullptr);
-    while (temp) {
-        LLNode* pNew = new LLNode(temp->val, newHead);
-        newHead = pNew;
+// Helping methods
+LLNode::LLNode() : val(0), next(nullptr) {}
+
+LLNode::LLNode(int val, LLNode* next) : val(val), next(next) {}
+
+LLNode* LLNode::createWithIterators(int* start, int* end) {
+    if (start == end) return nullptr;
+    LLNode* head = new LLNode(*start, nullptr);
+    start++;
+    LLNode* tail = head;
+    while (start != end) {
+        tail->next = new LLNode(*start, nullptr);
+        start++;
+        tail = tail->next;
+    }
+    return head;
+}
+
+void LLNode::printList(LLNode* head) {
+    cout << "[";
+    LLNode* temp = nullptr;
+    if (head != nullptr) {
+        cout << head->val;
+        temp = head->next;
+    }
+    while (temp != nullptr) {
+        cout << ", " << temp->val;
         temp = temp->next;
     }
-    return newHead;
+    cout << "]";
 }
+
+void LLNode::clear() {
+    while (this->next != nullptr) {
+        LLNode *pre = this, *cur = this->next;
+        while (cur->next != nullptr) {
+            pre = cur;
+            cur = cur->next;
+        }
+        delete cur;
+        pre->next = nullptr;
+    }
+    delete this;
+}
+// End helping methods
+
+/* TODO */
+LLNode* reverseLinkedList(LLNode* head) {
+    // STUDENT ANSWER
+    if (head == nullptr) return nullptr;
+    LLNode *pre = nullptr, *cur = head, *forward = nullptr;
+    while (cur != nullptr) {
+        forward = cur->next;
+        cur->next = pre;
+        pre = cur;
+        cur = forward;
+    }
+    return pre;
+}
+/* END TODO */
 
 int main() {
 
@@ -39,7 +94,7 @@ int main() {
     cout << "\n";
     LLNode* newhead = reverseLinkedList(head);
     LLNode::printList(newhead); // result: []
-    newhead->clear();
+    if (newhead != nullptr) newhead->clear();
     */
 
     /* test 3
