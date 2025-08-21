@@ -64,7 +64,7 @@ void LLNode::clear() {
 /* TODO */
 LLNode* reverseLinkedList(LLNode* head) {
     // STUDENT ANSWER
-    if (head == nullptr) return nullptr;
+    if (head == nullptr || head->next == nullptr) return head;
     LLNode *pre = nullptr, *cur = head, *forward = nullptr;
     while (cur != nullptr) {
         forward = cur->next;
