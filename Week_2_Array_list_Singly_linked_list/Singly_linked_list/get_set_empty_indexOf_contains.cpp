@@ -5,15 +5,15 @@ using namespace std;
 
 template<class T>
 class SLinkedList {
-    public:
+public:
     class Node; // Forward declaration
     
-    protected:
+protected:
     Node* head;
     Node* tail;
     int count;
     
-    public:
+public:
     SLinkedList(): head(NULL), tail(NULL), count(0) {}
     ~SLinkedList() {}
     void    add(const T& e) {
@@ -75,13 +75,12 @@ class SLinkedList {
     }
     
     class Node {
-    
-        private:
+    private:
         T data;
         Node* next;
         friend class SLinkedList<T>;
         
-        public:
+    public:
         Node() {
             next = 0;
         }
@@ -148,23 +147,20 @@ int main() {
     int index[]    = {0,  0,  1,  3,  2,  3,  5,   0};
     int expvalues[]= {8,  15, 2,  4,  7, 10,  40,  6}; 
 
-    for (int idx = 0; idx < 8; idx++){
-    list.add(index[idx], values[idx]);
+    for (int idx = 0; idx < 8; idx++) {
+        list.add(index[idx], values[idx]);
     }
-
     assert( list.size() == 8 );
-            
-    for (int idx = 0; idx < 8; idx++){
+    
+    for (int idx = 0; idx < 8; idx++) {
         assert( list.get(idx) == expvalues[idx] );
     }
-
-    cout << list.toString(); // Result: [8,15,2,4,7,10,40,6]
+    cout << list.toString() << endl; // Result: [8,15,2,4,7,10,40,6]
 
     /* Test 2
     SLinkedList<int> list;
-
     assert( list.empty() == true );
-    cout << list.toString(); // Result: []
+    cout << list.toString() << endl; // Result: []
     */
     
     return 0;
