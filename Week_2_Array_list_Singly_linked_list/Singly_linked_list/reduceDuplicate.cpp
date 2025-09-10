@@ -92,11 +92,11 @@ int main() {
     /* Test 3
     Node* node1 = new Node(6, nullptr);
 
-    printList(node1); // result: HEAD -> NULL
+    printList(node1); // result: HEAD -> 6 -> NULL
     cout << endl;
     
     reduceDuplicate(node1);
-    printList(node1); // result: HEAD -> NULL
+    printList(node1); // result: HEAD -> 6 -> NULL
     clear(node1);
     */
     
